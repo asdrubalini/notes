@@ -1,4 +1,4 @@
-# latex-to-pages
-Automatically compile latex document to publicly reachable PDF on Github Pages. Works on private repos too.
+# Notes
+Collection of notes
 
-[Click to open PDF](https://asdrubalini.github.io/latex-to-pages/)
+[Click to open PDF](https://asdrubalini.github.io/notes/)
