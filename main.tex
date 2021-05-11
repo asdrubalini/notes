@@ -2,6 +2,9 @@
 
 \usepackage{amsmath, mathtools, amsthm}
 
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
 \title{Onde elettromagnetiche}
 \author{github.com/asdrubalini}
 \date{\today}
@@ -17,7 +20,7 @@
     
     \section{Definizione del campo elettrico}
 
-    Il campo elettrico si rappresenta con la lettera E
+    Il campo elettrico si rappresenta con la lettera E e viene definito come:
 
     \begin{equation}
         \bar{E}^+(x, t) = E^+_M \cdot e^{j\omega (t-\frac{x}{u})}
@@ -37,7 +40,13 @@
 
     \section{Definizione del campo magnetico}
 
-    Il campo magnetico si rappresenta con la lettera H
+    Il campo magnetico si rappresenta con la lettera H e viene definito come:
+
+    \begin{equation}
+        \bar{H}^+(x,t) = \frac{\bar{E}^+(x,t)}{Z}
+    \end{equation}
+
+    dove $Z$ è l'impedenza caratteristica misurata in ohm $[\Omega]$
 
     \section{Velocità di onde elettromagnetiche}
 
@@ -111,6 +120,75 @@
     \begin{equation}
         k = \frac{2 \pi}{\lambda}
     \end{equation}
+
+    \section{Riflessione di un'onda}
+
+    \subsection{Coefficiente di riflessione}
+
+    Quando un'onda elettro-magnetica passa da un dielettrico ad un altro, una parte dell'onda procede per la sua strada
+    trapassando il dielettrico, mentre un'altra parte viene riflessa indietro con un angolo variabile.
+
+    Il coefficiente di riflessione, misurato con la lettera K, indica la percentuale dell'onda che viene riflessa, in relazione
+    a quella che invece trapassa il dielettrico.
+
+    Se con $E^+_1$ indichiamo l'onda originale prima di trapassare il dielettrico e con $E^-_1$ indichiamo l'onda riflessa,
+    è possibile calcolare il coefficiente di riflessione con:
+
+    \begin{equation}
+        K = \frac{E^-_1(x,t)}{E^+_1(x,t)}
+    \end{equation}
+
+    Nel caso in cui $K = 1$, possiamo dire che l'onda viene riflessa completamente. Inversamente, se $K = 0$, l'onda non viene
+    riflessa neanche in minima parte.
+
+    \subsection{Indice di rifrazione}
+
+    Con rifrazione si intende la parte di onda elettro-magnetica che non viene riflessa ma riesce ad incidere il materiale
+    passando dall'altra parte. L'angolo dell'onda rifratta rispetto alla normale varia in base alle caratteristiche dei due
+    materiali. Ogni materiale ha un indice di rifrazione caratteristico indicato con la lettera $n$ e definito come:
+
+    \begin{equation}
+        n = \frac{c}{u}
+    \end{equation}
+
+    dove $c$ è la velocità della luce e $u$ è la velocità di propagazione nel materiale. L'indice di rifrazione è un valore $n = 1$
+    per il vuoto ed $n < 1$ per tutti gli altri materiali. L'indice di rifrazione, inoltre, non ha unità di misura.
+
+    \subsection{Angolo di riflessione}
+
+    \begin{center}
+        \includegraphics[width=\textwidth]{angolo-di-riflessione.png}
+    \end{center}
+
+    La legge di Snell definisce il seguente rapporto tra angolo di incidenza, rifrazione e indici di rifrazione dei mezzi:
+
+    \begin{equation}
+        \frac{sin(\phi_i)}{sin(\phi_R)} = \frac{n_2}{n_1}
+    \end{equation}
+
+    Se indichiamo con $\phi_i$ l'angolo con cui l'onda indice la superficie di separazione, con $\phi_r$ l'angolo con cui l'onda
+    viene riflessa e con $\phi_R$ l'angolo con cui l'onda viene rifratta, le seguenti uguaglianze sono verificate:
+
+    \begin{equation}
+        \phi_i = \phi_r
+    \end{equation}
+
+    \begin{equation}
+        \phi_R = arcsin(\frac{n_1 sin(\phi_i)}{n_2})
+    \end{equation}
+
+    \subsection{Angolo limite}
+
+    Aumentando l'angolo di incidenza, aumenta conseguentemente anche l'angolo dell'onda rifratta. L'angolo di incidenza che consente
+    all'onda rifratta di raggiungere i 90 gradi si definisce angolo limite. Applicando la legge di Snell, è possibile calcolare
+    l'angolo limite con:
+
+    \begin{equation}
+        \phi_L = arcsin(\frac{n_2}{n_1})
+    \end{equation}
+
+    una volta raggiunto l'angolo limite, avremo un caso di riflessione totale, ovvero l'onda non viene rifratta ma soltanto riflessa.
+    Si tratta dello stesso principio utilizzato dalla fibra ottica per trasmettere la luce a grandi distanze.
 
     \section{Densità di potenza}
     
