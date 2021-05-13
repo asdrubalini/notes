@@ -205,4 +205,82 @@
         S = \frac{1}{2} \frac{{E_M}^2}{\zeta} \hspace{0.2cm} [\frac{W}{m^2}]
     \end{equation}
 
+    \newpage
+
+    \section{Linee di trasmissione}
+
+    Una linea di trasmissione non è altro che una linea realizzata con due fili conduttori. Ogni linea può essere descritta
+    con 4 costanti, chiamate costanti primarie. 
+
+    \begin{itemize}
+        \item R: tiene conto della resistenza
+        \item L: tiene conto dei campi magnetici
+        \item G: tiene conto delle perdite
+        \item C: tiene conto dei campi elettrici
+    \end{itemize}
+
+    \subsection{Impedenza caratteristica}
+
+    Con $\bar{Z_0}$ si definisce l'impedenza caratteristica della linea, calcolabile con la seguente formula:
+
+    \begin{equation}
+        \bar{Z_0} = \frac{\sqrt{R + j \omega L}}{\sqrt{G + j \omega C}} \hspace{0.2cm} [\Omega]
+    \end{equation}
+
+    \subsection{Costante di propagazione}
+
+    \begin{equation}
+        \bar{\varphi} = \sqrt{(R + j \omega L)(G + j \omega C)}
+    \end{equation}
+
+    Che può anche essere definita come la somma complessa di:
+
+    \begin{equation}
+        \bar{\varphi} = \alpha + j \beta
+    \end{equation}
+
+    dove $\alpha$ è la costante di attenuazione (che indica l'attenuazione del segnale) e $\beta$ è la 
+    costante di fase (che indica lo sfasamento del segnale).
+
+    \subsection{Coefficiente di riflessione}
+
+    La linea si trova in regime stazionario quando ci sono sia onde progressive che onde regressive.
+    Si definisce $\bar{K_L}$ il coefficiente di riflessione sul carico, che indica in che percentuale l'onda viene
+    riflessa.
+
+    \begin{equation}
+        \bar{K_L} = \frac{
+            \bar{Z_L} - \bar{Z_0}
+        }{
+            \bar{Z_L} + \bar{Z_0}
+        }
+    \end{equation}
+
+    dove $\bar{Z_L}$ è l'impedenza sul carico.
+
+    \subsection{Impedenza relativa alla distanza dal carico}
+
+    L'impedenza varia in base alla distanza a cui ci troviamo dal carico. Per calcolare l'impedenza ad una distanza nota,
+    si usa la seguente formula:
+
+    \begin{equation}
+        \bar{Z}(d) = \bar{Z_0} \frac{
+            \bar{Z_L} + j \bar{Z_0} tg (\beta d)
+        }{
+            \bar{Z_0} + j \bar{Z_L} tg (\beta d)
+        }
+    \end{equation}
+
+    \subsection{Linea ideale}
+
+    Una linea ideale è una linea con perdite nulle, in cui si verificano le seguenti condizioni:
+
+    \begin{equation}
+        \alpha = 0
+    \end{equation}
+
+    \begin{equation}    
+        \beta = \omega \sqrt{LC}
+    \end{equation}
+
 \end{document}
