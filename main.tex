@@ -271,6 +271,22 @@
         }
     \end{equation}
 
+    \subsection{Rapporto onda stazionaria}
+
+    Il ROS è una misura del disadattamento di impedenza tra la linea di trasmissione ed il suo carico. Il suo valore minimo
+    è 1 e corrisponde alla condizione di perfetto adattamento. I valori maggiori indicano un disadattamento dovuti ad una
+    riflessione parziale del carico.
+
+    \begin{equation}
+        ROS = \frac{Vmax}{Vmin} =
+        \frac{Imax}{Imin} =
+        \frac{
+            1 + |\bar{K_L}|
+        }{
+            1 - |\bar{K_L}|
+        }
+    \end{equation}
+
     \subsection{Linea ideale}
 
     Una linea ideale è una linea con perdite nulle, in cui si verificano le seguenti condizioni:
@@ -281,6 +297,92 @@
 
     \begin{equation}    
         \beta = \omega \sqrt{LC}
+    \end{equation}
+
+    \subsection{Linea adattata}
+
+    Una linea adattata è una linea senza riflessioni, paragonabile ad una linea di lunghezza infinita.
+    Nelle linee adattate si verifica che l'impedenza del carico è uguale all'impedenza caratteristica.
+
+    \begin{equation}
+        \bar{Z_L} = \bar{Z_0}
+    \end{equation}
+
+    Pertanto, il coefficiente di riflessione è zero:
+
+    \begin{equation}
+        \bar{K_L} = \frac{
+            \bar{Z_L} - \bar{Z_0}
+        }{
+            \bar{Z_L} + \bar{Z_0}
+        } = 0
+    \end{equation}
+
+    E il ROS (rapporto onda stazionaria) è 1
+
+    \begin{equation}
+        ROS = \frac{
+            1 + |\bar{K_L}|
+        }{
+            1 - |\bar{K_L}|
+        } = 1
+    \end{equation}
+
+    \subsection{Linea in corto circuito}
+
+    Una linea di trasmissione in corto circuito (ovvero senza carico, o con carico pari a zero) subisce una riflessione
+    totale ed uno sfasamento di 180 gradi, come possiamo verificare da $\bar{K_L} = -1$.
+
+    \begin{equation}
+        \bar{Z_L} = 0
+    \end{equation}
+
+    \begin{equation}
+        \bar{K_L} = \frac{
+            \bar{Z_L} - \bar{Z_0}
+        }{
+            \bar{Z_L} + \bar{Z_0}
+        } = -1
+    \end{equation}
+
+    Inoltre il ROS tende ad infinito, ulteriore dimostrazione che si tratta di una riflessione totale.
+
+    \subsection{Linea aperta}
+
+    Una linea di trasmissione aperta subisce una riflessione totale ma nessun sfasamento.
+
+    \begin{equation}
+        \bar{Z_L} = \infty
+    \end{equation}
+
+    \begin{equation}
+        \bar{K_L} = \frac{
+            \bar{Z_L} - \bar{Z_0}
+        }{
+            \bar{Z_L} + \bar{Z_0}
+        } = 1
+    \end{equation}
+
+    Anche in questo caso, il ROS tende ad infinito.
+    
+    \subsection{Trasformazione da forma cartesiana a polare}
+
+    \begin{equation}
+        Z = 10 + j20
+    \end{equation}
+
+    \begin{equation}
+        |Z| = \sqrt{10^2 + 20^2} = 500
+    \end{equation}
+
+    \begin{equation}
+        \theta = tan^{-1}(\frac{20}{10}) = -2.18
+    \end{equation}
+
+    \subsection{Trasformazione da forma polare a cartesiana}
+
+    \begin{equation}
+        Z = 500 
     \end{equation}
 
 \end{document}
