@@ -115,6 +115,10 @@
         \lambda = \frac{\omega}{k f}
     \end{equation}
 
+    \begin{equation}
+        \lambda = \frac{2 \pi}{f}
+    \end{equation}
+
     Da cui ricaviamo che la costante di fase (k) si può calcolare, sapendo la lunghezza d'onda, con:
 
     \begin{equation}
@@ -258,6 +262,18 @@
 
     dove $\bar{Z_L}$ è l'impedenza sul carico.
 
+    \subsection{Indice di riflessione relativo alla distanza dal carico}
+
+    \begin{equation}
+    \bar{K}(d) = \bar{K}_L \cdot e^{-j \beta d}
+    \end{equation}
+
+    dove $\beta$ si calcola con
+
+    \begin{equation}
+        \beta = \frac{2 \pi}{\lambda}
+    \end{equation}
+
     \subsection{Impedenza relativa alla distanza dal carico}
 
     L'impedenza varia in base alla distanza a cui ci troviamo dal carico. Per calcolare l'impedenza ad una distanza nota,
@@ -265,11 +281,23 @@
 
     \begin{equation}
         \bar{Z}(d) = \bar{Z_0} \frac{
-            \bar{Z_L} + j \bar{Z_0} tg (\beta d)
+            \bar{Z_L} + j \bar{Z_0} tan(\beta d)
         }{
-            \bar{Z_0} + j \bar{Z_L} tg (\beta d)
+            \bar{Z_0} + j \bar{Z_L} tan(\beta d)
         }
     \end{equation}
+
+    oppure
+
+    \begin{equation}
+        \bar{Z}(d) = \bar{Z}_0 \frac{
+            1 + \bar{K}(d)
+        }{
+            1 - \bar{K}(d)
+        }
+    \end{equation}
+
+
 
     \subsection{Rapporto onda stazionaria}
 
@@ -364,6 +392,17 @@
     \end{equation}
 
     Anche in questo caso, il ROS tende ad infinito.
+
+    \subsection{Trasformatori in quarto d'onda}
+
+    Una linea si considera adattata quando $\bar{Z}_L = \bar{Z}_0$. Una linea adattata è ottimale perchè ha una riflessione
+    nulla ed il trasferimento di potenza è massimo. Raramente una linea è adattata, per questo motivo si utilizza un trucco
+    che consiste nell'aggiungere alla linea un ulteriore segmento di lunghezza pari a $\frac{\lambda}{4}$ con un'impedenza
+    nota. Questa impedenza, che varia in base all'impedenza della linea e del carico, si calcola con la seguente formula:
+
+    \begin{equation}
+        \bar{Z}_0' = \sqrt{\bar{Z}_L \cdot \bar{Z}_0}
+    \end{equation}
     
     \subsection{Trasformazione da forma cartesiana a polare}
 
@@ -376,13 +415,109 @@
     \end{equation}
 
     \begin{equation}
-        \theta = tan^{-1}(\frac{20}{10}) = -2.18
+        \theta = tan^{-1}(\frac{20}{10}) = -2.18^{\circ}
     \end{equation}
 
     \subsection{Trasformazione da forma polare a cartesiana}
 
     \begin{equation}
-        Z = 500 
+        Z = 500 \angle -2.18^{\circ}
     \end{equation}
+
+    \begin{equation}
+        Z = 500 \cdot cos(-2.18^{\circ}) + j 500 \cdot sin(-2.18^{\circ})
+    \end{equation}
+
+    \section{Esercizi comuni}
+
+    \subsection{Calcolo dell'impedenza in ingresso}
+
+    L'impedenza in ingresso non è altro che l'impedenza alla distanza $l$ dove $l$ corrisponde alla lunghezza della
+    linea. Avendo quindi $Z_0$, $Z_L$ e $\lambda$ possiamo calcolare $\bar{Z}(l)$.
+
+    \begin{equation*}
+        \bar{Z_0} = 100 \hspace{0.2cm} \Omega
+    \end{equation*}
+
+    \begin{equation*}
+        \bar{Z_L} = 150 \hspace{0.2cm} \Omega
+    \end{equation*}
+
+    \begin{equation*}
+        l = 50 \hspace{0.2cm} cm
+    \end{equation*}
+
+    \begin{equation*}
+        \lambda = 150 \hspace{0.2cm} cm
+    \end{equation*}
+
+    Prima calcoliamo $\beta$
+
+    \begin{equation*}
+        \beta = \frac{2 \pi}{\lambda} = 0.0418
+    \end{equation*}
+
+    E poi con i dati che abbiamo possiamo calcolare $\bar{Z}(50 cm)$
+
+    \begin{equation*}
+        \bar{Z}(50 cm) = \bar{Z_0} \frac{
+            \bar{Z_L} + j \bar{Z_0} \cdot tan(\beta \cdot 50 cm)
+        }{
+            \bar{Z_0} + j \bar{Z_L} \cdot tan(\beta \cdot 50 cm)
+        } = 100 \frac{
+            150 + j 100 tan(0.0418 \cdot 50)
+        }{
+            100 + j 150 tan(0.0418 \cdot 50)
+        }
+    \end{equation*}
+
+    \begin{equation*}
+        \bar{Z}(50 cm) = 77.4 + j27.9
+    \end{equation*}
+
+    \subsection{Differenza tra coefficiente di riflessione nel caso di carico puramente resistivo e non}
+
+    Abbiamo una linea con un'impedenza $\bar{Z_0} = 50 \hspace{0.2cm} \Omega$ e vogliamo vedere la Differenza
+    del coefficiente di riflessione che abbiamo tra un carico puramente resistivo ed un carico con una componente
+    immaginria.
+
+    \begin{equation*}
+        \bar{Z}_{L1} = 100 \hspace{0.2cm} \Omega
+    \end{equation*}
+
+    \begin{equation*}
+        \bar{Z}_{L2} = 50 + j70 \hspace{0.2cm} \Omega
+    \end{equation*}
+
+    Nel primo caso, calcoliamo il coefficiente di riflessione con:
+
+    \begin{equation*}
+        \bar{K}_{L1} = \frac{
+            \bar{Z}_L - \bar{Z}_0
+        }{
+            \bar{Z}_L + \bar{Z}_0
+        } = \frac{
+            100 - 50
+        }{
+            100 + 50
+        } = 0.\bar{3}
+    \end{equation*}
+
+    Il che significa che il 33\% del segnale viene riflesso, mentre nel secondo caso abbiamo un coefficiente pari a:
+    
+    \begin{equation*}
+        \bar{K}_{L1} = \frac{
+            \bar{Z}_L - \bar{Z}_0
+        }{
+            \bar{Z}_L + \bar{Z}_0
+        } = \frac{
+            50 + j70 - 50
+        }{
+            50 + j70 + 50
+        } = 0.57 \angle 55^{\circ}
+    \end{equation*}
+
+    che indica che il 55\% del segnale viene riflesso ed ha uno sfasamento di 55 gradi.
+
 
 \end{document}
