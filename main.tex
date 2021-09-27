@@ -12,13 +12,15 @@
 \begin{document}
     \maketitle
 
-    \section{Utilizzo}
+    \section{Teoria}
+
+    \subsection{Utilizzo}
 
     La fibra ottica è un mezzo vetroso che convoglia un raggio luminoso al suo interno. 
     Il raggio può essere trasmesso solo se il materiale di cui è composto la fibra ha delle caratteristiche
     tali da risultare in una riflessione totale.
 
-    \section{Legge di Snell}
+    \subsection{Legge di Snell}
 
     Esiste una relazione tra l'angolo di incidenza, l'angolo con cui viene rifratto il raggio nel secondo mezzo e gli indici di
     rifrazione dei due mezzi. La relazione è descritta dalla legge di Snell:
@@ -35,7 +37,7 @@
         sen (\phi L) = \frac{n_2}{n_1}
     \end{equation}
 
-    \section{Apertura numerica}
+    \subsection{Apertura numerica}
 
     L'apertura numerica è un parametro che caratterizza l'accoppiamento della fibra con la sorgente di radiazione.
 
@@ -43,7 +45,7 @@
         NA = n_1 sin(\phi M) = \sqrt{n_1^2 - n_2^2}
     \end{equation}
 
-    \section{Angolo di accettazione}
+    \subsection{Angolo di accettazione}
 
     Il segnale deve entrare nella fibra con un certo angolo, definito angolo di accettazione. L'angolo di accettazione si
     può ricavare dall'apertura numerica:
@@ -52,7 +54,7 @@
         \phi M = arcsin(NA)
     \end{equation}
 
-    \section{Modi di propagazione}
+    \subsection{Modi di propagazione}
 
     Dati i parametri della fibra, possono esistere diversi raggi luminosi che la attraversano con percorsi diversi, distanze diverse
     e tempi diversi. Il numero di questi raggi è definito come modi di propagazione e si calcola con la seguente equazione:
@@ -61,5 +63,45 @@
         M = \frac{1}{2} (\frac{\pi \cdot d \cdot NA}{\lambda})^2
     \end{equation}
 
+    \subsection{Banda di una fibra}
+
+    La banda di una fibra si può calcolare sapendo la banda modale $B_m$ e la banda cromatica $B_c$.
+
+    \begin{equation}
+        B = \frac{1}{
+            \sqrt{
+                \frac{1}{B_m}^2 +
+                \frac{1}{B_c}^2
+            }
+        } \hspace{0.5cm} [MHz]
+    \end{equation}
+
+    Banda modale:
+
+    \begin{equation}
+        \Delta tm_o = 3333 \cdot \frac{n_1}{n_2} \cdot (n_1 - n_2) \hspace{0.5cm} [\frac{ns}{km}]
+    \end{equation}
+
+    \begin{equation}
+        Bm_0 = \frac{0.44 \cdot 10^3}{\Delta tm_0} \hspace{0.5cm} [MHz \cdot km]
+    \end{equation}
+
+    \begin{equation}
+        Bm = \frac{Bm_0}{l^{0.85}} \hspace{0.5cm} [MHz]
+    \end{equation}
+    
+    Banda cromatica:
+
+    \begin{equation}
+        \Delta tc_o = \mu \cdot \Delta \lambda \hspace{0.5cm} [\frac{ps}{km}]
+    \end{equation}
+
+    \begin{equation}
+        Bc_0 = \frac{0.44 \cdot 10^6}{\Delta tc_0} \hspace{0.5cm} [MHz \cdot km]
+    \end{equation}
+
+    \begin{equation}
+        Bc = \frac{Bc_0}{l} \hspace{0.5cm} [MHz]
+    \end{equation}
 
 \end{document}
