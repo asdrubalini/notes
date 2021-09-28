@@ -63,6 +63,15 @@
         M = \frac{1}{2} (\frac{\pi \cdot d \cdot NA}{\lambda})^2
     \end{equation}
 
+    \subsection{Lunghezza d'onda di taglio di una fibra monomodale}
+
+    Una fibra monomodale ha un solo modo che può essere propagato. Esiste una relazione tra il diametro del nucleo, l'apertura
+    numerica e la lunghezza d'onda limite o critica $\lambda c$.
+
+    \begin{equation}
+        d = 0.76 \frac{\lambda c}{NA} \hspace{0.5cm} [m]
+    \end{equation}
+
     \subsection{Banda di una fibra}
 
     La banda di una fibra si può calcolare sapendo la banda modale $B_m$ e la banda cromatica $B_c$.
@@ -77,6 +86,8 @@
     \end{equation}
 
     Banda modale:
+
+    La dispersione modale è nulla per le fibre monomodali    
 
     \begin{equation}
         \Delta tm_o = 3333 \cdot \frac{n_1}{n_2} \cdot (n_1 - n_2) \hspace{0.5cm} [\frac{ns}{km}]
@@ -103,5 +114,46 @@
     \begin{equation}
         Bc = \frac{Bc_0}{l} \hspace{0.5cm} [MHz]
     \end{equation}
+
+    \subsection{Scarto relativo degli indici di rifrazione}
+
+    \begin{equation}
+        S = \frac{n_1^2 - n_2^2}{2 \cdot n_1^2} \cdot 100
+    \end{equation}
+
+    \subsection{Perdite intrinseche ed estrinseche}
+
+    Le perdite intrinseche di una fibra sono quelle che dipendono dalla tecnologia, mentre quelle estrinseche dipendono da
+    difetti di produzione.
+
+    Intrinseche, per scattering:
+    \begin{equation}
+        P = \frac{0.85}{\lambda ^ 4}
+    \end{equation}
+
+    Estrinseche:
+
+    Tronchi con diametro diverso:
+    \begin{equation}
+        A_d = 20 \cdot log(\frac{d_s}{d_r}) \hspace{0.5cm} [dB]
+    \end{equation}
+
+    Tronchi con apertura numerica diversa:
+    \begin{equation}
+        A_NA = 20 \cdot log(\frac{NA_s}{NA_r}) \hspace{0.5cm} [dB]
+    \end{equation}
+
+    Tronchi con indice di rifrazione diversi:
+    \begin{equation}
+        \tau = \frac{4}{
+            2 + \frac{n_1s}{n_1r} + \frac{n_1r}{n_1s}
+        }
+    \end{equation}
+    \begin{equation}
+        A_N = 10 \cdot log(\frac{1}{\tau}) \hspace{0.5cm} [dB]
+    \end{equation}
+
+
+    
 
 \end{document}
