@@ -27,8 +27,12 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           # The root LaTeX file to be compiled
-          root_file: main.tex
-          post_compile: mkdir build/ && cp ./main.pdf build/ && cp ./index.html build/
+          root_file: |
+            fibra_ottica.tex
+            onde_elettromagnetiche.tex
+            automi.tex
+
+          post_compile: mkdir build/ && cp ./*.pdf build/ && cp ./index.html build/
       
       - name: Deploy to pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
@@ -43,4 +47,4 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: false
           title: "Generated PDF"
-          files: main.pdf
+          files: *.pdf
