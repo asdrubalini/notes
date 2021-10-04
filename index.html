@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+        .container {
+            display: flex;
+            flex-direction: column;
         }
 
-        embed {
-            height: 100vh;
-            width: 100vw;
+        a {
+            margin-bottom: 2px;
         }
     </style>
 
     <title>Document</title>
 </head>
 <body>
-    <a href="fibra_ottica.pdf">Fibra ottica</a>
-    <a href="onde_elettromagnetiche.pdf">Onde elettromagnetiche</a>
-    <a href="automi.pdf">Automi</a>
+    <h3>Click to download PDFs</h3>
+
+    <div class="container">
+        <a href="fibra_ottica.pdf">Fibra ottica</a>
+        <a href="onde_elettromagnetiche.pdf">Onde elettromagnetiche</a>
+        <a href="automi.pdf">Automi</a>
+    </div>
 </body>
 </html>
