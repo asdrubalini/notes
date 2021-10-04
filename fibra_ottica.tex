@@ -42,7 +42,11 @@
     L'apertura numerica è un parametro che caratterizza l'accoppiamento della fibra con la sorgente di radiazione.
 
     \begin{equation}
-        NA = n_1 sin(\phi M) = \sqrt{n_1^2 - n_2^2}
+        NA = n_0 sin(\phi M) = \sqrt{n_1^2 - n_2^2}
+    \end{equation}
+
+    \begin{equation}
+        NA = n_1 cos(\phi L)
     \end{equation}
 
     \subsection{Angolo di accettazione}
@@ -61,6 +65,17 @@
 
     \begin{equation}
         M = \frac{1}{2} (\frac{\pi \cdot d \cdot NA}{\lambda})^2
+    \end{equation}
+
+    \subsection{Distanza massima di un raggio}
+
+    Ogni modo di propagazione corrisponde ad un raggio che percorre un percorso diverso all'interno
+    della fibra, ed essendo la velocità sempre la stessa, le distanze possono variare. La distanza minima
+    corrisponde alla lunghezza della fibra, mentre la distanza massima si può calcolare con gli indici
+    di rifrazione di nucleo e mantello.
+
+    \begin{equation}
+        d_{max} = \frac{l \cdot n_1}{n_2}
     \end{equation}
 
     \subsection{Lunghezza d'onda di taglio di una fibra monomodale}
@@ -152,8 +167,5 @@
     \begin{equation}
         A_N = 10 \cdot log(\frac{1}{\tau}) \hspace{0.5cm} [dB]
     \end{equation}
-
-
-    
 
 \end{document}
