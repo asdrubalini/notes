@@ -47,4 +47,7 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: false
           title: "Generated PDF"
-          files: *.pdf
+          files: |
+            fibra_ottica.pdf
+            onde_elettromagnetiche.pdf
+            automi.pdf
