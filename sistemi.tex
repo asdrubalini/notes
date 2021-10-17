@@ -1,0 +1,41 @@
+\documentclass{article}
+
+\usepackage{amsmath, mathtools, amsthm}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\title{Networking}
+\author{github.com/asdrubalini}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+    \section{TCP e UDP}
+    TCP: Orientato alla connessione
+    UDP: Non richiede una connessione
+
+    Protocollo TFTP su rete locale non poggia su TCP ma su UDP perchè la rete locale ha una bassa latenza e una bassa probabilità di errori.
+
+    Anche il protocollo DNS su rete locale usa UDP, mentre su internet usa TCP.
+    Due server DNS tra loro non dialogano un UDP ma in TCP, sempre sulla porta 53.
+
+    Il DNS è un protocollo critico perchè i DNS di tutto il mondo devono parlarsi e scambiarsi informazioni. I regimi dittatoriali configurano i DNS presenti sul territorio in modo che non diano tutte le informazioni.
+
+    Ognuno si deve fidare delle informazioni che gli vengono rilasciate dall'altro.
+    Ci sono delle autorità superiori che controllano chi possiede i DNS. Se si verificano delle anomalie, le autorità riescono a risalire a chi ha creato le anomalie.
+
+    Socket = IP + Porta
+    L'header del TCP normalmente ha 20 bytes + da 0 a 32 bytes opzionali.
+
+    Sequence number = TCP tiene sotto controllo il flusso e da un ordine ai pacchetti.
+    Acknowledgement number = chi riceve i dati comunica a chi li ha trasmessi il corretto recapito dei dati.
+
+    Bit di controllo = quali funzioni sono attive in quel pacchetto. Ad esempio, se il pacchetto è parte di un segmento fragmentato oppure no. Oppure se il pacchetto contiene oppure no un ACK number.
+
+    Window = delimitare il numero massimo di pacchetti che possono essere spediti senza ricevere un ACK.
+
+    Checksum = controllo degli errori nella trasmissione (sia header che dati)
+
+\end{document}
