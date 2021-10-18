@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage{amsmath, mathtools, amsthm}
+\usepackage{amsmath, mathtools, amsthm, tikz}
 
 \usepackage{graphicx}
 \graphicspath{ {./images/automi} }
@@ -49,6 +49,39 @@
     Tutte le combinazioni logiche sono state radunate e influenzano un marker.
     Esiste un contatto SpecialMerker0.0 (SM00) che indica lo stato di accensione e quindi è sempre ON.
     SpecialMerker0.1 (SM01) è ON solo durante il primo ciclo. Ciclo = lettura degli ingressi. Possiamo usarlo per passare allo stato di accensione.
+
+    Per ogni stato serve un flag (ovvero un merker).
+
+    \begin{enumerate}
+        \item Merker 0.0 (rete AND)
+        \item Merker 1.0 (fermo)
+        \item Merker 1.1 (irrigazione)
+        \item Merker 1.2 (avaria)
+    \end{enumerate}
+
+    5 network per risolvere l'automa + 1 per la rete AND
+
+    \begin{center}
+        \includegraphics[width=\textwidth]{irrigazione_state.png}
+    \end{center}
+
+    (S) = bobina di settaggio
+
+    Ogni volta che cambio lo stato, setto quello nuovo e resetto quello precedente.
+    In tutto 6 network.
+
+    Aggiungere anche un allarme acqua che viene attivato quando non c'è abbastanza acqua.
+
+    Tabella di stato (stato -> uscita)
+    \begin{enumerate}
+        \item Irriga $\rightarrow$ Q1.0
+        \item Allarme $\rightarrow$ Q1.1
+        \item Livello $\rightarrow$ Q1.2
+    \end{enumerate}
+
+    Mettere tutto in bella e consegnare in PDF
+
+    Avaria deve essere sempre su
 
 
 \end{document}
