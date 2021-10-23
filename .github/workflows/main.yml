@@ -28,32 +28,22 @@ jobs:
         with:
           # The root LaTeX file to be compiled
           root_file: |
-            fibra_ottica.tex
-            onde_elettromagnetiche.tex
-            automi.tex
-            serie_di_fourier.tex
-            storia.tex
-            leopardi.tex
+            telecomunicazioni/fibra_ottica.tex
+            telecomunicazioni/onde_elettromagnetiche.tex
+            tps/automi.tex
+            telecomunicazioni/serie_di_fourier.tex
+            italiano/leopardi.tex
+            storia/storia.tex
+            sistemi/sistemi.tex
 
-          post_compile: mkdir build/ && cp ./*.pdf build/ && cp ./index.html build/
+          post_compile: |
+            mkdir build/ && 
+            find . -name '*.pdf' -exec cp --parents \{\} build \; && 
+            rm -rf build/build && 
+            cp index.html build/index.html
       
       - name: Deploy to pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: pages
           folder: build
-      
-      - name: Make release
-        uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: false
-          title: "Generated PDF"
-          files: |
-            fibra_ottica.pdf
-            onde_elettromagnetiche.pdf
-            automi.pdf
-            serie_di_fourier.pdf
-            storia.pdf
-            leopardi.pdf
