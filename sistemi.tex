@@ -38,4 +38,41 @@
 
     Checksum = controllo degli errori nella trasmissione (sia header che dati)
 
+    Selective ACK = vengono reinviati solo i segmenti persi e non tutti, come è di default.
+
+    Durante la fase di connessione (3 way handshake) si settano anche alcuni parametri della comunicazione che possono essere risettati durante la connessione. Ad esempio windows size dove ci si mette d'accordo sul numero massimo di segmenti che possono essere spediti prima di ricevere l'ACK.
+
+    Se in un determinato momento ci sono tanti host che parlano con un server, il suo buffer si riempie e il server manda dei segmenti chiedendo di ridurre la finestra dei pacchetti massimi che si possono spedire ogni ACK.
+
+    I protocolli di oggi utilizzano le sliding windows e inviano un ACK ogni due segmenti che ricevono.
+
+    Le dimensioni della finestra non vengono definite in termini di segmenti ma in termini di bytes, quindi la finestra viene modificata ogni due segmenti.
+
+    Tipicamente la dimensione massima di un segmento è di 1460 bytes ma può essere modificato nel corso della connessione.
+
+    Alla fine dipende sempre dai tempi.
+
+    Guardare a casa il capitolo 15.
+
+    \section{Dominio di coalisione}
+
+    Dominio di coalisione è l'insieme delle linee di una LAN in cui può esserci coalisione fisica = due dispositivi che inviano dei dati insieme.
+    Ecludendo le connessioni wireless, sulle LAN con connessioni fisiche, il dominio di coalisione è il singolo tratto che connette i PC allo switch. La coalisione viene evitata dal fatto che la tipologia di connessione è in full duplex (però essendo in full duplex non c'è comunque collisione).
+
+    Il dominio di broadcast è l'insieme dello spazio di rete raggiungibile dai pacchetti broadcast.
+    Le reti VLAN servono a segmentare le reti in modo da ridurre i domini di broadcast.
+    Un altro modo per segmentare una rete è quello di utilizzare un router con più interfacce e su ogni interfaccia viene suddivisa un'intera rete in sottoreti.
+
+    I router aziendali ormai non hanno più tante interfacce perchè con il meccanismo della VLAN. Normalmente un rouer aziendale non ha più di 4 interfacce. Un paio vengono usate per il collegamento ad internet. Un'interfaccia per le sottoreti interne ed eventualmente un'altra interfaccia di collegamento diretto verso le altre filiali.
+
+    Le reti VLAN danno molta flessibilità.
+
+    La virtualizzazione non ha bisogno degli switch layer 3, sono sufficienti quelli di layer 2. Per configurarlo si va sugli switch e si crea una nuova VLAN con un certo nome. Poi comincio a lavorare sulla porta o sul range di porte che voglio usare per una determinata VLAN. Ad esempio ho uno switch 24 porte, su 12 voglio avere una VLAN e sulle altre 12 un'altra. Dichiaro le due VLAN, prendo il range delle prime 12 porte e faccio il tag della prima. Poi prendo l'altro range e faccio il tag della seconda.
+
+    Esercizio: tre VLANs, un PC per ogni VLAN, un solo switch. Sulla VLAN 1 mettiamo l'indirizzo IP dello switch che fa da SVI (Switch Virtual Interface) con tre PC. Quindi la VLAN 1 non verrà mai usata per creare una VLAN. Per questo motivo di parte della VLAN 2.
+
+    Di default le porte sono impostate per non far passare le VLAN. Posso dire allo switch di far transitare tutte le VLAN su una porta.
+
+    in una delle tre vlan bisogna mettere due pc. poi bisogna aggiungere un altro pc che non appartiene a nessuna vlan così facciamo tutte le prove. 
+
 \end{document}
