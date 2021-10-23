@@ -37,9 +37,13 @@ jobs:
             sistemi/sistemi.tex
 
           post_compile: |
-            mkdir build/ && 
-            find . -name '*.pdf' -exec cp --parents \{\} build \; && 
-            rm -rf build/build && 
+            mkdir build/ && cd build/ && mkdir telecomunicazioni tps italiano storia sistemi &&
+            cp ../telecomunicazioni/*.pdf telecomunicazioni/ &&
+            cp ../tps/*.pdf tps/ &&
+            cp ../italiano/*.pdf italiano/ &&
+            cp ../storia/*.pdf storia/ &&
+            cp ../sistemi/*.pdf sistemi/ &&
+            cd .. &&
             cp index.html build/index.html
       
       - name: Deploy to pages
