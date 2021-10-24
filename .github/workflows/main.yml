@@ -29,14 +29,16 @@ jobs:
             italiano/leopardi.tex
             storia/storia.tex
             sistemi/sistemi.tex
+            inglese/grammatica.tex
 
           post_compile: |
-            mkdir build/ && cd build/ && mkdir telecomunicazioni tps italiano storia sistemi &&
+            mkdir build/ && cd build/ && mkdir telecomunicazioni tps italiano storia sistemi inglese &&
             cp ../{fibra_ottica,onde_elettromagnetiche,serie_di_fourier}.pdf telecomunicazioni/ &&
             cp ../automi.pdf tps/ &&
             cp ../leopardi.pdf italiano/ &&
             cp ../storia.pdf storia/ &&
             cp ../sistemi.pdf sistemi/ &&
+            cp ../grammatica.pdf inglese/ &&
             cd .. &&
             cp index.html build/index.html
       
