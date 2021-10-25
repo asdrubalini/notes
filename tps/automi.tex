@@ -92,4 +92,56 @@
     Solitamente una rete di sensori è composta da sensori wireless.
     Spesso, uno dei problemi da affrontare è l'alimentazione.
 
+    \section{Come lavora un PLC}
+
+    Nomenclatura:
+    \begin{enumerate}
+        \item Merker: M
+        \item Ingressi: I
+        \item Uscite: U
+        \item Temporizzatori: T
+    \end{enumerate}
+
+    Tutte queste cose occupano risorse nella memoria del PLC.
+    \vspace{1cm}
+
+    Il PLC lavora sempre ciclicamente, ogni ciclo è fatto da questi step:
+
+    \begin{enumerate}
+        \item Lettura ingressi $\rightarrow$ Immagine di processo degli ingressi d'ora in poi gli ingressi possono cambiare ma il PLC fa affidamento a quelli appena letti
+        \item Esecuzione programma $\rightarrow$ Elabora il programma scritto e va a modificare qualcosa nelle risorse ma finchè non arrivo in fondo al programma e scrivo le uscite, le uscite non cambiano
+        \item Scrittura delle uscite
+    \end{enumerate}
+
+    Un sistema realtime assicura il fatto che ogni millisecondo gli ingressi vengono letti.
+
+    \subsection{Temporizzatori}
+
+    Esistono tre tipi di temporizzatori:
+
+    \begin{enumerate}
+        \item TON $\rightarrow$ dopo un certo tempo si accende
+        \item TOFF $\rightarrow$ accende subito qualcosa e poi lo spegne
+        \item TONR
+    \end{enumerate}
+
+    Un timer può essere visto come una funzione lineare che ogni base tempi viene incrementata. Quando il conteggio supera il tempo che ho impostato, l'uscita viene modificata
+    \newpage
+    
+    Un temporizzatore occupa un'area di memoria di 2 bytes. Un bit contiene l'informazione del contatto. \newline
+    Fino alla terza generazione dei PLC, le basi tempi erano fisse per ogni temporizzatore. Nei PLC della nuova generazione posso decidere io la base tempi, essendo puramente software.
+
+    Traccia: costruire un'automa che faccia ping-pong. Uno stato chiamato ping ed uno chiamato pong.
+
+    \begin{enumerate}
+        \item Desc automa
+        \item Tabella ingressi
+        \item Tabella risorse
+        \item Tabella temporizzatori
+        \item Tabella uscite
+    \end{enumerate}
+
+    Nell'esercitazione base del timer bisogna usare necessariamente 9 righe.\newline
+    Versione aggiornata con il lampeggio di un led alla fine
+
 \end{document}
