@@ -156,4 +156,52 @@
     Tante volte le innovazioni tecnologiche partono da esigenze di tipo militari.
     MEMS: elementi sensitivi che forniscono il dato in forma digitale.
 
+    \section{Esercitazione semaforo}
+
+    Centro di lavoro: una macchina che esegue delle operazioni in modo sequenziale. Creare un piccolo sistema che riusciamo a programmare che poi potremo anche gestire da remoto.
+
+    Progettazione di un sistema semaforico per due vie, quella principale e quella secondaria.
+
+    Ogni stato cambia con il passare del tempo. Sarà necessario definire le durate.
+    Inoltre, durante la notte i semafori non sono normalmente operativi ma lampeggiano di giallo. Abbiamo quindi due cicli distinti, un ciclo giorno ed un ciclo notte che si occupa semplicemente di far lampeggiare i semafori. A volte il ciclo notte coincide anche con il "fuori servizio".
+
+    \vspace{1cm}
+    
+    \subsection{Possibili stati}
+    Abbiamo 5 stati in cui il sistema si può trovare in ogni momento:
+    \begin{enumerate}
+        \item 
+        \item 
+        \item 
+        \item 
+        \item Lampeggiante: attivabile da interruttore fuori servizio o durante la notte.
+    \end{enumerate}
+
+    \vspace{1cm}
+
+    \subsection{Contatti}
+    Contatti:
+    \begin{enumerate}
+        \item Fuori servizio (attivo alto quando il sistema viene messo fuori servizio)
+        \item Orologio notte (attivo alto quando l'orologio segna notte)
+    \end{enumerate}
+
+    Il passaggio tra notte e giorno non può essere fatto a caso ma dovrà essere fatto in condizioni di sicurezza. Se sta lampeggiando devo decidere come entrare nel ciclo normale, magari con entrambe le luci rosse accese.
+
+    \vspace{1cm}
+
+    \subsection{Struttura documentazione}
+    Passi da svolgere:
+    \begin{enumerate}
+        \item Descrivo
+        \item Definisco ingressi ed uscite
+        \item Scelgo le risorse che uso nel PLC
+        \item Diagramma degli stati
+        \item Tabella dei temporizzatori
+        \item Registrare un video del funzionamento
+    \end{enumerate}
+
+    Da consegnare entro Lunedì prossimo.
+
+
 \end{document}
