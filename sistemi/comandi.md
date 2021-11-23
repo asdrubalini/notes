@@ -6,7 +6,7 @@
 (global) line console 0			// entra line console
     password cisco			// setta password console
     login
-(global) line vty 0 15			// entra lineee vty da 0 a 15 
+(global) line vty 0 15			// entra lineee vty da 0 a 15
     password cisco			// setta pass cisco alle linee
     login
 (global) service password-encription    // cripta password
@@ -31,7 +31,7 @@
 (global) line console 0			// entra line console
     password cisco			// setta password console
     login
-(global) line vty 0 15			// entra lineee vty da 0 a 15 
+(global) line vty 0 15			// entra lineee vty da 0 a 15
     password cisco			// setta pass cisco alle linee
     login
 (global) service password-encription    // cripta password
@@ -39,14 +39,14 @@
 (global) ipv6 unicast-routing   			//attiva ipv6 sul router
 (global) int g0/0/0   					//entra gigabit eternet 0/0/0
 (global 0/0/0) ipv6 addr 2001:bada:ebe:fede::1/64   	//da ipv6 al router --gateway--
-(global 0/0/0) no shut  
+(global 0/0/0) no shut
 (global 0/0/0) ipv6 addr fe80::1 link-local   		//ipv6 link local
 (global) show run			// x vedere le configurazioni del router
 (global) show ip interface brief	// fa vedere le interfaccie
 (global) wr o copy running-config startup-config	// salva configurazioni
 (global) show sta			// x vedere il file salvato delle configurazioni
 (global) reload				// torna indietro al vecchio salvataggio
-(global) erase startup-config		// torna impostazioni di fabbrica 
+(global) erase startup-config		// torna impostazioni di fabbrica
 ```
 
 # Routing table
@@ -61,14 +61,14 @@ Inserire gli indirizzi di rete delle reti connesse al router opposto + aggiunger
 
 - attivare servizio AAA nel server desiderato
 - client name: indifferente
-client ip: ip del router
-secret: esempio "ciao"
-username: credenziali utente
-password: credenziali utente
+  client ip: ip del router
+  secret: esempio "ciao"
+  username: credenziali utente
+  password: credenziali utente
 - attivare WPA2 Enterprise nel router wireless, compilo tutti i campi e inserire nel shared secret la stessa parola che ho inserire nella sezione "secret"
-nel server Radius nel servizio AAA
-- Nel laptop, nella sezione Wireless all'interno di "Config", inserire lo stesso SSID inserito nel router wireless, 
-selezionare WPA2 e inserire le credenziali dell'utente precedentemente settati all'interno del server.
+  nel server Radius nel servizio AAA
+- Nel laptop, nella sezione Wireless all'interno di "Config", inserire lo stesso SSID inserito nel router wireless,
+  selezionare WPA2 e inserire le credenziali dell'utente precedentemente settati all'interno del server.
 
 # VLAN
 
@@ -110,3 +110,63 @@ interface <interface-id>.<subinterface-id>
 encapsulation dot1q <vlan-id> native
 ```
 
+Sicurezza:
+
+```
+no ip domain-lookup
+security passwords min-length 10
+```
+
+Impostare password nella line console:
+
+```
+conf t
+line con 0
+password ciaociaociao
+login
+end
+```
+
+```
+conf t
+line vty 0 4
+exec-timeout 4201
+login
+end
+```
+
+```
+enable password @Cons1234!
+```
+
+```
+banner motd #se entri ti denuncio#
+```
+
+```
+service password-encryption
+```
+
+Utente con password:
+
+```
+username NETadmin secret mypassword
+username NETadmin privilege 15 secret S3cr3tP4ssw0rd
+```
+
+```
+hostname router-brutto
+ip domain-name router-brutto
+
+crypto key generate rsa
+ip ssh version 2
+line vty 0 4
+transport input ssh
+```
+
+Disabilitare porte non utilizzare:
+
+```
+interface range Gi0/1-24
+shutdown
+```
