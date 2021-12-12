@@ -3,7 +3,7 @@
 \usepackage{amsmath, mathtools, amsthm, tikz}
 
 \usepackage{graphicx}
-\graphicspath{ {./images/automi} }
+\graphicspath{ {./images/automi/} {./tps/images/automi/} }
 
 \title{Automi}
 \author{github.com/asdrubalini}
@@ -81,7 +81,150 @@
 
     Mettere tutto in bella e consegnare in PDF
 
-    \section{Perchè usiamo}
+    \section{Perchè usiamo i sensori:}
 
+    \begin{enumerate}
+        \item Perchè sono una tecnologia emergente
+        \item Perchè potrebbero essere utili a chi frequenterà l'università
+        \item Perchè potrebbero essere richiesti nell'esame di Stato
+    \end{enumerate}
+
+    Solitamente una rete di sensori è composta da sensori wireless.
+    Spesso, uno dei problemi da affrontare è l'alimentazione.
+
+    \section{Come lavora un PLC}
+
+    Nomenclatura:
+    \begin{enumerate}
+        \item Merker: M
+        \item Ingressi: I
+        \item Uscite: U
+        \item Temporizzatori: T
+    \end{enumerate}
+
+    Tutte queste cose occupano risorse nella memoria del PLC.
+    \vspace{1cm}
+
+    Il PLC lavora sempre ciclicamente, ogni ciclo è fatto da questi step:
+
+    \begin{enumerate}
+        \item Lettura ingressi $\rightarrow$ Immagine di processo degli ingressi d'ora in poi gli ingressi possono cambiare ma il PLC fa affidamento a quelli appena letti
+        \item Esecuzione programma $\rightarrow$ Elabora il programma scritto e va a modificare qualcosa nelle risorse ma finchè non arrivo in fondo al programma e scrivo le uscite, le uscite non cambiano
+        \item Scrittura delle uscite
+    \end{enumerate}
+
+    Un sistema realtime assicura il fatto che ogni millisecondo gli ingressi vengono letti.
+
+    \subsection{Temporizzatori}
+
+    Esistono tre tipi di temporizzatori:
+
+    \begin{enumerate}
+        \item TON $\rightarrow$ dopo un certo tempo si accende
+        \item TOFF $\rightarrow$ accende subito qualcosa e poi lo spegne
+        \item TONR
+    \end{enumerate}
+
+    Un timer può essere visto come una funzione lineare che ogni base tempi viene incrementata. Quando il conteggio supera il tempo che ho impostato, l'uscita viene modificata
+    \newpage
+    
+    Un temporizzatore occupa un'area di memoria di 2 bytes. Un bit contiene l'informazione del contatto. \newline
+    Fino alla terza generazione dei PLC, le basi tempi erano fisse per ogni temporizzatore. Nei PLC della nuova generazione posso decidere io la base tempi, essendo puramente software.
+
+    Traccia: costruire un'automa che faccia ping-pong. Uno stato chiamato ping ed uno chiamato pong.
+
+    \begin{enumerate}
+        \item Desc automa
+        \item Tabella ingressi
+        \item Tabella risorse
+        \item Tabella temporizzatori
+        \item Tabella uscite
+    \end{enumerate}
+
+    Nell'esercitazione base del timer bisogna usare necessariamente 9 righe.\newline
+    Versione aggiornata con il lampeggio di un led alla fine
+
+    \section{Reti di sensori}
+
+    Le reti di sensori predittive vengono create dagli ingegneri e permettono, attraverso funzioni matematiche, di predire la rottura di qualcosa.
+
+    \begin{enumerate}
+        \item Problemi di alimentazione: ad esempio se installo un sensore che può rilevare in anticipo le valanghe, dobbiamo tenere conto di quanto può durare la batteria
+        \item La comunicazione wireless ha un raggio limitato. Se voglio coprire distanze ampie devo trovare il modo di avere dei modi che fanno da ponte tra una rete e quella successiva
+    \end{enumerate}
+
+    Tante volte le innovazioni tecnologiche partono da esigenze di tipo militari.
+    MEMS: elementi sensitivi che forniscono il dato in forma digitale.
+
+    \section{Esercitazione semaforo}
+
+    Centro di lavoro: una macchina che esegue delle operazioni in modo sequenziale. Creare un piccolo sistema che riusciamo a programmare che poi potremo anche gestire da remoto.
+
+    Progettazione di un sistema semaforico per due vie, quella principale e quella secondaria.
+
+    Ogni stato cambia con il passare del tempo. Sarà necessario definire le durate.
+    Inoltre, durante la notte i semafori non sono normalmente operativi ma lampeggiano di giallo. Abbiamo quindi due cicli distinti, un ciclo giorno ed un ciclo notte che si occupa semplicemente di far lampeggiare i semafori. A volte il ciclo notte coincide anche con il "fuori servizio".
+
+    \vspace{1cm}
+    
+    \subsection{Possibili stati}
+    Abbiamo 5 stati in cui il sistema si può trovare in ogni momento:
+    \begin{enumerate}
+        \item 
+        \item 
+        \item 
+        \item 
+        \item Lampeggiante: attivabile da interruttore fuori servizio o durante la notte.
+    \end{enumerate}
+
+    \vspace{1cm}
+
+    \subsection{Contatti}
+    Contatti:
+    \begin{enumerate}
+        \item Fuori servizio (attivo alto quando il sistema viene messo fuori servizio)
+        \item Orologio notte (attivo alto quando l'orologio segna notte)
+    \end{enumerate}
+
+    Il passaggio tra notte e giorno non può essere fatto a caso ma dovrà essere fatto in condizioni di sicurezza. Se sta lampeggiando devo decidere come entrare nel ciclo normale, magari con entrambe le luci rosse accese.
+
+    \vspace{1cm}
+
+    \subsection{Struttura documentazione}
+    Passi da svolgere:
+    \begin{enumerate}
+        \item Descrivo
+        \item Definisco ingressi ed uscite
+        \item Scelgo le risorse che uso nel PLC
+        \item Diagramma degli stati
+        \item Tabella dei temporizzatori
+        \item Registrare un video del funzionamento
+    \end{enumerate}
+
+    Da consegnare entro Lunedì prossimo.
+
+    \section{Rete di sensori wireless}
+    Obiettivi di una rete di sensori wireless: quali obiettivi ci si deve porre affinchè una rete svolga il suo lavoro in efficacia ed efficienza.
+
+    Le informazioni raccolte devono essere affidabili.\\
+    Sono importanti le certificazioni.\\
+    Se prendo un Arduino qualsiasi e metto in piedi una rete LoraWAN, sono affidabile nella raccolta delle informazioni? No, perchè Arduino non ha nessuna certificazione industriale.
+
+    Un'azienda non può utilizzare una board non certificata.\\
+    Certezza dei dati = nel momento in cui vengono forniti più parametri, i valori forniti devono essere coerenti. I dati che vengono forniti devono essere compatibili tra loro.\\
+    I dati devono essere sempre disponibili.
+
+    Ci sono anche dei motivi secondari, che non significa che sono di secondo ordine.\\
+    Configurazione statica della rete = far si che i dispositivi riescano a dialogare in maniera efficiente.
+    
+    Supponiamo che stia utilizzando uno standard di trasmissione. Dopo due anni quello standard riceve un upgrade. Devo stare attento ad aggiornare tutto.\\
+    Minimizzazione del costo economico dei nodi.\\
+    Il progettista deve bilanciare efficienza energetica ed efficacia applicativa.\\
+    Devo essere bravo a scrivere il codice in modo tale che stia all'interno della memoria del dispositivo.\\
+    Devono essere anche energeticamente efficienti.\\
+    Se ho delle reti di sensori che raccolgono dei dati, il flusso delle informazioni prevalentemente va dai sensori al gateway, anche se in alcune situazioni il flusso funziona nel verso opposto.
+
+    Alcuni microcontrollori hanno i sensori integrati.
+    Grazie alla comunicazione tra nodi, un sensore può comunicare a più lunga distanza.
 
 \end{document}
