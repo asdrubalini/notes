@@ -9,7 +9,7 @@
 (global) line vty 0 15			// entra lineee vty da 0 a 15
     password cisco			// setta pass cisco alle linee
     login
-(global) service password-encription    // cripta password
+(global) service password-encryption    // cripta password
 (global) banner motd #testo#		// banner
 (global) int vlan1					// entra nella vlan1 per dare ip alllo sw
     ip address 10.10.10.254 255.255.255.0		// da ip allo sw
@@ -34,7 +34,7 @@
 (global) line vty 0 15			// entra lineee vty da 0 a 15
     password cisco			// setta pass cisco alle linee
     login
-(global) service password-encription    // cripta password
+(global) service password-encryption    // cripta password
 (global) banner motd #testo#		// banner
 (global) ipv6 unicast-routing   			//attiva ipv6 sul router
 (global) int g0/0/0   					//entra gigabit eternet 0/0/0
