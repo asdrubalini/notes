@@ -174,5 +174,18 @@
 
     richiedono dei server interni all'azienda che gestiscono le varie linee interne ed il centralino aziendale. IP phone e VoIP di solito hanno la priorità massima.
 
+    \subsection{Protocollo di routing RIP}
+    Il packet filtering basato su MAC decide quali pacchetti possono passare in base all'indirizzo MAC di sorgente.
+
+    Reti di sensori -> nodi -> struttura del nodo -> nella struttura del nodo, ricetrasmettitore.
+    Il nodo sensore all'interno della rete trasmette i dati. Se tutti i nodi sensori sono abbastanza vicini al gateway, tutti i nodi comunicano solo con il gateway. Se sono lontani invece, un nodo può comunicare con quello vicino che a sua volta invierà i dati al gateway.
+
+    Il nodo sensore riceve informazioni dal gateway. Il gateway potrebbe voler inviare messaggi di controllo al sensore, oppure dei comandi.
+
+    ESEMPIO:
+    Supponiamo che ci sia una rete di sensore. Ogni sensore può comunicare direttamente al gateway tranne uno, N5 che è troppo lontano e non arriva al gateway. Il sensore può comunicare ad N3 che passerà i messaggi direttamente al gateway. In questo caso, N3 ha la funzione di trasmettitore e di ricettore. Senza andare a coinvolgere il microcontrollore, il ricetrasmettitore che è intelligente fa da packet filtering sul MAC. Riceve il segnale, legge il MAC e se non appartiene nè ad N5 nè al gateway droppa il pacchetto e non lo passa al microcontrollore. Il packet filtering ha senso solo in ricezione.
+
+    L'hardware che riceve i pacchetti è in grado di comprendere solo fino al livello 2 e quindi può filtrare solo in base al MAC.
+
 
 \end{document}
