@@ -236,4 +236,30 @@
 
     Fare una scaletta
 
+    \section{Risoluzione di problemi autonomamente con PLC}
+    RTU: trasporta dati da e per zone nell'impianto.
+    \\
+    In passato si usava il protocollo SCADA, oggi si usa solo Ethernet industriale o industrial Ethernet.
+    \\
+    \begin{enumerate}
+        \item IT: Information Technology, trasporta dati e non viene usata per produrre qualcosa di fisicamente tangibile.
+        \item OT: Operation Technology, rete che si occupa di controllare robot, far comunicare sensori, qualsiasi macchina che viene utilizzata per produrre qualcosa di tangibile.
+    \end{enumerate}
+    Questi due mondi ormai iniziano a dialogare tra di loro, tutto viene gestito in modo informatico. Tutto viaggia su rete.
+    \\
+    Profinet è un sistema di comunicazione real-time. Le applicazioni profinet comunicano attraverso ethernet utilizzando protocolli già conosciuti con un'aggiunta di un protocollo profinet real-time che deve assicurare la comunicazione in un tempo ben stabilito. Tutte le altre applicazioni invece possono viaggiare con tempi non certi. A livello industriale non ci sono switch normali ma ci sono switch con priorità su alcuni pacchetti. A livello di rete interna, quando un pacchetto prioritario arriva ad uno switch, quello switch deve rilevare la priorità. Lo switch deve essere in grado di accedere ai livelli superiori.
+    \\
+    Si aggiunge la complicazione di dover far comunicare due mondi che fino a poco tempo fa erano considerati separati.
+    \\
+    L'OPC permette lo scambio di dati tra il livello IT ed OT. I dati vengono scambiati sottoforma di stringhe di testo. Lo standard OPC inizia ad essere sostituito da altre soluzioni più informatiche, ad esempio un raspberry con node-red o dispositivi simili. Node-red permette a chi non sa programmare di scrivere programmi. Come concezione è molto simile a labview.
+    \\
+    Solitamente i lavoratori che fanno smart working si collegano ad un server remoto sul quale viene eseguito un desktop e lavorano su quello, attraverso una VPN cifrata. Per una maggiore sicurezza si possono anche implementare autenticazione a due fattori tramite codice OTP.
+    \\
+    Da installare su VMWare ESXi. Per comodità, è possibile installare VMWare ESXi all'interno di un'altra macchina virtuale.
+    \begin{enumerate}
+        \item Server active directory
+        \item Gateway RDred
+    \end{enumerate}
+    
+
 \end{document}
