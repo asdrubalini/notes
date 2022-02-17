@@ -171,7 +171,7 @@ interface range Gi0/1-24
 shutdown
 ```
 
-RIP:
+# RIP:
 
 ```
 conf t
