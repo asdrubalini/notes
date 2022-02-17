@@ -173,6 +173,35 @@ shutdown
 
 # RIP:
 
+## RIPv1
+
+```
+(config) router rip									// serve per entrare nella configurazione del protocollo rip del router
+(config-router) network 10.10.10.0 -> per togliere il network: no network 10.10.10.0	// inserisce la rete connessa al router come rotta e in questo caso la rete 10.10.10.0
+(config-router) exit									// esce dalla configurazione del protocollo rip del router
+(global) show ip route									// mostra le rotte salvate nel router
+(global) show ip protocols								// mostra i protocolli attivi nel router
+(global) debug ip rip -> x stopparlo: undebug all					// visualizza i messaggi RIP mandati e ricevuti
+```
+
+## RIPv2
+
+```
+(config) router rip									// serve per entrare nella configurazione del protocollo rip del router
+(config-router) version 2								// specifica l'uso della versione 2 del protocollo rip
+(config-router) network 10.10.10.0							// inserisce la rete connessa al router e in questo caso la rete 10.10.10.0
+(config-router) exit									// esce dalla configurazione del protocollo rip del router
+```
+
+## da RIPv1 a RIPv2
+
+```
+(config-router) version 2								// specifica l'uso della versione 2 del protocollo rip
+(config-router) no auto-summary								// toglie la modalità auto-summary all'interno del router
+(config-router) no network 10.10.10.0							// toglie la rete salvata all'interno del router (inserita precedentemente) e in questo caso toglie la rete 10.10.10.0
+(config-router) network 10.10.10.0							// inserisce la rete connessa al router come rotta e in questo caso la rete 10.10.10.0
+```
+
 ```
 conf t
 router rip
