@@ -170,3 +170,14 @@ Disabilitare porte non utilizzare:
 interface range Gi0/1-24
 shutdown
 ```
+
+RIP:
+
+```
+conf t
+router rip
+version 2
+no auto-summary
+network <net>
+end
+```
