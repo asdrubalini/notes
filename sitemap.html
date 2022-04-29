@@ -6,7 +6,7 @@
 <!-- 2022-04-29 Fri 19:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OSPF</title>
+<title>Sitemap for project posts</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -195,76 +195,10 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">OSPF</h1>
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orgcf9feb6">1. Suddivisione in Autonomous System</a></li>
-<li><a href="#org1df2700">2. Suddivisione in Aree</a></li>
-<li><a href="#orge5457e9">3. IXP</a></li>
+<h1 class="title">Sitemap for project posts</h1>
+<ul class="org-ul">
+<li><a href="index.html">OSPF</a></li>
 </ul>
-</div>
-</div>
-<p>
-L'algoritmo OSPF si basa su alcuni metadati relativi allo stato della rete.
-Per determinare una route, il principale fattore è la banda tra i due router, tuttavia possono essere
-inseriti anche dei parametri dall'amministratore di rete.
-</p>
-
-<div id="outline-container-orgcf9feb6" class="outline-2">
-<h2 id="orgcf9feb6"><span class="section-number-2">1.</span> Suddivisione in Autonomous System</h2>
-<div class="outline-text-2" id="text-1">
-<p>
-Internet è suddiviso in tanti AS (Autonomous System). L'autonomous system di frontiera deciderà la route migliore.
-Per questo motivo, i protocolli di routing si suddividono tra interni ed esterni all'AS.
-Un protocollo esterno molto utilizzato è il BGP (Border Gateway Protocol)
-</p>
-</div>
-</div>
-
-<div id="outline-container-org1df2700" class="outline-2">
-<h2 id="org1df2700"><span class="section-number-2">2.</span> Suddivisione in Aree</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-Una grossa rete è suddivisa in aree di massimo 50 router, per limitare le risorse hardware necessarie.
-Tempo di convergenza: il tempo che un router impiega per aggiornarsi in base allo stato della rete.
-</p>
-
-<p>
-Ogni area ha un numero univoco con il quale viene identificata. Tutte le aree sono collegate all'area 0.
-Se un router dell'area 1 deve comunicare con uno dell'area 2, passa prima attraverso lo 0.
-Ci sono diversi tipi di pacchetti: hello (per scoprire i router nella rete), dd, lsr, lsu e lsa.
-</p>
-
-<p>
-Grazie ad LSA, un messaggio si espande a tutta la rete. Ogni router manda al proprio vicino le informazioni
-riguardanti gli altri router, perchè solo così i vicini possono avere informazioni su tutta l'area.
-</p>
-
-<p>
-Il protocollo RIP considera solo il numero di salti, mentre il protocollo OSPF considera anche il costo.
-Il costo viene ricalcolato continuamente, quando la rete si aggiorna (ad esempio un router si guasta).
-</p>
-
-<p>
-L'efficienza amministrativa è un valore interno di Cisco. Più il costo è basso, più la route viene privilegiata
-dall'algoritmo. È assolutamente possibile che una route che contiene più hops venga privilegiata rispetto
-ad una route più breve (ma più lunga secondo i parametri di OSPF).
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge5457e9" class="outline-2">
-<h2 id="orge5457e9"><span class="section-number-2">3.</span> IXP</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-"Se mi paghi 10 euro al mese ti permetto di connettermi direttamente a me a patto che voi mettiate il vostro AS
-a disposizione di tutti gli altri a me connessi, gratuitamente".
-Chi offre questo tipo di servizio si chiama IXP o Internet Exchange Point.
-</p>
-</div>
-</div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Created: 2022-04-29 Fri 19:39</p>
