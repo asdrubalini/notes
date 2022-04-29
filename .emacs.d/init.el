@@ -26,12 +26,6 @@
 ;; Fontify source
 (setq org-html-htmlize-output-type 'css)
 
-(use-package evil
-  :straight t
-  :ensure t
-  :config
-  (evil-mode 1))
-
 ;; Org mode
 (use-package org-contrib
   :straight t
