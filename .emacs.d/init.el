@@ -42,22 +42,14 @@
   :straight t
   :ensure t)
 
-(use-package ox-publish
-  :straight t
-  :ensure t)
+(require 'ox-publish)
 
 (setq org-publish-project-alist
-    '(
-	("org-notes"
-	    :base-directory "./"
-	    :base-extension "org"
-	    :publishing-directory "./publish"
-	    :recursive t
-	    :publishing-function org-html-publish-to-html
-	    :headline-levels 4
-	    :auto-preamble t
-	)
-
-	("org" :components ("org-notes"))
-    ))
-
+      '(("posts"
+         :base-directory "./"
+         :base-extension "org"
+         :publishing-directory "./pages/"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :auto-sitemap t)
+        ("all" :components ("posts"))))
