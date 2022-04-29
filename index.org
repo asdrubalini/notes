@@ -1,6 +1,10 @@
 #+title: Asdrubalini's notes
 
-# Urls
-[[file:school/5al/italiano/pirandello.org][pirandello]]
+
+* Italiano
+  [[file:school/5al/italiano/pirandello.org][pirandello]]
+
+* Sistemi
+  [[file:school/5al/sistemi/ospf.org][OSPF]]
 
 

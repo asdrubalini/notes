@@ -1,7 +1,7 @@
 #+title: Pirandello
 #+created: <2022-04-29 Fri>
 
-# La vita
+** La vita
 Nasce ad Agrigento. Studia lettere, prima a Roma e poi in Germania. Lavora
 nelle miniere di zolfo. Ad un certo punto la miniera si allaga e perdono
 un sacco di soldi. 
@@ -13,7 +13,7 @@ di Roma e fa anche collaborazioni con i giornali.
 Ha pensato che il fascismo potesse essere una soluzione, anche se poi si
 è allontanato da quelle idee, senza mai rinnegarle.
 
-# Il suo pensiero
+** Il suo pensiero
 La verità per Pirandello è come un magma indistinto. La società cerca di
 dargli una forma che senza queste regoli sociali sarebbe un caos. In che
 senso gli dà una forma? Attraverso tutte le regole sociali, le norme, le
