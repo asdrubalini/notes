@@ -24,8 +24,8 @@ jobs:
 
       - name: Compile org-mode to HTML
         run: |
-          emacs ../index.html --batch -Q --load init.el -f org-html-export-to-html --kill &&
-          ls
+          ls &&
+          emacs ../index.html --batch -Q --load init.el -f org-html-export-to-html --kill
 
       - name: Deploy to pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
