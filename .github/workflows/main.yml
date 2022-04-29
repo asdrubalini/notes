@@ -8,8 +8,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          target: src
 
       - name: Set up Emacs
         uses: purcell/setup-emacs@v3.0
@@ -20,12 +18,11 @@ jobs:
         name: Download emacs config
         with:
             url: https://raw.githubusercontent.com/asdrubalini/nixos-config/master/desktop/emacs/init.el
-            target: src
 
       - name: Compile org-mode to HTML
         run: |
           ls &&
-          emacs ../index.html --batch -Q --load init.el -f org-html-export-to-html --kill
+          emacs index.org --batch -Q --load init.el -f org-html-export-to-html --kill
 
       - name: Deploy to pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
