@@ -14,15 +14,10 @@ jobs:
         with:
           version: 28.1
 
-      - uses: suisei-cn/actions-download-file@v1
-        name: Download emacs config
-        with:
-            url: https://raw.githubusercontent.com/asdrubalini/nixos-config/master/desktop/emacs/init.el
-
       - name: Compile org-mode to HTML
         run: |
           ls &&
-          emacs index.org --batch -Q --load init.el -f org-html-export-to-html --kill
+          emacs index.org --batch -Q --load .emacs.d/init.el -f org-html-export-to-html --kill
 
       - name: Deploy to pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
