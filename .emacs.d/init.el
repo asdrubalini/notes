@@ -17,6 +17,15 @@
 
 (straight-use-package 'use-package)
 
+;; Don't make backups
+(setq make-backup-files nil)
+
+;; Publish planning information by default
+(setq org-export-with-planning t)
+
+;; Fontify source
+(setq org-html-htmlize-output-type 'css)
+
 (use-package evil
   :straight t
   :ensure t
@@ -28,7 +37,23 @@
   :straight t
   :ensure t)
 
-;; this is required to highlight code blocks properly
+;; This is required to highlight code blocks properly
 (use-package htmlize
   :straight t
   :ensure t)
+
+(use-package ox-publish
+  :straight t
+  :ensure t)
+
+("org-notes"
+  :base-directory "./"
+  :base-extension "org"
+  :publishing-directory "./publish"
+  :recursive t
+  :publishing-function org-html-publish-to-html
+  :headline-levels 4
+  :auto-preamble t
+ )
+
+("org" :components ("org-notes"))
