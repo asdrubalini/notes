@@ -1,34 +1,6 @@
-#+title: OSPF
-#+created: <2022-04-29 Fri>
+#+title: Asdrubalini's notes
 
-L'algoritmo OSPF si basa su alcuni metadati relativi allo stato della rete.
-Per determinare una route, il principale fattore è la banda tra i due router, tuttavia possono essere
-inseriti anche dei parametri dall'amministratore di rete.
+# Urls
+[[file:school/5al/italiano/pirandello.org][pirandello]]
 
-** Suddivisione in Autonomous System
-Internet è suddiviso in tanti AS (Autonomous System). L'autonomous system di frontiera deciderà la route migliore.
-Per questo motivo, i protocolli di routing si suddividono tra interni ed esterni all'AS.
-Un protocollo esterno molto utilizzato è il BGP (Border Gateway Protocol)
 
-** Suddivisione in Aree
-Una grossa rete è suddivisa in aree di massimo 50 router, per limitare le risorse hardware necessarie.
-Tempo di convergenza: il tempo che un router impiega per aggiornarsi in base allo stato della rete.
-
-Ogni area ha un numero univoco con il quale viene identificata. Tutte le aree sono collegate all'area 0.
-Se un router dell'area 1 deve comunicare con uno dell'area 2, passa prima attraverso lo 0.
-Ci sono diversi tipi di pacchetti: hello (per scoprire i router nella rete), dd, lsr, lsu e lsa.
-
-Grazie ad LSA, un messaggio si espande a tutta la rete. Ogni router manda al proprio vicino le informazioni
-riguardanti gli altri router, perchè solo così i vicini possono avere informazioni su tutta l'area.
-
-Il protocollo RIP considera solo il numero di salti, mentre il protocollo OSPF considera anche il costo.
-Il costo viene ricalcolato continuamente, quando la rete si aggiorna (ad esempio un router si guasta).
-
-L'efficienza amministrativa è un valore interno di Cisco. Più il costo è basso, più la route viene privilegiata
-dall'algoritmo. È assolutamente possibile che una route che contiene più hops venga privilegiata rispetto
-ad una route più breve (ma più lunga secondo i parametri di OSPF).
-
-** IXP
-"Se mi paghi 10 euro al mese ti permetto di connettermi direttamente a me a patto che voi mettiate il vostro AS
-a disposizione di tutti gli altri a me connessi, gratuitamente".
-Chi offre questo tipo di servizio si chiama IXP o Internet Exchange Point.
