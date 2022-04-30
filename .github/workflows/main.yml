@@ -18,8 +18,8 @@ jobs:
         id: cache-emacs
         uses: actions/cache@v3
         with:
-            path: .emacs.d/
-            key: ${{ hashFiless('.emacs.id/init.el') }}-emacs
+          path: .emacs.d/
+          key: ${{ hashFiless('.emacs.id/init.el') }}-emacs
 
       - name: Compile org-mode to HTML
         run: |
