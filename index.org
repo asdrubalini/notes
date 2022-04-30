@@ -1,10 +1,10 @@
 #+title: Asdrubalini's notes
 
 
-* Italiano
-  [[file:school/5al/italiano/pirandello.org][pirandello]]
+** Italiano
+  [[file:school/5al/italiano/pirandello.org][Pirandello]]
 
-* Sistemi
+** Sistemi
   [[file:school/5al/sistemi/ospf.org][OSPF]]
-
+  [[file:school/5al/sistemi/lavoro.org][Lavoro]]
 
