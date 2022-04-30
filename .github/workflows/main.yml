@@ -14,6 +14,13 @@ jobs:
         with:
           version: 28.1
 
+      - name: Cache emacs
+        id: cache-emacs
+        uses: actions/cache@v3
+        with:
+            path: .emacs.d/
+            key: ${{ hashFiless('.emacs.id/init.el') }}-emacs
+
       - name: Compile org-mode to HTML
         run: |
           emacs index.org --batch -Q --load .emacs.d/init.el -f org-publish-all --kill
