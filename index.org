@@ -1,12 +1,12 @@
 #+title: Asdrubalini's notes
 
 *** Sistemi
-  [[file:school/5al/sistemi/ospf.org][OSPF]]
-  [[file:school/5al/sistemi/lavoro.org][Lavoro]]
+  1. [[file:school/5al/sistemi/ospf.org][OSPF]]
+  2. [[file:school/5al/sistemi/lavoro.org][Lavoro]]
 
 *** Italiano
-  [[file:school/5al/storia/era-fascista.org][Era fascista]]
+  1. [[file:school/5al/storia/era-fascista.org][Era fascista]]
 
 *** Italiano
-  [[file:school/5al/italiano/pirandello.org][Pirandello]]
+  1. [[file:school/5al/italiano/pirandello.org][Pirandello]]
 
