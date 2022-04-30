@@ -19,7 +19,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: .emacs.d/
-          key: ${{ hashFiles('.emacs.id/init.el') }}-emacs
+          key: ${{ hashFiles('.emacs.d/init.el') }}-emacs
 
       - name: Compile org-mode to HTML
         run: |
