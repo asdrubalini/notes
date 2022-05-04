@@ -4,9 +4,8 @@
   1. [[file:school/5al/sistemi/ospf.org][OSPF]]
   2. [[file:school/5al/sistemi/lavoro.org][Lavoro]]
 
-*** Italiano
+*** Storia
   1. [[file:school/5al/storia/era-fascista.org][Era fascista]]
 
 *** Italiano
   1. [[file:school/5al/italiano/pirandello.org][Pirandello]]
-
