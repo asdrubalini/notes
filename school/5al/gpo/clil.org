@@ -9,6 +9,14 @@ from wind, sea waves and geothermal heat.
 It is important to note that not all renewable energies are also
 green energies. Some of them do emit huge amount of greenhouse gases.
 
+** Solar energy
+Solar energy is the most popular form of renewable energy. Solar panels nowadays
+are cheap, can be installed almost everywhere and don't require much maintenance aside
+from dust cleaning. They don't have a great capacity factor (the amount of time energy
+is produced in a year's time) and for this reason it must be paired with another form
+of energy in order to guarantee power at night and during winters, especially for
+factories and other power-hungry appliances such as electric trains.
+
 ** Is nuclear power considered renewable?
 There is currently a debate on whether or not the nuclear energy should
 be considered renewable. Nuclear fission (or fusion, in the future) produce
@@ -21,3 +29,5 @@ in ocean waters where it can be extracted. Uranium is also very energy dense,
 meaning that few amount of material can produce great quantities of energy,
 meaning that we won't run out of uranium even if we powered the entire Earth
 with nuclear power.
+Since nuclear power does not produce CO2, it is also considered green by the
+European Union.
