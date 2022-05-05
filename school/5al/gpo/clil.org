@@ -1,0 +1,23 @@
+#+title: The main aspects of renewable energies
+
+** What is renewable energy?
+All energies that gets naturally replenished on a human scale are
+considered renewable. For instance, the energy that is produced from
+the Sun is considered renewable because, on a human scale, it will
+never cease to exist. Popular forms of renewable energy are produced
+from wind, sea waves and geothermal heat.
+It is important to note that not all renewable energies are also
+green energies. Some of them do emit huge amount of greenhouse gases.
+
+** Is nuclear power considered renewable?
+There is currently a debate on whether or not the nuclear energy should
+be considered renewable. Nuclear fission (or fusion, in the future) produce
+heat, which is then used to turn water into steam to power a steam turbine.
+Unlike other forms of renewable energies, nuclear power requires fissible
+material like uranium in order to function. For this reason, many does
+not consider nuclear power a renewable form of energy. However, it must be
+noted that uranium is present at great quantities on the Earth, especially
+in ocean waters where it can be extracted. Uranium is also very energy dense,
+meaning that few amount of material can produce great quantities of energy,
+meaning that we won't run out of uranium even if we powered the entire Earth
+with nuclear power.
