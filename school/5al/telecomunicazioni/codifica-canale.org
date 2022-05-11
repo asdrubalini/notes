@@ -1,0 +1,37 @@
+#+title: Codifica di Canale
+
+La codifica di canale serve per aggiungere ai blocchi di bit degli altri bit
+di ridondanza necessari per la rilevazione e la correzione degli errori.
+
+Due tecniche:
+- rilevazione dell'errore e richiesta automatica dell'invio del blocco
+  (strategia ARQ, Automatic Repeat Request)
+- rilevazione dell'errore e correzione diretta, l'errore viene corretto
+  senza richiesta di rispedire (strategia FEC, Foward Error Correction)
+
+Due tipi di codici
+- Codici a blocchi
+  - A ripetizione
+  - Parità (pari o dispari)
+  - Hemming
+  - Ciclici
+
+- Codici convoluzionali
+
+
+** Codici a ripetizione
+Consistono nell'associare al bit 0 un numero di zeri.
+Ad esempio 0 diventa 000 e 1 diventa 111 (con rapporto 3:1)
+In ricezione prendo la maggioranza. Esempio 001 prendo 0 perchè ci sono più 0 che 1.
+
+** Codici di parità
+Nel caso della parità pari, il numero di 1 nel blocco deve essere pari. Se scelgo
+la parità dispari, il numero di 1 deve essere dispari. È compreso il bit di parità.
+
+Esempio con parità pari:
+Se voglio trasmettere '1011010', aggiungo il bit di parità '0' perchè il numero complessivo
+di 1 è già pari.
+
+Si può fare anche in colonna:
+#+CAPTION: Parità in colonna
+[[./1.jpg]]
