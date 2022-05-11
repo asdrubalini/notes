@@ -12,3 +12,6 @@
 
 *** GPO
   1. [[file:school/5al/gpo/clil.org][Renewable energy]]
+
+*** Telecomunicazioni
+  1. [[file:school/5al/telecomunicazioni/codifica-canale.org][Codifica di canale]]
