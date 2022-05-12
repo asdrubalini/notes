@@ -3,10 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-11 Wed 10:53 -->
+<!-- 2022-05-12 Thu 11:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Codifica di Canale</title>
+<meta name="author" content="Asdrubalini" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -192,6 +193,27 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
@@ -200,8 +222,10 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc830919">1. Codici a ripetizione</a></li>
-<li><a href="#org5d711c1">2. Codici di parità</a></li>
+<li><a href="#orgcdfbc3c">1. Codici a ripetizione</a></li>
+<li><a href="#orgc3c97a4">2. Codici di parità</a></li>
+<li><a href="#orge4cf341">3. Correzione degli errori:</a></li>
+<li><a href="#org2ee6372">4. Codice di Hamming</a></li>
 </ul>
 </div>
 </div>
@@ -214,9 +238,9 @@ di ridondanza necessari per la rilevazione e la correzione degli errori.
 Due tecniche:
 </p>
 <ul class="org-ul">
-<li>rilevazione dell'errore e richiesta automatica dell'invio del blocco
+<li>rilevazione dell&rsquo;errore e richiesta automatica dell&rsquo;invio del blocco
 (strategia ARQ, Automatic Repeat Request)</li>
-<li>rilevazione dell'errore e correzione diretta, l'errore viene corretto
+<li>rilevazione dell&rsquo;errore e correzione diretta, l&rsquo;errore viene corretto
 senza richiesta di rispedire (strategia FEC, Foward Error Correction)</li>
 </ul>
 
@@ -236,19 +260,19 @@ Due tipi di codici
 </ul>
 
 
-<div id="outline-container-orgc830919" class="outline-2">
-<h2 id="orgc830919"><span class="section-number-2">1.</span> Codici a ripetizione</h2>
+<div id="outline-container-orgcdfbc3c" class="outline-2">
+<h2 id="orgcdfbc3c"><span class="section-number-2">1.</span> Codici a ripetizione</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Consistono nell'associare al bit 0 un numero di zeri.
+Consistono nell&rsquo;associare al bit 0 un numero di zeri.
 Ad esempio 0 diventa 000 e 1 diventa 111 (con rapporto 3:1)
 In ricezione prendo la maggioranza. Esempio 001 prendo 0 perchè ci sono più 0 che 1.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5d711c1" class="outline-2">
-<h2 id="org5d711c1"><span class="section-number-2">2.</span> Codici di parità</h2>
+<div id="outline-container-orgc3c97a4" class="outline-2">
+<h2 id="orgc3c97a4"><span class="section-number-2">2.</span> Codici di parità</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Nel caso della parità pari, il numero di 1 nel blocco deve essere pari. Se scelgo
@@ -257,7 +281,7 @@ la parità dispari, il numero di 1 deve essere dispari. È compreso il bit di pa
 
 <p>
 Esempio con parità pari:
-Se voglio trasmettere '1011010', aggiungo il bit di parità '0' perchè il numero complessivo
+Se voglio trasmettere &rsquo;1011010&rsquo;, aggiungo il bit di parità &rsquo;0&rsquo; perchè il numero complessivo
 di 1 è già pari.
 </p>
 
@@ -265,17 +289,80 @@ di 1 è già pari.
 Si può fare anche in colonna:
 </p>
 
-<div id="org6970a9d" class="figure">
+<div id="org0e1853a" class="figure">
 <p><img src="./1.jpg" alt="1.jpg" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Parità in colonna</p>
 </div>
 </div>
 </div>
+
+<div id="outline-container-orge4cf341" class="outline-2">
+<h2 id="orge4cf341"><span class="section-number-2">3.</span> Correzione degli errori:</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Si utilizza XOR per avere dei bit di parità. In base al bit di parità sbagliato, posso capire
+in quale bit si trova l&rsquo;errore e quindi correggerlo.
+</p>
+
+
+<div id="org0f3b6b9" class="figure">
+<p><img src="./2.jpg" alt="2.jpg" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Correzione degli errori</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2ee6372" class="outline-2">
+<h2 id="org2ee6372"><span class="section-number-2">4.</span> Codice di Hamming</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Prevede un numero di bit di ridondanza q, k il numero di bit di informazione, n il numero di bit totali:
+</p>
+\begin{equation}
+n = 2^q -1
+\end{equation}
+
+<p>
+Esempio
+</p>
+
+\begin{equation}
+q = 3
+n = 2^3 - 1 = 7
+k = 4
+\end{equation}
+
+<p>
+I bit di ridondanza in questo caso non sono in coda ma sono mischiati. Per individuare la posizione dei bit
+di ridondanza:
+</p>
+
+\begin{equation}
+2^0 = 1^a \hspace{0.2cm} posizione
+\end{equation}
+
+\begin{equation}
+2^1 = 2^a \hspace{0.2cm} posizione
+\end{equation}
+
+\begin{equation}
+2^2 = 4^a \hspace{0.2cm} posizione
+\end{equation}
+
+
+<div id="org921110c" class="figure">
+<p><img src="./3.png" alt="3.png" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Tabella Hemming</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-05-11 Wed 10:53</p>
-<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="author">Author: Asdrubalini</p>
+<p class="date">Created: 2022-05-12 Thu 11:10</p>
 </div>
 </body>
 </html>

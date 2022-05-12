@@ -6,7 +6,7 @@
 <!-- 2022-05-12 Thu 09:15 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The main aspects of renewable energies</title>
+<title>Codifica di Canale</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -192,81 +192,180 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">The main aspects of renewable energies</h1>
+<h1 class="title">Codifica di Canale</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org97e63b0">1. What is renewable energy?</a></li>
-<li><a href="#org7b59125">2. Solar energy</a></li>
-<li><a href="#org3cf59ce">3. Geothermal energy</a></li>
-<li><a href="#orgc69297f">4. Is nuclear power considered renewable?</a></li>
+<li><a href="#orgb4d8bd8">1. Codici a ripetizione</a></li>
+<li><a href="#org6e90848">2. Codici di parità</a></li>
+<li><a href="#org0b7a9bf">3. Correzione degli errori:</a></li>
+<li><a href="#org6588457">4. Codice di Hamming</a></li>
 </ul>
 </div>
 </div>
+<p>
+La codifica di canale serve per aggiungere ai blocchi di bit degli altri bit
+di ridondanza necessari per la rilevazione e la correzione degli errori.
+</p>
 
-<div id="outline-container-org97e63b0" class="outline-2">
-<h2 id="org97e63b0"><span class="section-number-2">1.</span> What is renewable energy?</h2>
+<p>
+Due tecniche:
+</p>
+<ul class="org-ul">
+<li>rilevazione dell'errore e richiesta automatica dell'invio del blocco
+(strategia ARQ, Automatic Repeat Request)</li>
+<li>rilevazione dell'errore e correzione diretta, l'errore viene corretto
+senza richiesta di rispedire (strategia FEC, Foward Error Correction)</li>
+</ul>
+
+<p>
+Due tipi di codici
+</p>
+<ul class="org-ul">
+<li>Codici a blocchi
+<ul class="org-ul">
+<li>A ripetizione</li>
+<li>Parità (pari o dispari)</li>
+<li>Hemming</li>
+<li>Ciclici</li>
+</ul></li>
+
+<li>Codici convoluzionali</li>
+</ul>
+
+
+<div id="outline-container-orgb4d8bd8" class="outline-2">
+<h2 id="orgb4d8bd8"><span class="section-number-2">1.</span> Codici a ripetizione</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-All energy sources that get naturally replenished on a human scale are
-considered renewable. For instance, the energy that is produced from
-the Sun is considered renewable because, on a human scale, it will
-never cease to exist. Popular forms of renewable energy are wind, sea waves and
-geothermal heat, although there are also emerging technologies.
-It is important to note that not all renewable energies are also
-green energies. Some of them do emit huge amount of greenhouse gases.
+Consistono nell'associare al bit 0 un numero di zeri.
+Ad esempio 0 diventa 000 e 1 diventa 111 (con rapporto 3:1)
+In ricezione prendo la maggioranza. Esempio 001 prendo 0 perchè ci sono più 0 che 1.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7b59125" class="outline-2">
-<h2 id="org7b59125"><span class="section-number-2">2.</span> Solar energy</h2>
+<div id="outline-container-org6e90848" class="outline-2">
+<h2 id="org6e90848"><span class="section-number-2">2.</span> Codici di parità</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Solar energy is the most popular form of renewable energy. Solar panels nowadays
-are cheap, can be installed almost everywhere and don't require much maintenance aside
-from dust cleaning. They don't have a great capacity factor (ie. the amount of time energy
-is produced in a year's time) and for this reason it must be paired with another source
-of energy in order to guarantee power at night and during winters, especially for
-factories and other power-hungry appliances such as electric trains which cannot be
-powered from batteries.
+Nel caso della parità pari, il numero di 1 nel blocco deve essere pari. Se scelgo
+la parità dispari, il numero di 1 deve essere dispari. È compreso il bit di parità.
 </p>
+
+<p>
+Esempio con parità pari:
+Se voglio trasmettere '1011010', aggiungo il bit di parità '0' perchè il numero complessivo
+di 1 è già pari.
+</p>
+
+<p>
+Si può fare anche in colonna:
+</p>
+
+<div id="org9dbbb74" class="figure">
+<p><img src="./1.jpg" alt="1.jpg" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Parità in colonna</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org3cf59ce" class="outline-2">
-<h2 id="org3cf59ce"><span class="section-number-2">3.</span> Geothermal energy</h2>
+<div id="outline-container-org0b7a9bf" class="outline-2">
+<h2 id="org0b7a9bf"><span class="section-number-2">3.</span> Correzione degli errori:</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-The insides of the Earth are really hot, and this heat can be turned into electrical
-energy. Unlike solar energy, geothermal has a high capacity factor (90%), for this
-reason it could replace coal and other fossil fuels, provided that the territory can
-accomodate such plants.
+Si utilizza XOR per avere dei bit di parità. In base al bit di parità sbagliato, posso capire
+in quale bit si trova l'errore e quindi correggerlo.
 </p>
+
+
+<div id="orge743810" class="figure">
+<p><img src="./2.jpg" alt="2.jpg" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Correzione degli errori</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-orgc69297f" class="outline-2">
-<h2 id="orgc69297f"><span class="section-number-2">4.</span> Is nuclear power considered renewable?</h2>
+<div id="outline-container-org6588457" class="outline-2">
+<h2 id="org6588457"><span class="section-number-2">4.</span> Codice di Hamming</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-There is currently a debate on whether or not the nuclear energy should
-be considered renewable. Nuclear fission (or fusion, in the future) produce
-heat, which is then used to turn water into steam which powers a steam turbine.
-Unlike other forms of renewable energies, nuclear power requires fissible
-material like uranium in order to function. For this reason, many does
-not consider nuclear power a renewable energy source. However, it must be
-noted that uranium is present at great quantities on the Earth, especially
-in ocean waters where it can be extracted from relatively cheap. Uranium is
-also very energy dense, meaning that small quantities of material can produce
-a lot of energy, for this reason we wouldn't run out of uranium even if we
-powered the entire Earth with nuclear power.
-Since nuclear power does not produce CO2 or other gases, it is also considered
-green by the European Union.
+Prevede un numero di bit di ridondanza q, k il numero di bit di informazione, n il numero di bit totali:
+</p>
+
+\begin{equation}
+n = 2^q -1
+\end{equation}
+
+<p>
+Esempio
+</p>
+
+\begin{equation}
+q = 3
+\end{equation}
+
+\begin{equation}
+n = 2^3 - 1 = 7
+\end{equation}
+
+\begin{equation}
+k = 4
+\end{equation}
+
+<p>
+I bit di ridondanza in questo caso non sono in coda ma sono mischiati. Per individuare la posizione dei bit
+di ridondanza:
+</p>
+
+\begin{equation}
+2^0 = 1^a \hspace{0.2cm} posizione
+\end{equation}
+
+\begin{equation}
+2^1 = 2^a \hspace{0.2cm} posizione
+\end{equation}
+
+\begin{equation}
+2^2 = 4^a \hspace{0.2cm} posizione
+\end{equation}
+
+
+<div id="orge8a511c" class="figure">
+<p><img src="./3.png" alt="3.png" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Tabella Hamming</p>
+</div>
+
+<p>
+Ad ogni gruppo viene calcolata la parità e viene inserita nella posizione.
 </p>
 </div>
 </div>

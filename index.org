@@ -1,0 +1,17 @@
+#+title: Asdrubalini's notes
+
+*** Sistemi
+  1. [[file:school/5al/sistemi/ospf.org][OSPF]]
+  2. [[file:school/5al/sistemi/lavoro.org][Lavoro]]
+
+*** Storia
+  1. [[file:school/5al/storia/era-fascista.org][Era fascista]]
+
+*** Italiano
+  1. [[file:school/5al/italiano/pirandello.org][Pirandello]]
+
+*** GPO
+  1. [[file:school/5al/gpo/clil.org][Renewable energy]]
+
+*** Telecomunicazioni
+  1. [[file:school/5al/telecomunicazioni/codifica-canale.org][Codifica di canale]]
