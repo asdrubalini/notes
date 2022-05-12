@@ -35,3 +35,51 @@ di 1 è già pari.
 Si può fare anche in colonna:
 #+CAPTION: Parità in colonna
 [[./1.jpg]]
+
+** Correzione degli errori:
+Si utilizza XOR per avere dei bit di parità. In base al bit di parità sbagliato, posso capire
+in quale bit si trova l'errore e quindi correggerlo.
+
+#+CAPTION: Correzione degli errori
+[[./2.jpg]]
+
+** Codice di Hamming
+Prevede un numero di bit di ridondanza q, k il numero di bit di informazione, n il numero di bit totali:
+
+\begin{equation}
+n = 2^q -1
+\end{equation}
+
+Esempio
+
+\begin{equation}
+q = 3
+\end{equation}
+
+\begin{equation}
+n = 2^3 - 1 = 7
+\end{equation}
+
+\begin{equation}
+k = 4
+\end{equation}
+
+I bit di ridondanza in questo caso non sono in coda ma sono mischiati. Per individuare la posizione dei bit
+di ridondanza:
+
+\begin{equation}
+2^0 = 1^a \hspace{0.2cm} posizione
+\end{equation}
+
+\begin{equation}
+2^1 = 2^a \hspace{0.2cm} posizione
+\end{equation}
+
+\begin{equation}
+2^2 = 4^a \hspace{0.2cm} posizione
+\end{equation}
+
+#+CAPTION: Tabella Hamming
+[[./3.png]]
+
+Ad ogni gruppo viene calcolata la parità e viene inserita nella posizione.
