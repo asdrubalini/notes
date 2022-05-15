@@ -83,3 +83,59 @@ di ridondanza:
 [[./3.png]]
 
 Ad ogni gruppo viene calcolata la parità e viene inserita nella posizione.
+
+#+CAPTION: Rilevazione dell'errore
+[[./4.jpg]]
+
+** CRC: Cyclic redundant check
+Si esprime la combinazione di bit che dobbiamo trasmettere sottoforma di polinomio. Si considera
+un polinomio generatore di un certo grado e lo si moltiplica per il polinomio messaggio.
+
+Messaggio:
+\begin{equation}
+M(x)
+\end{equation}
+
+Generatore:
+\begin{equation}
+G(x)
+\end{equation}
+
+\begin{equation}
+M'(x) = M(x) \cdot x^{gr(G)}
+\end{equation}
+
+Ovvero aggiungo tanti zeri quanto è il grado di G $gr(G)$
+
+Poi divido per $G(x)§ ed il resto della divisione sarà il CRC che devo aggiungere al messaggio
+\begin{equation}
+R(x) = M'(x) % G(x)
+\end{equation}
+
+\begin{equation}
+T(x) = M(x) + R(x)
+\end{equation}
+
+*** Esempio:
+Messaggio: =1010011=
+
+\begin{equation}
+M(x) = x^6 + x^4 + x + 1
+\end{equation}
+
+Dalla norma, conosciuto sia da ricevitore che da trasmettitore:
+\begin{equation}
+G(x) = x^4 + x + 1
+\end{equation}
+
+Che corrisponde alla combinazione di bit =10011=.
+
+\begin{equation}
+M'(x) = (x^6 + x^4 + x + 1) \cdot x^4 = x^{10} + x^8 + x^5 + x^4
+\end{equation}
+
+Ovvero: =1010011_0000= (notare come equivale al messaggio con 4 zeri finali)
+
+Facendo la divisione tra $M'(x)$ e $G(x)$, ottengo un resto di =0111=, che aggiungo in coda al messaggio.
+
+In ricezione, divido nuovamente per G e se la non ottengo 0 come risultato so che il messaggio contiene un errore.
