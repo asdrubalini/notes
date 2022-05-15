@@ -6,7 +6,7 @@
 <!-- 2022-05-15 Sun 10:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ricerca lavoro</title>
+<title>Suggerimenti per esame</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -195,12 +195,32 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Ricerca lavoro</h1>
-<p>
-Cercare richieste di lavoro soprattutto dove c'è la richiesta di conoscenza dei PLC.
-Ricercare anche concorsi in enti pubblici dove viene richiesto il profilo del nostro
-diploma (perito tecnico industriale, informatica e telecomunicazioni)
+<h1 class="title">Suggerimenti per esame</h1>
+<ul class="org-ul">
+<li>Mettere in un foglio dove sono le sedi geograficamente;</li>
+<li>Capire le esigenze di ogni singola sede, quale sede deve comunicare con quale;</li>
+<li>Ragionare sui costi e sull'obiettivo;</li>
+<li>Dove lo metto il server VPN?
+<ul class="org-ul">
+<li><p>
+Metterlo su un server significa che il traffico deve passare dal firewall ed
+arrivare sul server, e fare l'autenticazione sul server. Da un lato facendo così
+andiamo a sgravare il firewall. Però dobbiamo impostare sul firewall delle regole
+che non permettono di accedere a tutta la rete di Filago.
 </p>
+
+<p>
+Sarà troppo dispendioso sul firewall? Quale può essere il traffico tra le sedi commerciali
+e quella di Filago? Possiamo intuirlo facendo delle ipotesi. Possiamo ipotizzare che il
+traffico sia abbastanza limitato poichè si devono scambiare qualche messaggio e qualche
+documento.
+In questo caso non metto il servizio VPN su un altro server ma direttamente sul firewall.
+Do' un po' di lavoro in più da fare al firewall spendendo quei 600 euro in più sul firewall
+per prenderlo di gamma più alta piuttosto che fare una configurazione un po' più rischiosa
+dovendo far entrare le connessioni verso un server interno.
+</p></li>
+</ul></li>
+</ul>
 </div>
 <div id="postamble" class="status">
 <p class="date">Created: 2022-05-15 Sun 10:50</p>

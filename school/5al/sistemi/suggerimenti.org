@@ -1,0 +1,19 @@
+#+title: Suggerimenti per esame
+
+- Mettere in un foglio dove sono le sedi geograficamente;
+- Capire le esigenze di ogni singola sede, quale sede deve comunicare con quale;
+- Ragionare sui costi e sull'obiettivo;
+- Dove lo metto il server VPN?
+  - Metterlo su un server significa che il traffico deve passare dal firewall ed
+    arrivare sul server, e fare l'autenticazione sul server. Da un lato facendo così
+    andiamo a sgravare il firewall. Però dobbiamo impostare sul firewall delle regole
+    che non permettono di accedere a tutta la rete di Filago.
+
+    Sarà troppo dispendioso sul firewall? Quale può essere il traffico tra le sedi commerciali
+    e quella di Filago? Possiamo intuirlo facendo delle ipotesi. Possiamo ipotizzare che il
+    traffico sia abbastanza limitato poichè si devono scambiare qualche messaggio e qualche
+    documento.
+    In questo caso non metto il servizio VPN su un altro server ma direttamente sul firewall.
+    Do' un po' di lavoro in più da fare al firewall spendendo quei 600 euro in più sul firewall
+    per prenderlo di gamma più alta piuttosto che fare una configurazione un po' più rischiosa
+    dovendo far entrare le connessioni verso un server interno.
