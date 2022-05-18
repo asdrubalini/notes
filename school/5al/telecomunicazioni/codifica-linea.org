@@ -1,0 +1,57 @@
+#+title: Codifica Linea
+
+** A cosa serve una codifica di linea
+Avviene prima di trasmettere l'informazione in linea.
+Consiste nel codificare l'informazione in maniera tale da trasformarli in un
+segnale elettrico idoneo alla linea ed alla tecnica di trasmissione.
+
+** Caratteristiche che dovrebbe avere un segnale di linea
+*** Eliminazione della componente continua
+Considerando che di solito la trasmissione avviene a distanza ed è spesso necessario
+l'impiego di ripetitori di segnale, la circuiteria non consentirebbe la rigenerazione
+del segnale nel caso di un segnale continuo.
+
+È necessario cercare di eliminare la componente continua del segnale che stiamo trasmettendo.
+
+*** Componente alla frequenza di cifra
+In ricezione il segnale deve essere ricostruito. Abbiamo quindi bisogno che ci sia una componente
+diversa da zero alla frequenza di cifra. Sarebbe utile che il nostro segnale in arrivo abbia una
+componente alla frequenza di cifra $F_c$.
+
+In realtà è un falso problema.
+
+*** Riduzione delle lunghe frequenze di zeri
+Il segnale non deve avere lunghe sequenze di zeri per evitare che in ricezione si abbiano dei problemi
+di decodifica.
+
+*** Riduzione della banda occupata dal segnale
+Non dovrebbe occupare una banda troppo larga.
+
+** Tipi di codici di linea a disposizione
+#+CAPTION: Metodi di codifica
+[[./5.png]]
+
+*** Codice NRZ (non ritorno a zero)
+Il segnale elettrico risultante è identico ai bit di partenza.
+NOTA: in ricezione, ogni codifica viene trasformata in NRZ.
+
+#+CAPTION: Codifica NRZ
+[[./NRZcode.png]]
+
+Spettro: si annulla alla Fc, a 2 Fc eccetera.
+La banda occupata è uguale ad Fc.
+Il problema è che la componente continua (la media del segnale) ha una frequenza molto alta.
+Per questo motivo, non useremo NRZ per la trasmissione a lunghe distanze.
+
+Per il circuito è sufficiente utilizzare un comparatore.
+
+*** Codifica RZ (ritorno a zero)
+
+#+CAPTION: Codifica RZ
+[[./RZcode.png]]
+
+Grazie a questo ho una componente continua più bassa ma ho allargato la banda.
+Non solo, in corrispondenza di Fc ho una componente che posso estrarre (perchè ha un valore
+diverso da zero).
+
+In ogni caso non ho risolto il problema perchè la componente continua è abbastanza alta.

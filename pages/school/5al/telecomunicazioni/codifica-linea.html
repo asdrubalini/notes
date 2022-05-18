@@ -6,7 +6,7 @@
 <!-- 2022-05-18 Wed 11:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The main aspects of renewable energies</title>
+<title>Codifica Linea</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -192,82 +192,178 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">The main aspects of renewable energies</h1>
+<h1 class="title">Codifica Linea</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgf32ebd9">1. What is renewable energy?</a></li>
-<li><a href="#orgff0a9ec">2. Solar energy</a></li>
-<li><a href="#org782b5a9">3. Geothermal energy</a></li>
-<li><a href="#orgc0e2e6d">4. Is nuclear power considered renewable?</a></li>
+<li><a href="#orge03b4f1">1. A cosa serve una codifica di linea</a></li>
+<li><a href="#org59b4ec4">2. Caratteristiche che dovrebbe avere un segnale di linea</a>
+<ul>
+<li><a href="#org7d865a5">2.1. Eliminazione della componente continua</a></li>
+<li><a href="#org5be89de">2.2. Componente alla frequenza di cifra</a></li>
+<li><a href="#orgcd148bc">2.3. Riduzione delle lunghe frequenze di zeri</a></li>
+<li><a href="#org936ff6e">2.4. Riduzione della banda occupata dal segnale</a></li>
+</ul>
+</li>
+<li><a href="#org35368b3">3. Tipi di codici di linea a disposizione</a>
+<ul>
+<li><a href="#org41bf0ab">3.1. Codice NRZ (non ritorno a zero)</a></li>
+<li><a href="#org9ebe749">3.2. Codifica RZ (ritorno a zero)</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgf32ebd9" class="outline-2">
-<h2 id="orgf32ebd9"><span class="section-number-2">1.</span> What is renewable energy?</h2>
+<div id="outline-container-orge03b4f1" class="outline-2">
+<h2 id="orge03b4f1"><span class="section-number-2">1.</span> A cosa serve una codifica di linea</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-All energy sources that get naturally replenished on a human scale are
-considered renewable. For instance, the energy that is produced from
-the Sun is considered renewable because, on a human scale, it will
-never cease to exist. Popular forms of renewable energy are wind, sea waves and
-geothermal heat, although there are also emerging technologies.
-It is important to note that not all renewable energies are also
-green energies. Some of them do emit huge amount of greenhouse gases.
+Avviene prima di trasmettere l'informazione in linea.
+Consiste nel codificare l'informazione in maniera tale da trasformarli in un
+segnale elettrico idoneo alla linea ed alla tecnica di trasmissione.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgff0a9ec" class="outline-2">
-<h2 id="orgff0a9ec"><span class="section-number-2">2.</span> Solar energy</h2>
+<div id="outline-container-org59b4ec4" class="outline-2">
+<h2 id="org59b4ec4"><span class="section-number-2">2.</span> Caratteristiche che dovrebbe avere un segnale di linea</h2>
 <div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7d865a5" class="outline-3">
+<h3 id="org7d865a5"><span class="section-number-3">2.1.</span> Eliminazione della componente continua</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
-Solar energy is the most popular form of renewable energy. Solar panels nowadays
-are cheap, can be installed almost everywhere and don't require much maintenance aside
-from dust cleaning. They don't have a great capacity factor (ie. the amount of time energy
-is produced in a year's time) and for this reason it must be paired with another source
-of energy in order to guarantee power at night and during winters, especially for
-factories and other power-hungry appliances such as electric trains which cannot be
-powered from batteries.
+Considerando che di solito la trasmissione avviene a distanza ed è spesso necessario
+l'impiego di ripetitori di segnale, la circuiteria non consentirebbe la rigenerazione
+del segnale nel caso di un segnale continuo.
+</p>
+
+<p>
+È necessario cercare di eliminare la componente continua del segnale che stiamo trasmettendo.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org782b5a9" class="outline-2">
-<h2 id="org782b5a9"><span class="section-number-2">3.</span> Geothermal energy</h2>
+<div id="outline-container-org5be89de" class="outline-3">
+<h3 id="org5be89de"><span class="section-number-3">2.2.</span> Componente alla frequenza di cifra</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+In ricezione il segnale deve essere ricostruito. Abbiamo quindi bisogno che ci sia una componente
+diversa da zero alla frequenza di cifra. Sarebbe utile che il nostro segnale in arrivo abbia una
+componente alla frequenza di cifra \(F_c\).
+</p>
+
+<p>
+In realtà è un falso problema.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd148bc" class="outline-3">
+<h3 id="orgcd148bc"><span class="section-number-3">2.3.</span> Riduzione delle lunghe frequenze di zeri</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Il segnale non deve avere lunghe sequenze di zeri per evitare che in ricezione si abbiano dei problemi
+di decodifica.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org936ff6e" class="outline-3">
+<h3 id="org936ff6e"><span class="section-number-3">2.4.</span> Riduzione della banda occupata dal segnale</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Non dovrebbe occupare una banda troppo larga.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org35368b3" class="outline-2">
+<h2 id="org35368b3"><span class="section-number-2">3.</span> Tipi di codici di linea a disposizione</h2>
 <div class="outline-text-2" id="text-3">
+
+<div id="org0619701" class="figure">
+<p><img src="./5.png" alt="5.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Metodi di codifica</p>
+</div>
+</div>
+
+<div id="outline-container-org41bf0ab" class="outline-3">
+<h3 id="org41bf0ab"><span class="section-number-3">3.1.</span> Codice NRZ (non ritorno a zero)</h3>
+<div class="outline-text-3" id="text-3-1">
 <p>
-The insides of the Earth are really hot, and this heat can be turned into electrical
-energy. Unlike solar energy, geothermal has a high capacity factor (90%), for this
-reason it could replace coal and other fossil fuels, provided that the territory can
-accomodate such plants.
+Il segnale elettrico risultante è identico ai bit di partenza.
+NOTA: in ricezione, ogni codifica viene trasformata in NRZ.
+</p>
+
+
+<div id="orgcabf772" class="figure">
+<p><img src="./NRZcode.png" alt="NRZcode.png" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Codifica NRZ</p>
+</div>
+
+<p>
+Spettro: si annulla alla Fc, a 2 Fc eccetera.
+La banda occupata è uguale ad Fc.
+Il problema è che la componente continua (la media del segnale) ha una frequenza molto alta.
+Per questo motivo, non useremo NRZ per la trasmissione a lunghe distanze.
+</p>
+
+<p>
+Per il circuito è sufficiente utilizzare un comparatore.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc0e2e6d" class="outline-2">
-<h2 id="orgc0e2e6d"><span class="section-number-2">4.</span> Is nuclear power considered renewable?</h2>
-<div class="outline-text-2" id="text-4">
-<p>
-There is currently a debate on whether or not the nuclear energy should
-be considered renewable. Nuclear fission (or fusion, in the future) produce
-heat, which is then used to turn water into steam which powers a steam turbine.
-Unlike other forms of renewable energies, nuclear power requires fissible
-material like uranium in order to function. For this reason, many does
-not consider nuclear power a renewable energy source. However, it must be
-noted that uranium is present at great quantities on the Earth, especially
-in ocean waters where it can be extracted from relatively cheap. Uranium is
-also very energy dense, meaning that small quantities of material can produce
-a lot of energy, for this reason we wouldn't run out of uranium even if we
-powered the entire Earth with nuclear power.
-Since nuclear power does not produce CO2 or other gases, it is also considered
-green by the European Union.
+<div id="outline-container-org9ebe749" class="outline-3">
+<h3 id="org9ebe749"><span class="section-number-3">3.2.</span> Codifica RZ (ritorno a zero)</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<div id="orgaa1468c" class="figure">
+<p><img src="./RZcode.png" alt="RZcode.png" />
 </p>
+<p><span class="figure-number">Figure 3: </span>Codifica RZ</p>
+</div>
+
+<p>
+Grazie a questo ho una componente continua più bassa ma ho allargato la banda.
+Non solo, in corrispondenza di Fc ho una componente che posso estrarre (perchè ha un valore
+diverso da zero).
+</p>
+
+<p>
+In ogni caso non ho risolto il problema perchè la componente continua è abbastanza alta.
+</p>
+</div>
 </div>
 </div>
 </div>
