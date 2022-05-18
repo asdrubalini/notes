@@ -28,8 +28,6 @@ di decodifica.
 Non dovrebbe occupare una banda troppo larga.
 
 ** Tipi di codici di linea a disposizione
-=100001100001=
-
 #+CAPTION: Metodi di codifica
 [[./5.png]]
 
@@ -38,17 +36,19 @@ Il segnale elettrico risultante è identico ai bit di partenza.
 NOTA: in ricezione, ogni codifica viene trasformata in NRZ.
 
 #+CAPTION: Codifica NRZ
-[[./NRZCode.png]]
+[[./NRZcode.png]]
 
 Spettro: si annulla alla Fc, a 2 Fc eccetera.
 La banda occupata è uguale ad Fc.
 Il problema è che la componente continua (la media del segnale) ha una frequenza molto alta.
 Per questo motivo, non useremo NRZ per la trasmissione a lunghe distanze.
 
+Per il circuito è sufficiente utilizzare un comparatore.
+
 *** Codifica RZ (ritorno a zero)
 
 #+CAPTION: Codifica RZ
-[[./RZCode.png]]
+[[./RZcode.png]]
 
 Grazie a questo ho una componente continua più bassa ma ho allargato la banda.
 Non solo, in corrispondenza di Fc ho una componente che posso estrarre (perchè ha un valore
