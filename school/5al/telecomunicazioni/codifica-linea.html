@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-05-19 Thu 11:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Codifica di linea</title>
+<meta name="author" content="Asdrubalini" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Codifica di linea</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org227782a">1. A cosa serve una codifica di linea</a></li>
+<li><a href="#org643b435">2. Caratteristiche che dovrebbe avere un segnale di linea</a>
+<ul>
+<li><a href="#org8ffdcda">2.1. Eliminazione della componente continua</a></li>
+<li><a href="#org5886299">2.2. Componente alla frequenza di cifra</a></li>
+<li><a href="#orgc1b3fc9">2.3. Riduzione delle lunghe frequenze di zeri</a></li>
+<li><a href="#org14251af">2.4. Riduzione della banda occupata dal segnale</a></li>
+</ul>
+</li>
+<li><a href="#org63900a1">3. Tipi di codici di linea a disposizione</a>
+<ul>
+<li><a href="#orga5e7d04">3.1. Codice NRZ (non ritorno a zero)</a></li>
+<li><a href="#org6efc728">3.2. Codifica RZ (ritorno a zero)</a></li>
+<li><a href="#orgecfc37d">3.3. Codifica di Manchester</a></li>
+<li><a href="#orga020e8f">3.4. Codifica AMI</a></li>
+<li><a href="#org747e8cd">3.5. Codifica HDB-n</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org227782a" class="outline-2">
+<h2 id="org227782a"><span class="section-number-2">1.</span> A cosa serve una codifica di linea</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Avviene prima di trasmettere l&rsquo;informazione in linea.
+Consiste nel codificare l&rsquo;informazione in maniera tale da trasformarli in un
+segnale elettrico idoneo alla linea ed alla tecnica di trasmissione.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org643b435" class="outline-2">
+<h2 id="org643b435"><span class="section-number-2">2.</span> Caratteristiche che dovrebbe avere un segnale di linea</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org8ffdcda" class="outline-3">
+<h3 id="org8ffdcda"><span class="section-number-3">2.1.</span> Eliminazione della componente continua</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Considerando che di solito la trasmissione avviene a distanza ed è spesso necessario
+l&rsquo;impiego di ripetitori di segnale, la circuiteria non consentirebbe la rigenerazione
+del segnale nel caso di un segnale continuo.
+</p>
+
+<p>
+È necessario cercare di eliminare la componente continua del segnale che stiamo trasmettendo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5886299" class="outline-3">
+<h3 id="org5886299"><span class="section-number-3">2.2.</span> Componente alla frequenza di cifra</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+In ricezione il segnale deve essere ricostruito. Abbiamo quindi bisogno che ci sia una componente
+diversa da zero alla frequenza di cifra. Sarebbe utile che il nostro segnale in arrivo abbia una
+componente alla frequenza di cifra \(F_c\).
+</p>
+
+<p>
+In realtà è un falso problema.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1b3fc9" class="outline-3">
+<h3 id="orgc1b3fc9"><span class="section-number-3">2.3.</span> Riduzione delle lunghe frequenze di zeri</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Il segnale non deve avere lunghe sequenze di zeri per evitare che in ricezione si abbiano dei problemi
+di decodifica.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14251af" class="outline-3">
+<h3 id="org14251af"><span class="section-number-3">2.4.</span> Riduzione della banda occupata dal segnale</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Non dovrebbe occupare una banda troppo larga.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org63900a1" class="outline-2">
+<h2 id="org63900a1"><span class="section-number-2">3.</span> Tipi di codici di linea a disposizione</h2>
+<div class="outline-text-2" id="text-3">
+
+<div id="orge35addd" class="figure">
+<p><img src="./5.png" alt="5.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Metodi di codifica</p>
+</div>
+</div>
+
+<div id="outline-container-orga5e7d04" class="outline-3">
+<h3 id="orga5e7d04"><span class="section-number-3">3.1.</span> Codice NRZ (non ritorno a zero)</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Il segnale elettrico risultante è identico ai bit di partenza.
+NOTA: in ricezione, ogni codifica viene trasformata in NRZ.
+</p>
+
+
+<div id="orgb1153b9" class="figure">
+<p><img src="./NRZcode.png" alt="NRZcode.png" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Codifica NRZ</p>
+</div>
+
+<p>
+Spettro: si annulla alla Fc, a 2 Fc eccetera.
+La banda occupata è uguale ad Fc.
+Il problema è che la componente continua (la media del segnale) ha una frequenza molto alta.
+Per questo motivo, non useremo NRZ per la trasmissione a lunghe distanze.
+</p>
+
+<p>
+Per il circuito è sufficiente utilizzare un comparatore.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6efc728" class="outline-3">
+<h3 id="org6efc728"><span class="section-number-3">3.2.</span> Codifica RZ (ritorno a zero)</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<div id="orgddf3edc" class="figure">
+<p><img src="./RZcode.png" alt="RZcode.png" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Codifica RZ</p>
+</div>
+
+<p>
+I bit zero rimangono a zero, mentre i bit uno rimangono per metà tempo a livello basso e per l&rsquo;altra
+metà a livello alto.
+</p>
+
+<p>
+Grazie a questo ho una componente continua più bassa ma ho allargato la banda.
+Non solo, in corrispondenza di Fc ho una componente che posso estrarre (perchè ha un valore
+diverso da zero).
+</p>
+
+<p>
+In ogni caso non ho risolto il problema perchè la componente continua è abbastanza alta.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecfc37d" class="outline-3">
+<h3 id="orgecfc37d"><span class="section-number-3">3.3.</span> Codifica di Manchester</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<div id="org23571bf" class="figure">
+<p><img src="./manchester.png" alt="manchester.png" />
+</p>
+<p><span class="figure-number">Figure 4: </span>Codifica di Manchester</p>
+</div>
+
+<p>
+In questo modo abbiamo un valore medio che è molto prossimo a 0. Il problema però è che la
+banda occupata dal segnale è molto elevata.
+</p>
+
+
+<div id="orgd272b52" class="figure">
+<p><img src="./banda-manchester.png" alt="banda-manchester.png" />
+</p>
+<p><span class="figure-number">Figure 5: </span>Banda Manchester</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga020e8f" class="outline-3">
+<h3 id="orga020e8f"><span class="section-number-3">3.4.</span> Codifica AMI</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+AMI = Automated Mark Inversion
+</p>
+
+
+<div id="orgff02e21" class="figure">
+<p><img src="./AMICode.png" alt="AMICode.png" />
+</p>
+<p><span class="figure-number">Figure 6: </span>Codifica AMI</p>
+</div>
+
+<p>
+Deriva dal codice RZ ma si differenzia per il fatto che gli impulsi devono essere alternati.
+Ha un valore medio molto prossimo a zero, una banda piccola ma si annulla ad Fc.
+In realtà però il fatto che sia nullo in Fc è un falso problema perchè in demodulazione lo
+convertiamo comunque in RZ o qualsiasi altro codice che abbia la Fc.
+</p>
+
+
+<div id="orgf92e694" class="figure">
+<p><img src="./banda-ami.png" alt="banda-ami.png" />
+</p>
+<p><span class="figure-number">Figure 7: </span>Banda AMI</p>
+</div>
+
+<p>
+Rimane però il problema delle lunghe sequenze di zero, poichè potrebbero creare dei problemi di
+codifica in ricezione. Per risolvere, si usa HDB-n
+</p>
+</div>
+</div>
+
+<div id="outline-container-org747e8cd" class="outline-3">
+<h3 id="org747e8cd"><span class="section-number-3">3.5.</span> Codifica HDB-n</h3>
+<div class="outline-text-3" id="text-3-5">
+
+<div id="orgf73b077" class="figure">
+<p><img src="./HDB3Code.png" alt="HDB3Code.png" />
+</p>
+<p><span class="figure-number">Figure 8: </span>Banda AMI</p>
+</div>
+
+<p>
+Dove n è il numero massimo di zeri consecutivi consentiti. Ad esempio, HDB-3 mi permette di trasmettere
+3 zeri consecutivi prima che il codice intervenga.
+</p>
+
+<p>
+Consiste nel codice AMI ma quando c&rsquo;è una violazione (troppi zeri consecutivi) il codice interviene, in
+modi diversi in base a se il numero di uno è pari o dispari.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Asdrubalini</p>
+<p class="date">Created: 2022-05-19 Thu 11:10</p>
+</div>
+</body>
+</html>
