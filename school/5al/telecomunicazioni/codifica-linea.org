@@ -91,7 +91,7 @@ Rimane però il problema delle lunghe sequenze di zero, poichè potrebbero crear
 codifica in ricezione. Per risolvere, si usa HDB-n
 
 *** Codifica HDB-n
-#+CAPTION: Banda AMI
+#+CAPTION: Banda HDB-3
 [[./HDB3Code.png]]
 
 Dove n è il numero massimo di zeri consecutivi consentiti. Ad esempio, HDB-3 mi permette di trasmettere
@@ -99,3 +99,22 @@ Dove n è il numero massimo di zeri consecutivi consentiti. Ad esempio, HDB-3 mi
 
 Consiste nel codice AMI ma quando c'è una violazione (troppi zeri consecutivi) il codice interviene, in
 modi diversi in base a se il numero di uno è pari o dispari.
+
+** Per ricostruire un segnale NRZ
+Devo assicurarmi di prendere proprio il centro del livello alto. Per questo motivo, traslo il clock in modo
+che il fronte di salita sia al centro.
+
+RZ = (NRZ) and (CLOCK)
+Con l'and logico, il segnale è diverso da zero solo quando sono alti sia il clock che l'NRZ.
+
+Per trasmettere in NZ e convertire in NRZ in ricezione:
+#+CAPTION: Circuito di conversione RZ -> NRZ
+[[./conversione-rz-nrz.png]]
+
+** Per trasmettere in codice AMI e riconvertire in NRZ
+#+CAPTION: Circuito di conversione NRZ -> AMI
+[[./conversione-nrz-ami.jpg]]
+
+** Conversione NRZ -> Bifase -> NRZ
+#+CAPTION: Circuito di conversione NRZ -> Bifase -> NRZ
+[[./conversione-nrz-bifase-nrz.jpg]]
