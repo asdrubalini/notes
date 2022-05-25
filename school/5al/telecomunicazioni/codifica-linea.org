@@ -74,7 +74,7 @@ banda occupata dal segnale è molto elevata.
 [[./banda-manchester.png]]
 
 *** Codifica AMI
-AMI = Automated Mark Inversion
+AMI = Alternated Mark Inversion
 
 #+CAPTION: Codifica AMI
 [[./AMICode.png]]
