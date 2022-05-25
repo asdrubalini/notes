@@ -15,3 +15,4 @@
 
 *** Telecomunicazioni
   1. [[file:school/5al/telecomunicazioni/codifica-canale.org][Codifica di canale]]
+  1. [[file:school/5al/telecomunicazioni/codifica-linea.org][Codifica di linea]]
