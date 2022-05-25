@@ -13,7 +13,7 @@ Due tipi di codici
 - Codici a blocchi
   - A ripetizione
   - Parità (pari o dispari)
-  - Hemming
+  - Hamming
   - Ciclici
 
 - Codici convoluzionali
@@ -107,7 +107,7 @@ M'(x) = M(x) \cdot x^{gr(G)}
 
 Ovvero aggiungo tanti zeri quanto è il grado di G $gr(G)$
 
-Poi divido per $G(x)§ ed il resto della divisione sarà il CRC che devo aggiungere al messaggio
+Poi divido per $G(x)$ ed il resto della divisione sarà il CRC che devo aggiungere al messaggio
 \begin{equation}
 R(x) = M'(x) % G(x)
 \end{equation}
@@ -115,6 +115,11 @@ R(x) = M'(x) % G(x)
 \begin{equation}
 T(x) = M(x) + R(x)
 \end{equation}
+
+*** In ricezione
+In ricezione ci deve essere lo stesso polinomio generatore.
+Divido per $G(x)$ e controllo se il resto è uguale o diverso da zero. Se è diverso da zero
+richiedo il rinvio.
 
 *** Esempio:
 Messaggio: =1010011=

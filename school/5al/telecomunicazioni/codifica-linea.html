@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-25 Wed 08:01 -->
+<!-- 2022-05-25 Wed 18:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Codifica di linea</title>
@@ -221,33 +221,33 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8b2e54d">1. A cosa serve una codifica di linea</a></li>
-<li><a href="#org7920b3e">2. Caratteristiche che dovrebbe avere un segnale di linea</a>
+<li><a href="#org90f2bd5">1. A cosa serve una codifica di linea</a></li>
+<li><a href="#orgcf415d9">2. Caratteristiche che dovrebbe avere un segnale di linea</a>
 <ul>
-<li><a href="#org10790d4">2.1. Eliminazione della componente continua</a></li>
-<li><a href="#orgc4f429b">2.2. Componente alla frequenza di cifra</a></li>
-<li><a href="#org1b40356">2.3. Riduzione delle lunghe frequenze di zeri</a></li>
-<li><a href="#org73242eb">2.4. Riduzione della banda occupata dal segnale</a></li>
+<li><a href="#org28fe492">2.1. Eliminazione della componente continua</a></li>
+<li><a href="#org03e05a0">2.2. Componente alla frequenza di cifra</a></li>
+<li><a href="#org2387753">2.3. Riduzione delle lunghe frequenze di zeri</a></li>
+<li><a href="#org8b22154">2.4. Riduzione della banda occupata dal segnale</a></li>
 </ul>
 </li>
-<li><a href="#org28f2209">3. Tipi di codici di linea a disposizione</a>
+<li><a href="#org28ab4b7">3. Tipi di codici di linea a disposizione</a>
 <ul>
-<li><a href="#org347e4f1">3.1. Codice NRZ (non ritorno a zero)</a></li>
-<li><a href="#org279d846">3.2. Codifica RZ (ritorno a zero)</a></li>
-<li><a href="#orgc44c3ad">3.3. Codifica di Manchester</a></li>
-<li><a href="#org00cd8ef">3.4. Codifica AMI</a></li>
-<li><a href="#org12f4854">3.5. Codifica HDB-n</a></li>
+<li><a href="#org5d17791">3.1. Codice NRZ (non ritorno a zero)</a></li>
+<li><a href="#orgabeac08">3.2. Codifica RZ (ritorno a zero)</a></li>
+<li><a href="#org9c6e414">3.3. Codifica di Manchester</a></li>
+<li><a href="#org0ec8a96">3.4. Codifica AMI</a></li>
+<li><a href="#orga65d5ad">3.5. Codifica HDB-n</a></li>
 </ul>
 </li>
-<li><a href="#org94a7de1">4. Per ricostruire un segnale NRZ</a></li>
-<li><a href="#org47657d5">5. Per trasmettere in codice AMI e riconvertire in NRZ</a></li>
-<li><a href="#org9aa1b0b">6. Conversione NRZ -&gt; Bifase -&gt; NRZ</a></li>
+<li><a href="#org8843a67">4. Per ricostruire un segnale NRZ</a></li>
+<li><a href="#org978b9f4">5. Per trasmettere in codice AMI e riconvertire in NRZ</a></li>
+<li><a href="#org7e82ba4">6. Conversione NRZ -&gt; Bifase -&gt; NRZ</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org8b2e54d" class="outline-2">
-<h2 id="org8b2e54d"><span class="section-number-2">1.</span> A cosa serve una codifica di linea</h2>
+<div id="outline-container-org90f2bd5" class="outline-2">
+<h2 id="org90f2bd5"><span class="section-number-2">1.</span> A cosa serve una codifica di linea</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Avviene prima di trasmettere l'informazione in linea.
@@ -256,7 +256,7 @@ segnale elettrico idoneo alla linea ed alla tecnica di trasmissione.
 </p>
 
 
-<div id="orga2adda9" class="figure">
+<div id="org0e8b571" class="figure">
 <p><img src="./riepilogo.jpg" alt="riepilogo.jpg" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Riepilogo</p>
@@ -264,12 +264,12 @@ segnale elettrico idoneo alla linea ed alla tecnica di trasmissione.
 </div>
 </div>
 
-<div id="outline-container-org7920b3e" class="outline-2">
-<h2 id="org7920b3e"><span class="section-number-2">2.</span> Caratteristiche che dovrebbe avere un segnale di linea</h2>
+<div id="outline-container-orgcf415d9" class="outline-2">
+<h2 id="orgcf415d9"><span class="section-number-2">2.</span> Caratteristiche che dovrebbe avere un segnale di linea</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org10790d4" class="outline-3">
-<h3 id="org10790d4"><span class="section-number-3">2.1.</span> Eliminazione della componente continua</h3>
+<div id="outline-container-org28fe492" class="outline-3">
+<h3 id="org28fe492"><span class="section-number-3">2.1.</span> Eliminazione della componente continua</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Considerando che di solito la trasmissione avviene a distanza ed è spesso necessario
@@ -283,8 +283,8 @@ del segnale nel caso di un segnale continuo.
 </div>
 </div>
 
-<div id="outline-container-orgc4f429b" class="outline-3">
-<h3 id="orgc4f429b"><span class="section-number-3">2.2.</span> Componente alla frequenza di cifra</h3>
+<div id="outline-container-org03e05a0" class="outline-3">
+<h3 id="org03e05a0"><span class="section-number-3">2.2.</span> Componente alla frequenza di cifra</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 In ricezione il segnale deve essere ricostruito. Abbiamo quindi bisogno che ci sia una componente
@@ -298,8 +298,8 @@ In realtà è un falso problema.
 </div>
 </div>
 
-<div id="outline-container-org1b40356" class="outline-3">
-<h3 id="org1b40356"><span class="section-number-3">2.3.</span> Riduzione delle lunghe frequenze di zeri</h3>
+<div id="outline-container-org2387753" class="outline-3">
+<h3 id="org2387753"><span class="section-number-3">2.3.</span> Riduzione delle lunghe frequenze di zeri</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Il segnale non deve avere lunghe sequenze di zeri per evitare che in ricezione si abbiano dei problemi
@@ -308,8 +308,8 @@ di decodifica.
 </div>
 </div>
 
-<div id="outline-container-org73242eb" class="outline-3">
-<h3 id="org73242eb"><span class="section-number-3">2.4.</span> Riduzione della banda occupata dal segnale</h3>
+<div id="outline-container-org8b22154" class="outline-3">
+<h3 id="org8b22154"><span class="section-number-3">2.4.</span> Riduzione della banda occupata dal segnale</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 Non dovrebbe occupare una banda troppo larga.
@@ -318,19 +318,19 @@ Non dovrebbe occupare una banda troppo larga.
 </div>
 </div>
 
-<div id="outline-container-org28f2209" class="outline-2">
-<h2 id="org28f2209"><span class="section-number-2">3.</span> Tipi di codici di linea a disposizione</h2>
+<div id="outline-container-org28ab4b7" class="outline-2">
+<h2 id="org28ab4b7"><span class="section-number-2">3.</span> Tipi di codici di linea a disposizione</h2>
 <div class="outline-text-2" id="text-3">
 
-<div id="orge29e8f4" class="figure">
+<div id="orgdfa28c6" class="figure">
 <p><img src="./5.png" alt="5.png" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Metodi di codifica</p>
 </div>
 </div>
 
-<div id="outline-container-org347e4f1" class="outline-3">
-<h3 id="org347e4f1"><span class="section-number-3">3.1.</span> Codice NRZ (non ritorno a zero)</h3>
+<div id="outline-container-org5d17791" class="outline-3">
+<h3 id="org5d17791"><span class="section-number-3">3.1.</span> Codice NRZ (non ritorno a zero)</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Il segnale elettrico risultante è identico ai bit di partenza.
@@ -338,7 +338,7 @@ NOTA: in ricezione, ogni codifica viene trasformata in NRZ.
 </p>
 
 
-<div id="org29c8b9e" class="figure">
+<div id="orgd5545f2" class="figure">
 <p><img src="./NRZcode.png" alt="NRZcode.png" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Codifica NRZ</p>
@@ -357,11 +357,11 @@ Per il circuito è sufficiente utilizzare un comparatore.
 </div>
 </div>
 
-<div id="outline-container-org279d846" class="outline-3">
-<h3 id="org279d846"><span class="section-number-3">3.2.</span> Codifica RZ (ritorno a zero)</h3>
+<div id="outline-container-orgabeac08" class="outline-3">
+<h3 id="orgabeac08"><span class="section-number-3">3.2.</span> Codifica RZ (ritorno a zero)</h3>
 <div class="outline-text-3" id="text-3-2">
 
-<div id="org04e8097" class="figure">
+<div id="orgf056699" class="figure">
 <p><img src="./RZcode.png" alt="RZcode.png" />
 </p>
 <p><span class="figure-number">Figure 4: </span>Codifica RZ</p>
@@ -384,11 +384,11 @@ In ogni caso non ho risolto il problema perchè la componente continua è abbast
 </div>
 </div>
 
-<div id="outline-container-orgc44c3ad" class="outline-3">
-<h3 id="orgc44c3ad"><span class="section-number-3">3.3.</span> Codifica di Manchester</h3>
+<div id="outline-container-org9c6e414" class="outline-3">
+<h3 id="org9c6e414"><span class="section-number-3">3.3.</span> Codifica di Manchester</h3>
 <div class="outline-text-3" id="text-3-3">
 
-<div id="orgd466bc9" class="figure">
+<div id="orge8390c4" class="figure">
 <p><img src="./manchester.png" alt="manchester.png" />
 </p>
 <p><span class="figure-number">Figure 5: </span>Codifica di Manchester</p>
@@ -400,7 +400,7 @@ banda occupata dal segnale è molto elevata.
 </p>
 
 
-<div id="org16ecf06" class="figure">
+<div id="orgd6328be" class="figure">
 <p><img src="./banda-manchester.png" alt="banda-manchester.png" />
 </p>
 <p><span class="figure-number">Figure 6: </span>Banda Manchester</p>
@@ -408,15 +408,15 @@ banda occupata dal segnale è molto elevata.
 </div>
 </div>
 
-<div id="outline-container-org00cd8ef" class="outline-3">
-<h3 id="org00cd8ef"><span class="section-number-3">3.4.</span> Codifica AMI</h3>
+<div id="outline-container-org0ec8a96" class="outline-3">
+<h3 id="org0ec8a96"><span class="section-number-3">3.4.</span> Codifica AMI</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
-AMI = Automated Mark Inversion
+AMI = Alternated Mark Inversion
 </p>
 
 
-<div id="orga5bcaf4" class="figure">
+<div id="org6cfd5bd" class="figure">
 <p><img src="./AMICode.png" alt="AMICode.png" />
 </p>
 <p><span class="figure-number">Figure 7: </span>Codifica AMI</p>
@@ -430,7 +430,7 @@ convertiamo comunque in RZ o qualsiasi altro codice che abbia la Fc.
 </p>
 
 
-<div id="org56dda5c" class="figure">
+<div id="org8ac8b21" class="figure">
 <p><img src="./banda-ami.png" alt="banda-ami.png" />
 </p>
 <p><span class="figure-number">Figure 8: </span>Banda AMI</p>
@@ -443,11 +443,11 @@ codifica in ricezione. Per risolvere, si usa HDB-n
 </div>
 </div>
 
-<div id="outline-container-org12f4854" class="outline-3">
-<h3 id="org12f4854"><span class="section-number-3">3.5.</span> Codifica HDB-n</h3>
+<div id="outline-container-orga65d5ad" class="outline-3">
+<h3 id="orga65d5ad"><span class="section-number-3">3.5.</span> Codifica HDB-n</h3>
 <div class="outline-text-3" id="text-3-5">
 
-<div id="orged3f062" class="figure">
+<div id="org5e66ff3" class="figure">
 <p><img src="./HDB3Code.png" alt="HDB3Code.png" />
 </p>
 <p><span class="figure-number">Figure 9: </span>Banda HDB-3</p>
@@ -466,8 +466,8 @@ modi diversi in base a se il numero di uno è pari o dispari.
 </div>
 </div>
 
-<div id="outline-container-org94a7de1" class="outline-2">
-<h2 id="org94a7de1"><span class="section-number-2">4.</span> Per ricostruire un segnale NRZ</h2>
+<div id="outline-container-org8843a67" class="outline-2">
+<h2 id="org8843a67"><span class="section-number-2">4.</span> Per ricostruire un segnale NRZ</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Devo assicurarmi di prendere proprio il centro del livello alto. Per questo motivo, traslo il clock in modo
@@ -483,7 +483,7 @@ Con l'and logico, il segnale è diverso da zero solo quando sono alti sia il clo
 Per trasmettere in NZ e convertire in NRZ in ricezione:
 </p>
 
-<div id="orgbc2c5a4" class="figure">
+<div id="org037e536" class="figure">
 <p><img src="./conversione-rz-nrz.png" alt="conversione-rz-nrz.png" />
 </p>
 <p><span class="figure-number">Figure 10: </span>Circuito di conversione RZ -&gt; NRZ</p>
@@ -491,11 +491,11 @@ Per trasmettere in NZ e convertire in NRZ in ricezione:
 </div>
 </div>
 
-<div id="outline-container-org47657d5" class="outline-2">
-<h2 id="org47657d5"><span class="section-number-2">5.</span> Per trasmettere in codice AMI e riconvertire in NRZ</h2>
+<div id="outline-container-org978b9f4" class="outline-2">
+<h2 id="org978b9f4"><span class="section-number-2">5.</span> Per trasmettere in codice AMI e riconvertire in NRZ</h2>
 <div class="outline-text-2" id="text-5">
 
-<div id="org829fc33" class="figure">
+<div id="org2ce6056" class="figure">
 <p><img src="./conversione-nrz-ami.jpg" alt="conversione-nrz-ami.jpg" />
 </p>
 <p><span class="figure-number">Figure 11: </span>Circuito di conversione NRZ -&gt; AMI</p>
@@ -503,11 +503,11 @@ Per trasmettere in NZ e convertire in NRZ in ricezione:
 </div>
 </div>
 
-<div id="outline-container-org9aa1b0b" class="outline-2">
-<h2 id="org9aa1b0b"><span class="section-number-2">6.</span> Conversione NRZ -&gt; Bifase -&gt; NRZ</h2>
+<div id="outline-container-org7e82ba4" class="outline-2">
+<h2 id="org7e82ba4"><span class="section-number-2">6.</span> Conversione NRZ -&gt; Bifase -&gt; NRZ</h2>
 <div class="outline-text-2" id="text-6">
 
-<div id="org15d5efd" class="figure">
+<div id="orgf5525fc" class="figure">
 <p><img src="./conversione-nrz-bifase-nrz.jpg" alt="conversione-nrz-bifase-nrz.jpg" />
 </p>
 <p><span class="figure-number">Figure 12: </span>Circuito di conversione NRZ -&gt; Bifase -&gt; NRZ</p>
@@ -516,7 +516,7 @@ Per trasmettere in NZ e convertire in NRZ in ricezione:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-05-25 Wed 08:01</p>
+<p class="date">Created: 2022-05-25 Wed 18:40</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
