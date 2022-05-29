@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-25 Wed 18:40 -->
+<!-- 2022-05-29 Sun 20:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Codifica di Canale</title>
@@ -221,14 +221,14 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org341ecef">1. Codici a ripetizione</a></li>
-<li><a href="#org1842b6a">2. Codici di parità</a></li>
-<li><a href="#org0326691">3. Correzione degli errori:</a></li>
-<li><a href="#org982e897">4. Codice di Hamming</a></li>
-<li><a href="#org9cacab5">5. CRC: Cyclic redundant check</a>
+<li><a href="#orgf894253">1. Codici a ripetizione</a></li>
+<li><a href="#org1972ca3">2. Codici di parità</a></li>
+<li><a href="#orgc2849b2">3. Correzione degli errori:</a></li>
+<li><a href="#orge0d40e6">4. Codice di Hamming</a></li>
+<li><a href="#org9125b4b">5. CRC: Cyclic redundant check</a>
 <ul>
-<li><a href="#org94efbda">5.1. In ricezione</a></li>
-<li><a href="#org407ee2e">5.2. Esempio:</a></li>
+<li><a href="#org40f70e0">5.1. In ricezione</a></li>
+<li><a href="#orgc95c9c6">5.2. Esempio:</a></li>
 </ul>
 </li>
 </ul>
@@ -265,8 +265,8 @@ Due tipi di codici
 </ul>
 
 
-<div id="outline-container-org341ecef" class="outline-2">
-<h2 id="org341ecef"><span class="section-number-2">1.</span> Codici a ripetizione</h2>
+<div id="outline-container-orgf894253" class="outline-2">
+<h2 id="orgf894253"><span class="section-number-2">1.</span> Codici a ripetizione</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Consistono nell'associare al bit 0 un numero di zeri.
@@ -276,8 +276,8 @@ In ricezione prendo la maggioranza. Esempio 001 prendo 0 perchè ci sono più 0 
 </div>
 </div>
 
-<div id="outline-container-org1842b6a" class="outline-2">
-<h2 id="org1842b6a"><span class="section-number-2">2.</span> Codici di parità</h2>
+<div id="outline-container-org1972ca3" class="outline-2">
+<h2 id="org1972ca3"><span class="section-number-2">2.</span> Codici di parità</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Nel caso della parità pari, il numero di 1 nel blocco deve essere pari. Se scelgo
@@ -294,7 +294,7 @@ di 1 è già pari.
 Si può fare anche in colonna:
 </p>
 
-<div id="org9457085" class="figure">
+<div id="orga356288" class="figure">
 <p><img src="./1.jpg" alt="1.jpg" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Parità in colonna</p>
@@ -302,8 +302,8 @@ Si può fare anche in colonna:
 </div>
 </div>
 
-<div id="outline-container-org0326691" class="outline-2">
-<h2 id="org0326691"><span class="section-number-2">3.</span> Correzione degli errori:</h2>
+<div id="outline-container-orgc2849b2" class="outline-2">
+<h2 id="orgc2849b2"><span class="section-number-2">3.</span> Correzione degli errori:</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Si utilizza XOR per avere dei bit di parità. In base al bit di parità sbagliato, posso capire
@@ -311,7 +311,7 @@ in quale bit si trova l'errore e quindi correggerlo.
 </p>
 
 
-<div id="orgfd87f4d" class="figure">
+<div id="org1c93366" class="figure">
 <p><img src="./2.jpg" alt="2.jpg" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Correzione degli errori</p>
@@ -319,8 +319,8 @@ in quale bit si trova l'errore e quindi correggerlo.
 </div>
 </div>
 
-<div id="outline-container-org982e897" class="outline-2">
-<h2 id="org982e897"><span class="section-number-2">4.</span> Codice di Hamming</h2>
+<div id="outline-container-orge0d40e6" class="outline-2">
+<h2 id="orge0d40e6"><span class="section-number-2">4.</span> Codice di Hamming</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Prevede un numero di bit di ridondanza q, k il numero di bit di informazione, n il numero di bit totali:
@@ -364,7 +364,7 @@ di ridondanza:
 \end{equation}
 
 
-<div id="org3b0437f" class="figure">
+<div id="org1b6e071" class="figure">
 <p><img src="./3.png" alt="3.png" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Tabella Hamming</p>
@@ -375,7 +375,7 @@ Ad ogni gruppo viene calcolata la parità e viene inserita nella posizione.
 </p>
 
 
-<div id="org843ae1d" class="figure">
+<div id="org31f3c88" class="figure">
 <p><img src="./4.jpg" alt="4.jpg" />
 </p>
 <p><span class="figure-number">Figure 4: </span>Rilevazione dell'errore</p>
@@ -383,8 +383,8 @@ Ad ogni gruppo viene calcolata la parità e viene inserita nella posizione.
 </div>
 </div>
 
-<div id="outline-container-org9cacab5" class="outline-2">
-<h2 id="org9cacab5"><span class="section-number-2">5.</span> CRC: Cyclic redundant check</h2>
+<div id="outline-container-org9125b4b" class="outline-2">
+<h2 id="org9125b4b"><span class="section-number-2">5.</span> CRC: Cyclic redundant check</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Si esprime la combinazione di bit che dobbiamo trasmettere sottoforma di polinomio. Si considera
@@ -425,8 +425,8 @@ T(x) = M(x) + R(x)
 \end{equation}
 </div>
 
-<div id="outline-container-org94efbda" class="outline-3">
-<h3 id="org94efbda"><span class="section-number-3">5.1.</span> In ricezione</h3>
+<div id="outline-container-org40f70e0" class="outline-3">
+<h3 id="org40f70e0"><span class="section-number-3">5.1.</span> In ricezione</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 In ricezione ci deve essere lo stesso polinomio generatore.
@@ -436,8 +436,8 @@ richiedo il rinvio.
 </div>
 </div>
 
-<div id="outline-container-org407ee2e" class="outline-3">
-<h3 id="org407ee2e"><span class="section-number-3">5.2.</span> Esempio:</h3>
+<div id="outline-container-orgc95c9c6" class="outline-3">
+<h3 id="orgc95c9c6"><span class="section-number-3">5.2.</span> Esempio:</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 Messaggio: <code>1010011</code>
@@ -478,7 +478,7 @@ In ricezione, divido nuovamente per G e se la non ottengo 0 come risultato so ch
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-05-25 Wed 18:40</p>
+<p class="date">Created: 2022-05-29 Sun 20:55</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
