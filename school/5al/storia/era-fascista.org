@@ -2,48 +2,55 @@
 
 ** La vittoria mutilata
 A Gennaio del 1919, si tiene la conferenza di pace a Versailles. L'Italia non ottiene le terre che avrebbe
-dovuto avere, per colpa del principio di nazionalità. L'Italia rivendica la città di fiume perchè era abitata
-principalmente da Italiani.
-L'Italia (il ministro degli esteri Sonnino) decide di accettare di perdere la Dalmazia.
+dovuto avere, per colpa del principio di nazionalità secondo cui in uno Stato dovrebbero vivere le persone
+di quella nazionalità. L'Italia rivendica quindi la città di fiume secondo lo stesso principio, ma non ebbe
+nemmeno quella.
+Il ministro degli esteri Sonnino decise però di accettare la perdita della Dalmazia.
 
-Si diffonde l'idea di aver vinto la guerra ma perso la pace. Da qui l'espressione di vittoria mutilata. D'Annunzio
-occupa Fiume, ed alla fine l'Italia prende Istria.
+Si diffonde l'idea di aver vinto la guerra ma perso la pace. Da qui l'espressione di vittoria mutilata.
+D'Annunzio occupa Fiume, ed alla fine l'Italia prende Istria.
 
 ** Nuovo sistema politico
-La crisi economica colpisce la piccola e la media borghesia e così inizia una serie di scioperi e lotte sociali ai
-quali partecipano sempre più persone.
+La crisi economica colpisce la piccola e la media borghesia e così iniziano una serie di scioperi e lotte
+sociali ai quali partecipano sempre più persone nel corso degli anni.
 
-Si passa dal sistema proporzionario ad uno maggioritario, in cui un candidato deve superare la maggioranza assoluta
-per poter governare. Questo sistema limita fortemente la rappresentanza delle minoranze ma aumenta la governabilità.
+Il sistema politico passa da essere proporzionario ad essere maggioritario, in cui un candidato per poter
+governare deve superare la maggioranza assoluta. Ciò limita la rappresentanza delle minoranze ma anche di chi
+riceve percentuali di voto significative, però aumenta la governabilità. Il criterio con cui lavora è
+"il primo prende tutto".
 
-** Nascita del PPI e del PCI
+** Nascita del PPI
 Nasce il Partito Popolare Italiano (PPI) da un sacerdote (Sturzo) che decise di creare un partito che si collocasse
 al centro, non che non si rivede nei nè liberali nè nei socialisti e non si rivolge solo ai cattolici.
 
+** Scissione del movimento socialista in comunisti e socialisti
 Gramsci non avrebbe voluto separarsi dai socialisti perchè sapeva che avrebbe portato alla
-separazione dei voti. Alla fine però le parole di Lenin secondo cui con i riformisti non ci sarebbe
-potuta essere nessuna rivoluzione proletaria gli fanno cambiare idea e si decide quindi di separare il
-partito facendo nascere il PCI.
+separazione dei voti. Alla fine però le parole di Lenin rivolte all'Italia secondo cui con i riformisti
+non ci sarebbe potuta essere nessuna rivoluzione proletaria gli fanno cambiare idea e si
+decide quindi di separare il partito facendo nascere il PCI, in opposizione al PSI formato dai riformisti
+e gestito da Matteotti.
 
-Vincono i grandi partiti di massa (PSI e PPI).
+** Elezioni del 1919
+Alle elezioni vincono i grandi partiti di massa (PPI e PSI) ma non essendo coalizzabili si crea una
+coalizione tra i liberali ed i popolari.
 
-** Elezioni del 1919, radicalizzazione del partito fascista
-Al governo vanno i liberali ed i popolari perchè PSI e PPI non erano coalizzabili.
-Il movimento di Mussolini in questi anni non voleva nulla, ma ad un certo punto ha una svolta radicale
-e passa dal socialismo all'estrema destra.
+Il movimento di Mussolini, i fasci di combattimento, in questo momento hanno ancora 0 seggi e sono
+repubblicani ed anticlericali.
 
-** Attentato contro i socialisti a Bologna
+** Episodio di Palazzo d'Accursio, attentato contro i socialisti a Bologna
 Nel comune di Bologna avevano vinto i socialisti. Al momento dell'insediamento vengono sparati dei colpi
-di pistola sulla folla di matrice socialista. Il governo tuttavia non fa nulla, perchè il pericolo
+di pistola sulla folla da parte di squadristi fascisti. Il governo tuttavia non fa nulla, perchè il pericolo
 principale erano i comunisti per via di una possibile rivoluzione Bolscevica come quella che stava avvenendo in
 Russia.
 
-** Elezioni Maggio 1921
-I fascisti si presentano in coalizione con liberali e nazionalisti. Adesso i fascisti non sono più così
-irrilevanti, ed i fascisti entrano in Parlamento con 35 seggi su 275.
+** Elezioni Maggio 1921, radicalizzazione dei fasci di combattimento
+Il movimento di Mussolini ha una radicalizzazione all'estrema destra, dal socialismo.
 
-Nel 1921 nasce anche il Partito Nazionale Fascista (PNF) e i fascisti marciano su Roma.
-Grazie a ciò, Mussolini ottiene l'incarico dal Re di formare un governo.
+I fascisti si presentano in coalizione con liberali e nazionalisti e prendono il 19%, ed entrano
+in Parlamento con 35 seggi su 275. Non sono più così irrilevanti.
+
+Nel 1921 nasce anche il Partito Nazionale Fascista (PNF) mentre nel 1922 gli squadristi marciano su Roma
+minacciando il colpo di Stato. Grazie a ciò, Mussolini ottiene l'incarico dal Re di formare un governo.
 
 I primi provvedimenti:
 - Creazione di una milizi volontaria per la sicurezza nazionale;
@@ -61,7 +68,7 @@ rivoluzione russa. Nel 1923 i popolari si staccano. I fascisti si coalizzano.
 Nel momento in cui è al governo gli si chiede di cessare nuovamente le violenze squadriste. Trasforma un esercito di
 partito in un esercito di Stato, nazionale.
 
-** La vittoria dei fascisti in parlamento
+** Elezioni del 1924, vittoria fascista
 Mussolini si presenta alle elezioni con delle liste imparentate, però si staccano da lui i liberali di Giolitti.
 Socialisti, comunisti e liberali si presentano tutti singolarmente.
 
@@ -100,6 +107,9 @@ qualsiasi legge in autonomia.
 **** Sostituzione dei sindaci con il podestà, un funzionario nominato dal Governo
 
 **** Licenziamento per tutti i funzionari pubblici senza la tessera del partito
+
+*** Nascita delle camere dei fasci e delle corporazioni (1939)
+Un organo legislativo che sostituì la camera dei deputati.
 
 ** I provvedimenti interni:
 *** Controllo dei mezzi di informazione e comunicazione
@@ -147,14 +157,15 @@ Bonifica l'agro pontino in modo da renderlo coltivabile ed essere autosufficient
 del grano.
 
 ** Provvedimenti esterni
-Conquista di un nuovo territorio (Etiopia), piuttosto che risollevare l'economia interna.
+**** Conquista di un nuovo territorio (Etiopia), piuttosto che risollevare l'economia interna.
 
 Qual è il problema della conquista dell'etiopia: c'era una legge che impediva alle altre nazioni di
 inviare le armi all'Italia. Mussolini assume un'atteggiamento vittimistico.
 In questo modo ottiene il consenso dell'opinione pubblica.
-Nel 1936 l'Italia conquista l'Etiopia. Offre la corona a Vittorio Emanuele III. La conquista del territorio
-dimostra che l'Italia è potente.
+Nel 1936 l'Italia conquista l'Etiopia. Offre la corona a Vittorio Emanuele III.
 
 **** Asse Roma-Berlino
-Il primo momento di vicinanza tra Hitler e Mussolini. Nel 1938 vengono promulgate le leggi razziali anche
-in Italia.
+Termine utilizzata Il primo momento di vicinanza tra Hitler e Mussolini.
+
+**** Promulgazione delle leggi razziali
+Nel 1938 vengono promulgate le leggi razziali anche in Italia.
