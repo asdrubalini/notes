@@ -6,6 +6,7 @@
 
 *** Storia
   1. [[file:school/5al/storia/era-fascista.org][Era fascista]]
+  1. [[file:school/5al/storia/nazismo.org][Nazismo]]
 
 *** Italiano
   1. [[file:school/5al/italiano/pirandello.org][Pirandello]]
