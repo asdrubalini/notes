@@ -10,6 +10,7 @@
 
 *** Italiano
   1. [[file:school/5al/italiano/pirandello.org][Pirandello]]
+  1. [[file:school/5al/italiano/italo-svevo.org][Italo Svevo]]
 
 *** GPO
   1. [[file:school/5al/gpo/clil.org][Renewable energy]]
