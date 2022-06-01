@@ -6,7 +6,7 @@
 <!-- 2022-06-01 Wed 07:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Codifica di Canale</title>
+<title>Seconda Guerra Mondiale</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -192,288 +192,207 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Codifica di Canale</h1>
+<h1 class="title">Seconda Guerra Mondiale</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb9f196d">1. Codici a ripetizione</a></li>
-<li><a href="#orgc4e1eae">2. Codici di parità</a></li>
-<li><a href="#org8f82fb6">3. Correzione degli errori:</a></li>
-<li><a href="#orgbbcabaf">4. Codice di Hamming</a></li>
-<li><a href="#orga3e5c3c">5. CRC: Cyclic redundant check</a>
+<li><a href="#orgc01b967">1. Hitler annette la &lt;qualcosa&gt;</a></li>
+<li><a href="#org2a63540">2. Nel 1939 -&gt; patto Ribbentrop-Molotov tra Germania e Russia</a></li>
+<li><a href="#orga70f6b9">3. Invasione della Polonia nei primi di settembre</a></li>
+<li><a href="#org4f7e37f">4. Mussolini inizialmente non voleva entrare in guerra perchè l'Italia aveva subito grosse perdite sia nella guerra di Etiopia sia nella guerra civile spagnola.</a></li>
+<li><a href="#orge1b792d">5. Due battaglie che la rendono una guerra di logoramento</a>
 <ul>
-<li><a href="#org7a12791">5.1. In ricezione</a></li>
-<li><a href="#orgc356945">5.2. Esempio:</a></li>
+<li><a href="#org10a6393">5.1. Leone marino</a></li>
+<li><a href="#org6c2b527">5.2. Barbarossa</a></li>
 </ul>
 </li>
+<li><a href="#org3babbab">6. Il patto Tripartito</a></li>
+<li><a href="#orgdfe4f17">7. I Giapponesi attaccano la base navale a Pearl Harbour</a></li>
+<li><a href="#orga52ba0c">8. La svolta (dal 1942 al 1944) (nella slide non si capisce nulla)</a></li>
+<li><a href="#orgaf42195">9. 3 Settembre 1943 Bagoglio firma l'Armistizio con gli alleati</a></li>
 </ul>
 </div>
 </div>
-<p>
-La codifica di canale serve per aggiungere ai blocchi di bit degli altri bit
-di ridondanza necessari per la rilevazione e la correzione degli errori.
-</p>
 
-<p>
-Due tecniche:
-</p>
-<ul class="org-ul">
-<li>rilevazione dell'errore e richiesta automatica dell'invio del blocco
-(strategia ARQ, Automatic Repeat Request)</li>
-<li>rilevazione dell'errore e correzione diretta, l'errore viene corretto
-senza richiesta di rispedire (strategia FEC, Foward Error Correction)</li>
-</ul>
-
-<p>
-Due tipi di codici
-</p>
-<ul class="org-ul">
-<li>Codici a blocchi
-<ul class="org-ul">
-<li>A ripetizione</li>
-<li>Parità (pari o dispari)</li>
-<li>Hamming</li>
-<li>Ciclici</li>
-</ul></li>
-
-<li>Codici convoluzionali</li>
-</ul>
-
-
-<div id="outline-container-orgb9f196d" class="outline-2">
-<h2 id="orgb9f196d"><span class="section-number-2">1.</span> Codici a ripetizione</h2>
+<div id="outline-container-orgc01b967" class="outline-2">
+<h2 id="orgc01b967"><span class="section-number-2">1.</span> Hitler annette la &lt;qualcosa&gt;</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Consistono nell'associare al bit 0 un numero di zeri.
-Ad esempio 0 diventa 000 e 1 diventa 111 (con rapporto 3:1)
-In ricezione prendo la maggioranza. Esempio 001 prendo 0 perchè ci sono più 0 che 1.
+Anche Mussolini segue la stessa scia ed annette l'Albania.
+</p>
+
+<p>
+Patto d'acciaio -&gt; l'Italia entra in guerra a prescindere, anche se la Germania
+avesse attaccato.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc4e1eae" class="outline-2">
-<h2 id="orgc4e1eae"><span class="section-number-2">2.</span> Codici di parità</h2>
+<div id="outline-container-org2a63540" class="outline-2">
+<h2 id="org2a63540"><span class="section-number-2">2.</span> Nel 1939 -&gt; patto Ribbentrop-Molotov tra Germania e Russia</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Nel caso della parità pari, il numero di 1 nel blocco deve essere pari. Se scelgo
-la parità dispari, il numero di 1 deve essere dispari. È compreso il bit di parità.
+Hitler decide di firmare il pattro con Stalin in cui si giurava la non aggressione
+con l'espansione della Germania. Inoltre si spartivano la Polonia, parte del patto
+che rimane segreta.
 </p>
-
-<p>
-Esempio con parità pari:
-Se voglio trasmettere '1011010', aggiungo il bit di parità '0' perchè il numero complessivo
-di 1 è già pari.
-</p>
-
-<p>
-Si può fare anche in colonna:
-</p>
-
-<div id="org9b57cd3" class="figure">
-<p><img src="./1.jpg" alt="1.jpg" />
-</p>
-<p><span class="figure-number">Figure 1: </span>Parità in colonna</p>
-</div>
 </div>
 </div>
 
-<div id="outline-container-org8f82fb6" class="outline-2">
-<h2 id="org8f82fb6"><span class="section-number-2">3.</span> Correzione degli errori:</h2>
+<div id="outline-container-orga70f6b9" class="outline-2">
+<h2 id="orga70f6b9"><span class="section-number-2">3.</span> Invasione della Polonia nei primi di settembre</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-Si utilizza XOR per avere dei bit di parità. In base al bit di parità sbagliato, posso capire
-in quale bit si trova l'errore e quindi correggerlo.
+Quando invade la Polonia intervengono anche Francia ed Inghilterra dichiarando guerra
+alla Germania.
 </p>
 
-
-<div id="org5330795" class="figure">
-<p><img src="./2.jpg" alt="2.jpg" />
+<p>
+Conquista anche la Danimarca e la Norvegia.
 </p>
-<p><span class="figure-number">Figure 2: </span>Correzione degli errori</p>
-</div>
+
+<p>
+La prima guerra mondiale si era trasformata in guerra di logoramento. In questo caso, Hitler
+riesce ad arrivare a Parigi nel giro di un mese.
+</p>
+
+<p>
+La Francia si arrende.
+</p>
+
+<p>
+La Francia si divide tra Nord e Sud. La parte Nord subisce l'occupazione tedesca, mentre
+a Sud abbiamo la Repubblica di Vichy.
+</p>
+
+<p>
+I soldati francesi collaborano con la Germania (forse).
+</p>
+
+<p>
+Scappa dal porto di Danquerque per rifugiarsi in Inghilterra.
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgbbcabaf" class="outline-2">
-<h2 id="orgbbcabaf"><span class="section-number-2">4.</span> Codice di Hamming</h2>
+<div id="outline-container-org4f7e37f" class="outline-2">
+<h2 id="org4f7e37f"><span class="section-number-2">4.</span> Mussolini inizialmente non voleva entrare in guerra perchè l'Italia aveva subito grosse perdite sia nella guerra di Etiopia sia nella guerra civile spagnola.</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-Prevede un numero di bit di ridondanza q, k il numero di bit di informazione, n il numero di bit totali:
+La guerra sembrava lampo, perciò Mussolini entra in guerra all'ultimo per sedersi al tavolo dei
+vincitori ed ottenere le terre. Entra il 10 Giugno e il 14 la Francia crolla.
 </p>
-
-\begin{equation}
-n = 2^q -1
-\end{equation}
 
 <p>
-Esempio
+L'Italia aveva pochi soldati.
 </p>
-
-\begin{equation}
-q = 3
-\end{equation}
-
-\begin{equation}
-n = 2^3 - 1 = 7
-\end{equation}
-
-\begin{equation}
-k = 4
-\end{equation}
-
-<p>
-I bit di ridondanza in questo caso non sono in coda ma sono mischiati. Per individuare la posizione dei bit
-di ridondanza:
-</p>
-
-\begin{equation}
-2^0 = 1^a \hspace{0.2cm} posizione
-\end{equation}
-
-\begin{equation}
-2^1 = 2^a \hspace{0.2cm} posizione
-\end{equation}
-
-\begin{equation}
-2^2 = 4^a \hspace{0.2cm} posizione
-\end{equation}
-
-
-<div id="org0c91bc9" class="figure">
-<p><img src="./3.png" alt="3.png" />
-</p>
-<p><span class="figure-number">Figure 3: </span>Tabella Hamming</p>
-</div>
-
-<p>
-Ad ogni gruppo viene calcolata la parità e viene inserita nella posizione.
-</p>
-
-
-<div id="orge4e56f6" class="figure">
-<p><img src="./4.jpg" alt="4.jpg" />
-</p>
-<p><span class="figure-number">Figure 4: </span>Rilevazione dell'errore</p>
-</div>
 </div>
 </div>
 
-<div id="outline-container-orga3e5c3c" class="outline-2">
-<h2 id="orga3e5c3c"><span class="section-number-2">5.</span> CRC: Cyclic redundant check</h2>
+<div id="outline-container-orge1b792d" class="outline-2">
+<h2 id="orge1b792d"><span class="section-number-2">5.</span> Due battaglie che la rendono una guerra di logoramento</h2>
 <div class="outline-text-2" id="text-5">
 <p>
-Si esprime la combinazione di bit che dobbiamo trasmettere sottoforma di polinomio. Si considera
-un polinomio generatore di un certo grado e lo si moltiplica per il polinomio messaggio.
+Le due battaglie sono Operazione Barbarossa ed Operazione Leone Marino (con cui Hitler
+decide di attaccare l'Inghilterra).
 </p>
-
-<p>
-Messaggio:
-</p>
-\begin{equation}
-M(x)
-\end{equation}
-
-<p>
-Generatore:
-</p>
-\begin{equation}
-G(x)
-\end{equation}
-
-\begin{equation}
-M'(x) = M(x) \cdot x^{gr(G)}
-\end{equation}
-
-<p>
-Ovvero aggiungo tanti zeri quanto è il grado di G \(gr(G)\)
-</p>
-
-<p>
-Poi divido per \(G(x)\) ed il resto della divisione sarà il CRC che devo aggiungere al messaggio
-</p>
-\begin{equation}
-R(x) = M'(x) % G(x)
-\end{equation}
-
-\begin{equation}
-T(x) = M(x) + R(x)
-\end{equation}
 </div>
 
-<div id="outline-container-org7a12791" class="outline-3">
-<h3 id="org7a12791"><span class="section-number-3">5.1.</span> In ricezione</h3>
+<div id="outline-container-org10a6393" class="outline-3">
+<h3 id="org10a6393"><span class="section-number-3">5.1.</span> Leone marino</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
-In ricezione ci deve essere lo stesso polinomio generatore.
-Divido per \(G(x)\) e controllo se il resto è uguale o diverso da zero. Se è diverso da zero
-richiedo il rinvio.
+Il presidente Churchill aveva dichiarato di proseguire ad oltranza la guerra contro la Germania.
+Si combatte tramite l'aviazione.
+</p>
+
+<p>
+Nessuna delle due potenze prevale sull'altra -&gt; guerra di logoramento
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc356945" class="outline-3">
-<h3 id="orgc356945"><span class="section-number-3">5.2.</span> Esempio:</h3>
+<div id="outline-container-org6c2b527" class="outline-3">
+<h3 id="org6c2b527"><span class="section-number-3">5.2.</span> Barbarossa</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
-Messaggio: <code>1010011</code>
-</p>
-
-\begin{equation}
-M(x) = x^6 + x^4 + x + 1
-\end{equation}
-
-<p>
-Dalla norma, conosciuto sia da ricevitore che da trasmettitore:
-</p>
-\begin{equation}
-G(x) = x^4 + x + 1
-\end{equation}
-
-<p>
-Che corrisponde alla combinazione di bit <code>10011</code>.
-</p>
-
-\begin{equation}
-M'(x) = (x^6 + x^4 + x + 1) \cdot x^4 = x^{10} + x^8 + x^5 + x^4
-\end{equation}
-
-<p>
-Ovvero: <code>1010011_0000</code> (notare come equivale al messaggio con 4 zeri finali)
-</p>
-
-<p>
-Facendo la divisione tra \(M'(x)\) e \(G(x)\), ottengo un resto di <code>0111</code>, che aggiungo in coda al messaggio.
-</p>
-
-<p>
-In ricezione, divido nuovamente per G e se la non ottengo 0 come risultato so che il messaggio contiene un errore.
+La Germania attacca la Russia nonostante il patto di Ribbentrop-Molotov. Hitler voleva anche
+il territorio dell'URSS. Considerava gli slavi come una popolazione inferiore.
 </p>
 </div>
+</div>
+</div>
+
+<div id="outline-container-org3babbab" class="outline-2">
+<h2 id="org3babbab"><span class="section-number-2">6.</span> Il patto Tripartito</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Dopo l'asse Roma-Berlino ed il patto di Acciaio, al patto Tripartito si aggiunge il Giappone.
+Queste tre potenze pensavano di spartirsi il mondo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdfe4f17" class="outline-2">
+<h2 id="orgdfe4f17"><span class="section-number-2">7.</span> I Giapponesi attaccano la base navale a Pearl Harbour</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Perchè non permettevano di vendere le armi.
+</p>
+
+<p>
+Gli Stati Uniti entrano in guerra l'8 dicembre 1941 con il presidente Roosevelt (rieletto per la
+terza volta).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga52ba0c" class="outline-2">
+<h2 id="orga52ba0c"><span class="section-number-2">8.</span> La svolta (dal 1942 al 1944) (nella slide non si capisce nulla)</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Si ribaltano le sorti del conflitto.
+Generale Rommel.
+</p>
+
+<p>
+Vanno a combattere in Africa.
+</p>
+
+<p>
+Ottobre-Novembre 1942 le sorti si ribaltano con tre battaglie tra cui lo sbarco in Normandia.
+</p>
+
+<p>
+Luglio 1943 sbarco in Sicilia.
+</p>
+
+<p>
+Il Re toglie i poteri a Mussolini e vuole togliere la dittatura. Viene imprigionato sul
+Gran Sasso. Nel Luglio del 1943 si deve creare un governo 2
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf42195" class="outline-2">
+<h2 id="orgaf42195"><span class="section-number-2">9.</span> 3 Settembre 1943 Bagoglio firma l'Armistizio con gli alleati</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+I soldati però non avevano ricevuto nessuna informazione.
+</p>
+
+<p>
+Sempre a Settembre i Tedeschi scarcerano Mussolini che crea la Repubblica di Salò.
+Il Re e Badoglio lasciano Roma per rifugiarsi a Brindisi perchè era già stata ritirata.
+</p>
+
+<p>
+I soldati non sapevano ancora cosa fare.
+</p>
 </div>
 </div>
 </div>
