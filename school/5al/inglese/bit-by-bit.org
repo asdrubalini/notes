@@ -1,0 +1,92 @@
+#+title: Bit By Bit
+
+* Module 3 -> Computer Programming
+** The C family
+C is a general purpose systems programming language from which many modern programming
+languages take inspiration of. It was an innovation from Assembly, a much more
+complicated language.
+
+C++ is derived and mostly compatible with C but has classes and allows object oriented programming
+(OOP). It was created by Bjarne Stroutstrup in Bell Labs. It is also a low level language but allows
+more abstractions than C.
+
+On the other hand, C# is not as low level but is simpler to program with if compared with C
+and is often used to create command line applications. With Visual C# it is easy to create
+graphical applications for the Windows operating system.
+
+** HTML
+HTML is a markup language used to create websites and documents. It allows to define the structure
+of a page using an XML syntax. It is composed by tags, one inside another. Common tags are head,
+body, h1, div.
+
+** Java
+Java is a general purpose high level language which was originally called Oak. Programs created with Java
+are highly portable since they are not compiled to a native language, but instead to an intermediate
+bytecode which is then interpreted by the Java Virtual Machine or JVM. Code can also be compiled on the
+fly using JIT or Just in Time. Performance of Java applications is not comparable to performance of
+compiled C and C++ code but this is often not a problem.
+
+** Python
+Java is a general purpose high level scripting language. It is dynamically typed, meaning that during
+the lifetime of an object, its type can vary. Unlike other programming languages, it does not use
+brackets but instead indentation. It does not require compilation, and for this reason, it is
+extremely slower than C and C++, but it is also very easy to use.
+
+** Flowcharts
+Flowcharts are a way to design the program before actually writing it with code. It is a graphical
+representation for structure and logic.
+
+** Writing a program
+** Testing and documenting
+
+* Module 5 -> The Internet
+** History of the internet
+** Internet connection and services
+** The world wide web, websites and web browsers
+The world wide web was invented in CERN laboratories by Tim Berners-Lee. It is
+an internet based hypermedia system for information sharing all over the world.
+
+*** Hypermedia
+*** Browser
+*** Bookmarks
+*** Favorites
+*** URL
+
+** Search engines and web search
+A search engine is a service that allows users to search in the entire web
+for specific keywords. To gain informations, search engines use crawlers and
+spiders that downloads content from websites in order to index it based on
+some algorithms.
+
+Some search engines also offer a more advanced way to search using a specific
+syntax.
+
+** Wikis
+Wiki is a server software that allows users to collaborate to create a website based
+on trust. The word comes from wikiwikiwiki which means fast in Hawaiian.
+The first ever wiki was Wiki Wiki Web but the most known and largest wiki nowadays
+is Wikipedia.
+
+** Email
+Email is a way of sending texts and documents to other people on the internet.
+It can be accessed using a desktop or a web client.
+There are a bunch of software that can be used to send and receive emails.
+To send a mail to someone, you must know their email address, which is composed
+by a name and a domain managed by your ISP or other companies.
+
+** Cloud computing
+*** Infrastructure as a Service
+Rent virtual machines
+*** Platform as a Service
+Rent a platform where developer can work on without having to manage
+the underlying hardware
+*** Software as a Service
+Rent services without having to manage the underlying infrastructure by yourself
+
+*** Public Cloud Computing
+The hardware is shared with other users which pay based on what they use
+*** Private Cloud Computing
+The hardware is dedicated to a single company or entity which pays a fixed
+amount.
+*** Virtual private computing
+A mix of the two, like sharing an holiday apartment with other people.
