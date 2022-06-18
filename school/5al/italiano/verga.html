@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-06-18 Sat 21:01 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Verga</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Verga</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8f52f1a">1. La vita</a></li>
+<li><a href="#orgc8825a6">2. Il verismo</a></li>
+<li><a href="#org5358d05">3. Tecniche narrative</a>
+<ul>
+<li><a href="#org702dadc">3.1. Impersonalità</a></li>
+<li><a href="#org876359c">3.2. Discorso indiretto libero</a></li>
+<li><a href="#org6180e01">3.3. Narratore regredito</a></li>
+<li><a href="#org445ad22">3.4. La lingua</a></li>
+</ul>
+</li>
+<li><a href="#org163c24d">4. Pensiero</a>
+<ul>
+<li><a href="#org858dd86">4.1. Ideale dell'ostrica</a></li>
+</ul>
+</li>
+<li><a href="#org39797c6">5. I Malavoglia</a>
+<ul>
+<li><a href="#org6a313d6">5.1. Introduzione</a></li>
+<li><a href="#orga7e2ed7">5.2. Lo stile</a></li>
+<li><a href="#org749da6d">5.3. Personaggi</a></li>
+<li><a href="#org6149567">5.4. La fiumana del progresso</a></li>
+<li><a href="#orgeeab8ae">5.5. La rivoluzione per la tassa sulla pece</a></li>
+<li><a href="#org65a84e7">5.6. L'addio di 'Ntoni</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8f52f1a" class="outline-2">
+<h2 id="org8f52f1a"><span class="section-number-2">1.</span> La vita</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Figlio di proprietari terrieri, nasce a Catania e riceve una formazione romantica.
+</p>
+
+<p>
+A Firenze entra in contatto con la vera <b>società letteraria Italiana</b>. Poi si trasferisce a Milano
+dove entra in contatto con la <b>Scapigliatura</b>.
+</p>
+
+<p>
+Poi c'è la svolta verso il Verismo, con opere come:
+</p>
+<ul class="org-ul">
+<li>Rosso Malpelo</li>
+<li>I Malavoglia</li>
+<li>Mastro-don Gesualdo</li>
+<li>La Duchessa de Leyra, che non riesce a portare a termine</li>
+</ul>
+
+<p>
+Dopo essere tornato a Catania si chiuse in un silenzio tombale.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8825a6" class="outline-2">
+<h2 id="orgc8825a6"><span class="section-number-2">2.</span> Il verismo</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Esigenza del vero, il racconto della realtà. Non ci si interessa dei nobili ma degli umili,
+storie raccontate da uno scienziato in modo quasi scientifico. <b>Far emergere la realtà</b>
+che <b>parla da sola</b>.
+</p>
+
+<p>
+Una visione pessimistica, la vita non fa altro che travolgere i vinti.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5358d05" class="outline-2">
+<h2 id="org5358d05"><span class="section-number-2">3.</span> Tecniche narrative</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Rappresenta ambienti popolari e rurali, e lo fa con un linguaggio estremamente diverso da quello
+dello scrittore borghese.
+</p>
+</div>
+
+<div id="outline-container-org702dadc" class="outline-3">
+<h3 id="org702dadc"><span class="section-number-3">3.1.</span> Impersonalità</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Secondo Verga, ciò che racconta deve sembrare <b>realmente accaduto</b>, non si deve vedere il <b>filtro
+dello scrittore</b>. Lo scrittore deve eclissarsi, non ci devono essere le sue spiegazioni nè
+le sue impressioni perchè non ha il diritto di giudicare.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org876359c" class="outline-3">
+<h3 id="org876359c"><span class="section-number-3">3.2.</span> Discorso indiretto libero</h3>
+</div>
+
+<div id="outline-container-org6180e01" class="outline-3">
+<h3 id="org6180e01"><span class="section-number-3">3.3.</span> Narratore regredito</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Verga era molto più colto dei protagonisti delle sue opere ma decide di regredire per andare al suo
+livello. Ad esempio nell'inizio di rosso malpelo si dice che <code>aveva i capelli rossi
+perchè era un ragazzo malizioso e cattivo</code> anche se non lo pensava personalmente.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org445ad22" class="outline-3">
+<h3 id="org445ad22"><span class="section-number-3">3.4.</span> La lingua</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Le opere sono scritte in Italiano perchè devono essere comprensibili a tutte, ma con
+anche espressioni del dialetto siciliano.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org163c24d" class="outline-2">
+<h2 id="org163c24d"><span class="section-number-2">4.</span> Pensiero</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Verga sostiene che il progresso sia una fonte di sofferenza. I vinti sono quelli che
+non riescono a stare a passo con il progresso.
+</p>
+</div>
+
+<div id="outline-container-org858dd86" class="outline-3">
+<h3 id="org858dd86"><span class="section-number-3">4.1.</span> Ideale dell'ostrica</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Se l'ostrica si stacca dallo scoglio muore. Se noi ci stacchiamo dalla famiglia
+e dalle tradizioni moriamo. Per non perderci dobbiamo restare ancorati al nostro sistema di valori.
+</p>
+
+<p>
+Verga per descrivere le classi povere della Sicilia ha bisogno di una serie di
+documenti, dato che essendo nato in Sicilia da una famiglia di proprietari terrieri,
+non ha mai provato sulla sua pelle quello di cui parla.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org39797c6" class="outline-2">
+<h2 id="org39797c6"><span class="section-number-2">5.</span> I Malavoglia</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org6a313d6" class="outline-3">
+<h3 id="org6a313d6"><span class="section-number-3">5.1.</span> Introduzione</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+I Malavoglia fa parte del primo ciclo dei vinti.
+I protagonisti sono una famiglia povera di <b>pescatori siciliani</b>, sconfitti nella lotta per
+l'affermazione sociale. La vicenza si svolge subito dopo l'unità d'Italia 1865-1875 ad
+<b>Aci Trezza</b> in provincia di Catania.
+</p>
+
+<p>
+Il soprannone "Malavoglia" ha un significato ironico poichè non gli manca di certo la voglia
+di lavorare.
+</p>
+
+<p>
+Vivono nella casa del nespolo ed hanno una barca chiamata "la provvidenza", anche qui il nome
+è ironico.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7e2ed7" class="outline-3">
+<h3 id="orga7e2ed7"><span class="section-number-3">5.2.</span> Lo stile</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Il romanzo è ricco di discorsi diretti con l'utilizzo del discorso diretto ed indiretto libero.
+È quindi il lettore che deve capire quale personaggio sta parlando.
+Si usa una parlata popolare, spesso con dialetto e modi di dire siciliani.
+Ci sono anche figure retoriche come metafore e similitudini tratte dalla vita quotidiana.w:wq
+</p>
+
+
+<p>
+Non c'è giudizio da parte dell'autore. Verga con questo racconto ci sta dicendo che compie
+un'indagine scientifica osservando la reazione al progresso da parte di gente umile. Come
+si sviluppano i primi turbamenti al pensiero di poter migliorare la propria condizione.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org749da6d" class="outline-3">
+<h3 id="org749da6d"><span class="section-number-3">5.3.</span> Personaggi</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>Padron 'Ntoni: nonno e capofamiglia, il più vecchio di tutti. Stimato per il suo buonsenso e parla
+sempre con proverbi.</li>
+<li>Bastianazzo: il figlio, grande e grosso ma sottomesso dal padre.</li>
+<li>La Longa: la nuora, chiamata così perchè bassa di statura.</li>
+<li>'Ntoni, Luca, Messi, Mena e Lia: i nipoti</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6149567" class="outline-3">
+<h3 id="org6149567"><span class="section-number-3">5.4.</span> La fiumana del progresso</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+Secondo Verga, il progresso è come un fiume che scorre continuamente. Selezione
+naturale, c'è chi resiste e chi viene completamente soppiantato. (riga 5).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeeab8ae" class="outline-3">
+<h3 id="orgeeab8ae"><span class="section-number-3">5.5.</span> La rivoluzione per la tassa sulla pece</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+Questo capitolo parla dei dolori e delle scorrettezze che devono subire i poveri quotidianamente.
+Hanno messo una tassa sulla pece che colpisce le persone povere. Le donne sono scese in
+piazza per protestare contro.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65a84e7" class="outline-3">
+<h3 id="org65a84e7"><span class="section-number-3">5.6.</span> L'addio di 'Ntoni</h3>
+<div class="outline-text-3" id="text-5-6">
+<p>
+'Ntoni, dopo aver accoltellato un uomo perchè aveva avuto un rapporto con sua sorella Lia,
+disonorando la morale del tempo, decide di andarsene. Dopo aver trascorso cinque anni in
+carcere, torna ad Aci Trezza per salutare la famiglia per l'ultima volta.
+</p>
+
+<p>
+Il giovane è costretto a partire per la leva militare. Padron ntoni decide di comprare a
+debito dei lupini per poi rivenderli. La barca però naufraga e muoiono in mare. Vende
+la barca e vende la casa per ripagare il debito dei lupini.
+</p>
+
+
+<p>
+Verga non andrà avanti con il giro dei vinti perchè diventa sempre più complesso.
+Nei malavoglia la ricerca del progresso è una lotta dei bisogni materiali.
+</p>
+
+<p>
+I personaggi si presentano da soli, non è il narratore a presentarli.
+Appena la famiglia Malavoglia prova ad arricchirsi hanno un debito e perdono tutto.
+</p>
+
+<p>
+I malavoglia erano dei grandi lavoratori.
+La barca si chiamava provvidenza. La barca naufraga e bastianazzo muore. Da lì inizia il declino.
+</p>
+
+<p>
+Verga sostiene che il progresso sia una fonte di sofferenza. I vinti sono quelli che
+non riescono a stare a passo con il progresso.
+Ideale dell'ostrica: se l'ostrica si stacca dallo scoglio muore. Se noi ci stacchiamo dalla
+famiglia e dalle tradizioni moriamo. Per non perderci dobbiamo restare ancorati al nostro sistema di valori.
+</p>
+
+<p>
+Verga per descrivere le classi povere della Sicilia ha bisogno di una serie di
+documenti. Nasce in Sicilia da una famiglia di proprietari terrieri, non ha mai provato
+sulla sua pelle quello di cui parla.
+</p>
+
+<p>
+I malavoglia, dei pescatori siciliani. Protagonisti sono i vinti. Il nome dell'intero
+ciclo sarebbe stato ciclo dei vinti, avrebbe dovuto rappresentare gli sconfitti nella
+lotta dell'affermazione sociale.
+</p>
+
+<p>
+Secondo Verga, al top della scala sociale ci sono gli artisti. I pescatori invece
+sono al gradino più basso
+</p>
+
+<p>
+La vicenza si svolge subito dopo l'unità d'Italia 1865-1875 ad Acitrezza in provincia di Catania.
+</p>
+
+<p>
+Bastianaccio aveva sposato Maruzza la Longa
+</p>
+
+<p>
+Il giovane è costretto a partire per la leva militare. Padron ntoni decide di comprare a
+debito dei lupini per poi rivenderli. La barba però naufraga e muoiono in mare. Vende
+la barca e vende la casa per ripagare il debito dei lupini.
+</p>
+
+<p>
+MALAVOGLIA: La famiglia era disposta come el dita di una mano.
+Il figlio Bastianazzo era grosso. Non era l'antifrasi. Faceva tutto quello che gli veniva detto.
+La longa è la moglie di Bastianazzo. Chiamata Longa perchè era corta.
+Ntoni era il più giovane, contrario del nonno.
+Luca era più giudizioso.
+Filomena soprannominata sant'agata perchè stava sempre al telaio. Sant'Agata per
+evitare i matrimoni combinati aveva iniziato a tessere un telaio.
+Padron Ntoni conosceva dei motti sentiti dagli anziani e parla per proverbi. Verga ne usa molti.
+</p>
+
+<p>
+Ntoni sarebbe dovuto andare a fare la leva militare, la famiglia soffre perchè avrebbe avuto bisogno del suo lavoro. Cercano di trovare un cavillo a cui appigliarsi
+</p>
+
+<p>
+Esempio di oralità: verga utilizza i proverbi tradotti dal dialetto, e scrive esattamente come parlano "Alla Longa, l'era parso rubato a lei quel saluto". SI anticipa il complemento di termine e c'è un eccesso di pronomi. Ad esempio "a me mi", è un altro eccesso di pronomi. La frase senza eccesso di pronomi sarebbe: "Era parso rubato alla Longa quel saluto".
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-06-18 Sat 21:01</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
