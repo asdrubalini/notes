@@ -1,10 +1,13 @@
 #+title: Seconda Guerra Mondiale
 
-** Hitler annette la <qualcosa>
-Anche Mussolini segue la stessa scia ed annette l'Albania.
+* La vigilia della guerra
 
-Patto d'acciaio -> l'Italia entra in guerra a prescindere, anche se la Germania
-avesse attaccato.
+** Hitler annette la l'Austria e la Cecoslovacchia
+Anche Mussolini segue la stessa scia ed annette l'Albania.
+Francia e Inghilterra si dimostrano arrendevoli.
+
+Hitler e Mussolini firmano il Patto d'acciaio -> l'Italia entra in guerra a prescindere,
+anche se fosse la Gemania ad attaccare.
 
 ** Nel 1939 -> patto Ribbentrop-Molotov tra Germania e Russia
 Hitler decide di firmare il pattro con Stalin in cui si giurava la non aggressione
