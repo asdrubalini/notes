@@ -1,20 +1,26 @@
 #+title: Asdrubalini's notes
 
-*** Sistemi
+* Sistemi
   1. [[file:school/5al/sistemi/ospf.org][OSPF]]
-  2. [[file:school/5al/sistemi/lavoro.org][Lavoro]]
+  1. [[file:school/5al/sistemi/lavoro.org][Lavoro]]
 
-*** Storia
-  1. [[file:school/5al/storia/era-fascista.org][Era fascista]]
+* Storia
+  1. [[file:school/5al/storia/prima-guerra-mondiale.org][Prima guerra mondiale]]
+  1. [[file:school/5al/storia/rivoluzione-russa.org][Rivoluzione Russa]]
+  1. [[file:school/5al/storia/fascismo.org][Fascismo]]
   1. [[file:school/5al/storia/nazismo.org][Nazismo]]
+  1. [[file:school/5al/storia/seconda-guerra-mondiale.org][Seconda guerra mondiale]]
 
-*** Italiano
+* Italiano
+  1. [[file:school/5al/italiano/leopardi.org][Leopardi]]
+  1. [[file:school/5al/italiano/verga.org][Verga]]
+  1. [[file:school/5al/italiano/pascoli-dannunzio.org][Il decadentismo: Pascoli e D'Annunzio]]
   1. [[file:school/5al/italiano/pirandello.org][Pirandello]]
   1. [[file:school/5al/italiano/italo-svevo.org][Italo Svevo]]
 
-*** GPO
+* GPO
   1. [[file:school/5al/gpo/clil.org][Renewable energy]]
 
-*** Telecomunicazioni
+* Telecomunicazioni
   1. [[file:school/5al/telecomunicazioni/codifica-canale.org][Codifica di canale]]
   1. [[file:school/5al/telecomunicazioni/codifica-linea.org][Codifica di linea]]

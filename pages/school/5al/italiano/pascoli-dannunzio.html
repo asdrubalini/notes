@@ -6,7 +6,7 @@
 <!-- 2022-06-27 Mon 01:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Codifica di Canale</title>
+<title>Il decadentismo: Pascoli e d'Annunzio</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -192,287 +192,243 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Codifica di Canale</h1>
+<h1 class="title">Il decadentismo: Pascoli e d'Annunzio</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org6ee3eb0">1. Codici a ripetizione</a></li>
-<li><a href="#org222f7c6">2. Codici di parità</a></li>
-<li><a href="#orga4d5d27">3. Correzione degli errori:</a></li>
-<li><a href="#org9ddc7fd">4. Codice di Hamming</a></li>
-<li><a href="#org417e540">5. CRC: Cyclic redundant check</a>
+<li><a href="#orga6fc413">1. La corrente del decadentismo</a></li>
+<li><a href="#org5f42c25">2. Lo stile</a></li>
+<li><a href="#org6c6f776">3. Pascoli: il mistero nascosto nella quotidianità</a>
 <ul>
-<li><a href="#orga0918f5">5.1. In ricezione</a></li>
-<li><a href="#orge11bdbe">5.2. Esempio:</a></li>
+<li><a href="#org683370e">3.1. Vita</a></li>
+<li><a href="#org86baee1">3.2. Temi principali</a>
+<ul>
+<li><a href="#org33a5bea">3.2.1. La poetica del fanciullino</a></li>
+<li><a href="#org428e190">3.2.2. Tematica del nido</a></li>
+</ul>
+</li>
+<li><a href="#orgd81488e">3.3. Stile delle sue opere</a></li>
+<li><a href="#org46823e6">3.4. Il fanciullino</a></li>
+<li><a href="#orgabad9d7">3.5. Raccolta delle Myricae</a>
+<ul>
+<li><a href="#org6e6afcf">3.5.1. Lavandare</a></li>
+</ul>
+</li>
+<li><a href="#orga0c5809">3.6. X Agosto</a></li>
+</ul>
+</li>
+<li><a href="#orgb08e2a7">4. D'Annunzio: il culto della bellezza</a>
+<ul>
+<li><a href="#orgd44616c">4.1. Vita</a></li>
+<li><a href="#org03d044c">4.2. La poetica: Decadentismo</a></li>
+<li><a href="#org9ef8872">4.3. La poetica: Estetismo</a></li>
+<li><a href="#orga2f4de5">4.4. Lo stile</a></li>
+<li><a href="#org493930e">4.5. Principali opere</a>
+<ul>
+<li><a href="#org2ee718d">4.5.1. Il piacere</a></li>
+<li><a href="#orgb233387">4.5.2. Alcyone</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<p>
-La codifica di canale serve per aggiungere ai blocchi di bit degli altri bit
-di ridondanza necessari per la rilevazione e la correzione degli errori.
-</p>
 
-<p>
-Due tecniche:
-</p>
-<ul class="org-ul">
-<li>rilevazione dell'errore e richiesta automatica dell'invio del blocco
-(strategia ARQ, Automatic Repeat Request)</li>
-<li>rilevazione dell'errore e correzione diretta, l'errore viene corretto
-senza richiesta di rispedire (strategia FEC, Foward Error Correction)</li>
-</ul>
-
-<p>
-Due tipi di codici
-</p>
-<ul class="org-ul">
-<li>Codici a blocchi
-<ul class="org-ul">
-<li>A ripetizione</li>
-<li>Parità (pari o dispari)</li>
-<li>Hamming</li>
-<li>Ciclici</li>
-</ul></li>
-
-<li>Codici convoluzionali</li>
-</ul>
-
-
-<div id="outline-container-org6ee3eb0" class="outline-2">
-<h2 id="org6ee3eb0"><span class="section-number-2">1.</span> Codici a ripetizione</h2>
+<div id="outline-container-orga6fc413" class="outline-2">
+<h2 id="orga6fc413"><span class="section-number-2">1.</span> La corrente del decadentismo</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Consistono nell'associare al bit 0 un numero di zeri.
-Ad esempio 0 diventa 000 e 1 diventa 111 (con rapporto 3:1)
-In ricezione prendo la maggioranza. Esempio 001 prendo 0 perchè ci sono più 0 che 1.
+Si tratta di una corrente letteraria nata in Francia alla fine del 1800.
+Si caratterizza dal rifiuto del razionalismo e della visione del mondo scientifica.
+Lo scrittore deve svelare il mistero che si svela dietro le cose, ricercando ossessivamente la
+bellezza.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org222f7c6" class="outline-2">
-<h2 id="org222f7c6"><span class="section-number-2">2.</span> Codici di parità</h2>
+<div id="outline-container-org5f42c25" class="outline-2">
+<h2 id="org5f42c25"><span class="section-number-2">2.</span> Lo stile</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Nel caso della parità pari, il numero di 1 nel blocco deve essere pari. Se scelgo
-la parità dispari, il numero di 1 deve essere dispari. È compreso il bit di parità.
+Il decadentismo ha dei versi musicali e delle parole magiche e ricche di suggestioni simboliche.
+Ricco anche di figure retoriche. Si afferma anche in Italia con Giovanni Pascoli e Gabriele
+d'Annunzio.
 </p>
-
-<p>
-Esempio con parità pari:
-Se voglio trasmettere '1011010', aggiungo il bit di parità '0' perchè il numero complessivo
-di 1 è già pari.
-</p>
-
-<p>
-Si può fare anche in colonna:
-</p>
-
-<div id="orgfffabeb" class="figure">
-<p><img src="./1.jpg" alt="1.jpg" />
-</p>
-<p><span class="figure-number">Figure 1: </span>Parità in colonna</p>
-</div>
 </div>
 </div>
 
-<div id="outline-container-orga4d5d27" class="outline-2">
-<h2 id="orga4d5d27"><span class="section-number-2">3.</span> Correzione degli errori:</h2>
+<div id="outline-container-org6c6f776" class="outline-2">
+<h2 id="org6c6f776"><span class="section-number-2">3.</span> Pascoli: il mistero nascosto nella quotidianità</h2>
 <div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org683370e" class="outline-3">
+<h3 id="org683370e"><span class="section-number-3">3.1.</span> Vita</h3>
+<div class="outline-text-3" id="text-3-1">
 <p>
-Si utilizza XOR per avere dei bit di parità. In base al bit di parità sbagliato, posso capire
-in quale bit si trova l'errore e quindi correggerlo.
+Nasdce in Romagna da una famiglia borghese.
+La sua giovinezza viene segnata da molti lutti familiari. Questo avvenimento gli procura una ferita
+che caratterizza le sue opere. A Bologna è allievo di Carducci.
 </p>
 
-
-<div id="org43e7373" class="figure">
-<p><img src="./2.jpg" alt="2.jpg" />
+<p>
+Vive con le due sorelle con le quali si instaura un legame molto intenso ed esclusivo.
 </p>
-<p><span class="figure-number">Figure 2: </span>Correzione degli errori</p>
+</div>
+</div>
+
+<div id="outline-container-org86baee1" class="outline-3">
+<h3 id="org86baee1"><span class="section-number-3">3.2.</span> Temi principali</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+I temi principali sono le sue vicende personali, associate all'ambiente naturale della Romagna e
+della civiltà contadina.
+</p>
+</div>
+
+<div id="outline-container-org33a5bea" class="outline-4">
+<h4 id="org33a5bea"><span class="section-number-4">3.2.1.</span> La poetica del fanciullino</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+Come un bambino coglie le piccole cose della natura con stupore e meraviglia, cogliendo il mistero
+ed il senso della vita.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org428e190" class="outline-4">
+<h4 id="org428e190"><span class="section-number-4">3.2.2.</span> Tematica del nido</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+Come senso di protezione e di rifugio. Dopo la morte dei suoi parenti si fissa con l'idea di voler
+ricostruire il nido familiare.
+</p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org9ddc7fd" class="outline-2">
-<h2 id="org9ddc7fd"><span class="section-number-2">4.</span> Codice di Hamming</h2>
+<div id="outline-container-orgd81488e" class="outline-3">
+<h3 id="orgd81488e"><span class="section-number-3">3.3.</span> Stile delle sue opere</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+I versi sono brevi e spezzati, la sintassi è semplice. Le parole hanno una musicalità, onomatopee che 
+riproducono i suoni della natura. Non usa la forma del sonetto ma non si sofferma su una metrica regolare,
+provandone diverse, come ad esempio rime, pause ed enjambement.
+Si alternano termini ricercati ma anche parole di uso comune, che possono essere tecniche e scientifiche o dialettali.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46823e6" class="outline-3">
+<h3 id="org46823e6"><span class="section-number-3">3.4.</span> Il fanciullino</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+La sua riflessione ruota attorno al fanciullo eterno, 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgabad9d7" class="outline-3">
+<h3 id="orgabad9d7"><span class="section-number-3">3.5.</span> Raccolta delle Myricae</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-org6e6afcf" class="outline-4">
+<h4 id="org6e6afcf"><span class="section-number-4">3.5.1.</span> Lavandare</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<p>
+La vista dell'aratro abbandonato ci ricorda l'esperienza umana dell'abbandono e della perdita del nido con la nostra
+famiglia. L'uomo è destinato alla solitudine e all'abbandono.
+</p>
+
+<p>
+Dal canale arriva il rumore d'acqua che fanno le lavandaie.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga0c5809" class="outline-3">
+<h3 id="orga0c5809"><span class="section-number-3">3.6.</span> X Agosto</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+Il giorno in cui il padre di Pascoli fu assassinato. Poesia scritta diversi anni dopo il suo omicidio.
+Paragona l'episodio dell'uccisione del padre con quello di una rondine che viene uccisa in volo mentre
+ritornava al suo nido.
+Il 10 Agosto è anche la notte di San Lorenzo, nella quale si possono osservare le stelle cadenti.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb08e2a7" class="outline-2">
+<h2 id="orgb08e2a7"><span class="section-number-2">4.</span> D'Annunzio: il culto della bellezza</h2>
 <div class="outline-text-2" id="text-4">
-<p>
-Prevede un numero di bit di ridondanza q, k il numero di bit di informazione, n il numero di bit totali:
-</p>
-
-\begin{equation}
-n = 2^q -1
-\end{equation}
-
-<p>
-Esempio
-</p>
-
-\begin{equation}
-q = 3
-\end{equation}
-
-\begin{equation}
-n = 2^3 - 1 = 7
-\end{equation}
-
-\begin{equation}
-k = 4
-\end{equation}
-
-<p>
-I bit di ridondanza in questo caso non sono in coda ma sono mischiati. Per individuare la posizione dei bit
-di ridondanza:
-</p>
-
-\begin{equation}
-2^0 = 1^a \hspace{0.2cm} posizione
-\end{equation}
-
-\begin{equation}
-2^1 = 2^a \hspace{0.2cm} posizione
-\end{equation}
-
-\begin{equation}
-2^2 = 4^a \hspace{0.2cm} posizione
-\end{equation}
-
-
-<div id="orgad52031" class="figure">
-<p><img src="./3.png" alt="3.png" />
-</p>
-<p><span class="figure-number">Figure 3: </span>Tabella Hamming</p>
 </div>
-
+<div id="outline-container-orgd44616c" class="outline-3">
+<h3 id="orgd44616c"><span class="section-number-3">4.1.</span> Vita</h3>
+<div class="outline-text-3" id="text-4-1">
 <p>
-Ad ogni gruppo viene calcolata la parità e viene inserita nella posizione.
-</p>
-
-
-<div id="orgf2df23b" class="figure">
-<p><img src="./4.jpg" alt="4.jpg" />
-</p>
-<p><span class="figure-number">Figure 4: </span>Rilevazione dell'errore</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org417e540" class="outline-2">
-<h2 id="org417e540"><span class="section-number-2">5.</span> CRC: Cyclic redundant check</h2>
-<div class="outline-text-2" id="text-5">
-<p>
-Si esprime la combinazione di bit che dobbiamo trasmettere sottoforma di polinomio. Si considera
-un polinomio generatore di un certo grado e lo si moltiplica per il polinomio messaggio.
+Studia lettere a Roma e vive fuori dagli schemi e nel lusso, accumulando molti debiti. Scappa in 
+Francia ed al suo ritorno diventa deputato. Fu un forte nazionalista e sostenitore dell'ingresso 
+per l'Italia nella prima guerra mondiale e partecipò all'occupazione militare di Fiume dopo 
+la conclusione del conflitto.
 </p>
 
 <p>
-Messaggio:
-</p>
-\begin{equation}
-M(x)
-\end{equation}
-
-<p>
-Generatore:
-</p>
-\begin{equation}
-G(x)
-\end{equation}
-
-\begin{equation}
-M'(x) = M(x) \cdot x^{gr(G)}
-\end{equation}
-
-<p>
-Ovvero aggiungo tanti zeri quanto è il grado di G \(gr(G)\)
-</p>
-
-<p>
-Poi divido per \(G(x)\) ed il resto della divisione sarà il CRC che devo aggiungere al messaggio
-</p>
-\begin{equation}
-R(x) = M'(x) % G(x)
-\end{equation}
-
-\begin{equation}
-T(x) = M(x) + R(x)
-\end{equation}
-</div>
-
-<div id="outline-container-orga0918f5" class="outline-3">
-<h3 id="orga0918f5"><span class="section-number-3">5.1.</span> In ricezione</h3>
-<div class="outline-text-3" id="text-5-1">
-<p>
-In ricezione ci deve essere lo stesso polinomio generatore.
-Divido per \(G(x)\) e controllo se il resto è uguale o diverso da zero. Se è diverso da zero
-richiedo il rinvio.
+Alla fine si ritira nella sua villa sul lago di Garda.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge11bdbe" class="outline-3">
-<h3 id="orge11bdbe"><span class="section-number-3">5.2.</span> Esempio:</h3>
-<div class="outline-text-3" id="text-5-2">
+<div id="outline-container-org03d044c" class="outline-3">
+<h3 id="org03d044c"><span class="section-number-3">4.2.</span> La poetica: Decadentismo</h3>
+<div class="outline-text-3" id="text-4-2">
 <p>
-Messaggio: <code>1010011</code>
+In questo periodo, d'Annunzio percepisce la crisi della società e dei valori, perde sfiducia per il
+progresso.
 </p>
+</div>
+</div>
 
-\begin{equation}
-M(x) = x^6 + x^4 + x + 1
-\end{equation}
-
+<div id="outline-container-org9ef8872" class="outline-3">
+<h3 id="org9ef8872"><span class="section-number-3">4.3.</span> La poetica: Estetismo</h3>
+<div class="outline-text-3" id="text-4-3">
 <p>
-Dalla norma, conosciuto sia da ricevitore che da trasmettitore:
-</p>
-\begin{equation}
-G(x) = x^4 + x + 1
-\end{equation}
-
-<p>
-Che corrisponde alla combinazione di bit <code>10011</code>.
-</p>
-
-\begin{equation}
-M'(x) = (x^6 + x^4 + x + 1) \cdot x^4 = x^{10} + x^8 + x^5 + x^4
-\end{equation}
-
-<p>
-Ovvero: <code>1010011_0000</code> (notare come equivale al messaggio con 4 zeri finali)
+In questo periodo della sua vita si rifugia in un mondo artificiale fatto solo di bellezza esteriore,
+ignorando completamente quella interiore. Le sue opere sono caratterizzate da una bellezza estetica
+ma non necessariamente da una contenutistica.
 </p>
 
 <p>
-Facendo la divisione tra \(M'(x)\) e \(G(x)\), ottengo un resto di <code>0111</code>, che aggiungo in coda al messaggio.
+Pratica anche esibizioni teatrali.
 </p>
+</div>
+</div>
 
+<div id="outline-container-orga2f4de5" class="outline-3">
+<h3 id="orga2f4de5"><span class="section-number-3">4.4.</span> Lo stile</h3>
+<div class="outline-text-3" id="text-4-4">
 <p>
-In ricezione, divido nuovamente per G e se la non ottengo 0 come risultato so che il messaggio contiene un errore.
+La forma per d'Annunzio è tutto, i contenuti non hanno importanza. Il suo stile è caratterizzato da
+musicalità, rime, l'effetto sonoro delle parole, il costante innalzamento del tono, un lessico raro
+ed arcaico ed il verso libero.
 </p>
+</div>
+</div>
+
+<div id="outline-container-org493930e" class="outline-3">
+<h3 id="org493930e"><span class="section-number-3">4.5.</span> Principali opere</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org2ee718d" class="outline-4">
+<h4 id="org2ee718d"><span class="section-number-4">4.5.1.</span> Il piacere</h4>
+</div>
+<div id="outline-container-orgb233387" class="outline-4">
+<h4 id="orgb233387"><span class="section-number-4">4.5.2.</span> Alcyone</h4>
 </div>
 </div>
 </div>

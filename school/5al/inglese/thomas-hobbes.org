@@ -1,0 +1,27 @@
+#+title: Thomas Hobbes
+
+* Life and belief
+Thomas Hobbes, who lived in the 16th and 17th century, was mainly a political
+philosopher.
+
+* Materialist view of human nature
+He believed that every phenomena in the universe can be explained in terms of
+motions and interactions between bodies made of matter. He did not believe
+in the existance of soul or any other metaphysical entity.
+He believed that animals are machines and that their thoughts and emotions
+were determined by physical laws and chains of cause and effects, aimed
+at pursuing pleasure and avoiding pain.
+
+He also thought that a society should work in the same way as the human body,
+operating according to the laws.
+
+Researching about his thought, he was influenced by Galileo and Kepler,
+which has discovered the phisical laws governing the motion of planets.
+
+It is important to note, however, that Hobbes was not a physician and that
+he had never been able to explain the math behind human behaviour.
+
+* Absolute monarchy is the best form of government
+According to Hobbes and the Leviathan, the absolute monarchy is the only form 
+of government that can guarantee peace, since if every menber of the society
+agree to one single central authority, civil war is not possible.
