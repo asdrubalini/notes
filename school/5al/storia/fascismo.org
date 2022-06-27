@@ -1,6 +1,6 @@
 #+title: Era fascista
 
-** La vittoria mutilata
+* La vittoria mutilata
 A Gennaio del 1919, si tiene la conferenza di pace a Versailles. L'Italia non ottiene le terre che avrebbe
 dovuto avere, per colpa del principio di nazionalità secondo cui in uno Stato dovrebbero vivere le persone
 di quella nazionalità. L'Italia rivendica quindi la città di fiume secondo lo stesso principio, ma non ebbe
@@ -10,7 +10,7 @@ Il ministro degli esteri Sonnino decise però di accettare la perdita della Dalm
 Si diffonde l'idea di aver vinto la guerra ma perso la pace. Da qui l'espressione di vittoria mutilata.
 D'Annunzio occupa Fiume, ed alla fine l'Italia prende Istria.
 
-** Nuovo sistema politico
+* Nuovo sistema politico
 La crisi economica colpisce la piccola e la media borghesia e così iniziano una serie di scioperi e lotte
 sociali ai quali partecipano sempre più persone nel corso degli anni.
 
@@ -19,31 +19,31 @@ governare deve superare la maggioranza assoluta. Ciò limita la rappresentanza d
 riceve percentuali di voto significative, però aumenta la governabilità. Il criterio con cui lavora è
 "il primo prende tutto".
 
-** Nascita del PPI
+* Nascita del PPI
 Nasce il Partito Popolare Italiano (PPI) da un sacerdote (Sturzo) che decise di creare un partito che si collocasse
 al centro, non che non si rivede nei nè liberali nè nei socialisti e non si rivolge solo ai cattolici.
 
-** Scissione del movimento socialista in comunisti e socialisti
+* Scissione del movimento socialista in comunisti e socialisti
 Gramsci non avrebbe voluto separarsi dai socialisti perchè sapeva che avrebbe portato alla
 separazione dei voti. Alla fine però le parole di Lenin rivolte all'Italia secondo cui con i riformisti
 non ci sarebbe potuta essere nessuna rivoluzione proletaria gli fanno cambiare idea e si
 decide quindi di separare il partito facendo nascere il PCI, in opposizione al PSI formato dai riformisti
 e gestito da Matteotti.
 
-** Elezioni del 1919
+* Elezioni del 1919
 Alle elezioni vincono i grandi partiti di massa (PPI e PSI) ma non essendo coalizzabili si crea una
 coalizione tra i liberali ed i popolari.
 
 Il movimento di Mussolini, i fasci di combattimento, in questo momento hanno ancora 0 seggi e sono
 repubblicani ed anticlericali.
 
-** Episodio di Palazzo d'Accursio, attentato contro i socialisti a Bologna
+* Episodio di Palazzo d'Accursio, attentato contro i socialisti a Bologna
 Nel comune di Bologna avevano vinto i socialisti. Al momento dell'insediamento vengono sparati dei colpi
 di pistola sulla folla da parte di squadristi fascisti. Il governo tuttavia non fa nulla, perchè il pericolo
 principale erano i comunisti per via di una possibile rivoluzione Bolscevica come quella che stava avvenendo in
 Russia.
 
-** Elezioni Maggio 1921, radicalizzazione dei fasci di combattimento
+* Elezioni Maggio 1921, radicalizzazione dei fasci di combattimento
 Il movimento di Mussolini ha una radicalizzazione all'estrema destra, dal socialismo.
 
 I fascisti si presentano in coalizione con liberali e nazionalisti e prendono il 19%, ed entrano
@@ -57,7 +57,7 @@ I primi provvedimenti:
 - Legge Acerbo, una nuova legge elettorale in cui viene introdotto il premio di maggioranza, ovvero ogni partito
   che riesce ad ottenere almeno il 25% dei voti avrebbe avuto i 2/3 del parlamento.
 
-** Ascesa dei fascisti
+* Ascesa dei fascisti
 Quando i fascisti entrano in parlamento, gli viene chiesto di cessare le violenze verso gli altri partiti ma l'ala più
 violenta non accetta, perciò Mussolini decide di modificare il movimento in partito (Partito Nazionale Fascista)
 
@@ -68,22 +68,22 @@ rivoluzione russa. Nel 1923 i popolari si staccano. I fascisti si coalizzano.
 Nel momento in cui è al governo gli si chiede di cessare nuovamente le violenze squadriste. Trasforma un esercito di
 partito in un esercito di Stato, nazionale.
 
-** Elezioni del 1924, vittoria fascista
+* Elezioni del 1924, vittoria fascista
 Mussolini si presenta alle elezioni con delle liste imparentate, però si staccano da lui i liberali di Giolitti.
 Socialisti, comunisti e liberali si presentano tutti singolarmente.
 
 Vincono i fascisti con il 65%.
 
-** Omicidio di Matteotti
+* Omicidio di Matteotti
 Matteotti era un parlamentare che denunciò le violenze fasciste nel corso delle elezioni. Questo risveglia
 l'opinione pubblica nei confronti dei fascisti. Il potere del partito fascista in questo momento vacilla.
 
-** Secessione dell'Aventino
+* Secessione dell'Aventino
 Non vanno in parlamento per opporsi alle violenze fasciste. Secessione perchè richiama la pratica romana
 della secessione. I plebei volevano gli stessi diritti dei patrizi e causavano dei disordini allontanandosi
 dalla società.
 
-** Cade la democrazia
+* Cade la democrazia
 Il governo fascista instaura una dittatura e controlla tutti gli aspetti dello Stato.
 Il partito fascista proponeva una lista di 400 deputati ed il popolo era chiamato ad approvarla o meno. Non c'era
 più la votazione tradizionale.
@@ -91,44 +91,44 @@ più la votazione tradizionale.
 Nasce il fascio littorio come emblema dello Stato, un simbolo che deriva dall'antica Roma.
 Altri simboli, sempre derivanti dall'antica Roma sono il titolo "Duce", ed il saluto romano.
 
-** La costruzione dello Stato totalitario
-*** Definizione delle leggi fascistissime (nel 1925)
-**** Instaurazione del partito unico
+* La costruzione dello Stato totalitario
+** Definizione delle leggi fascistissime (nel 1925)
+*** Instaurazione del partito unico
 L'unico partito riconosciuto è il PNF e la polizia segreta (OVRA) ha il compito di individuare ed
 arrestare tutti gli oppositori.
 
-**** Reintroduzione della pena di morte
+*** Reintroduzione della pena di morte
 Per gli oppositori di partito, che sono giudicati nel Tribunale speciale per la difesa dello Stato.
 
-**** Il presidente del consiglio viene sostituito dal capo del governo
+*** Il presidente del consiglio viene sostituito dal capo del governo
 Che ha più importanza del parlamento, è responsabile solo di fronte al Re ed ha il potere di creare
 qualsiasi legge in autonomia.
 
-**** Sostituzione dei sindaci con il podestà, un funzionario nominato dal Governo
+*** Sostituzione dei sindaci con il podestà, un funzionario nominato dal Governo
 
-**** Licenziamento per tutti i funzionari pubblici senza la tessera del partito
+*** Licenziamento per tutti i funzionari pubblici senza la tessera del partito
 
-*** Nascita delle camere dei fasci e delle corporazioni (1939)
+** Nascita delle camere dei fasci e delle corporazioni (1939)
 Un organo legislativo che sostituì la camera dei deputati.
 
-** I provvedimenti interni:
-*** Controllo dei mezzi di informazione e comunicazione
+* I provvedimenti interni:
+** Controllo dei mezzi di informazione e comunicazione
 Mussolini fu il primo a rendersi conto di quanto fossero importanti i mezzi di comunicazione.
 Nei cinema si esaltava la dittatura fascista.
 
-*** Aumento della natalità e dei matrimoni, incentivi alle famiglie
+** Aumento della natalità e dei matrimoni, incentivi alle famiglie
 Per avere più soldati in futuro. Nelle sagre della nuzialità si sposavano anche 100 persone al giorno.
 C'erano anche degli incentivi economici alle famiglie, comprese delle agevolazioni ai lavoratori padri.
 Tassa sul celibato: chi non era sposato doveva pagare una tassa.
 
-*** Incentivi allo sport
+** Incentivi allo sport
 Per via del culto dell'uomo forte. I giovani venivano divisi in determinate organizzazioni.
 
-*** Controllo della scuola
+** Controllo della scuola
 Si insegna la disciplina militare, il motto "credere, obbedire, combattere". Modifica i manuali scolastici
 con l'introduzione di testi fascisti. Ad esempio leggi che sostengono la divisione in razze.
 
-*** Corporatismo
+** Corporatismo
 Nel fascismo, la società è più importante dell'individuo. Sotto il fascismo, l'individuo aveva più doveri
 nei confronti della società. Si scontra con l'idea socialista della lotta di classe, perchè la lotta di
 classe indebolisce la società.
@@ -137,18 +137,18 @@ Le corporazioni raggruppavano tutti quelli che facevano lo stesso mestiere, dell
 Si supera la lotta di classe perchè i produttori dovevano andare in contro alle esigenze dei lavoratori
 e viceversa. Lo scioero era proibito e si favorivano fortemente i produttori.
 
-*** Cattolicesimo
+** Cattolicesimo
 Si rende conto che l'Italia è estremamente cattolica e che non avrebbe potuto governare contro la chiesa.
 Per questo motivo firma i Patti Lateranensi, ovvero un accordo con la Chiesa.
 
-**** I Patti Lateranensi
+*** I Patti Lateranensi
 - La Chiesa riconosce lo Stato;
 - Lo Stato paga un indennizzo alla Chiesa;
 - La Religione Cattolica viene riconosciuta come religione di Stato ed insegnata nelle scuole;
 - Si riconoscono gli effetti civili del matrimonio in chiesa;
 - Si concede alla chiesa di nominare i vescovi;
 
-*** Politica economica
+* Politica economica
 La politica economica fascista è protezionistica, non esiste un mercato libero. Mussolini punta
 all'autarchia. L'Italia avrebbe dovuto produrre tutto nel proprio Stato, senza importare nulla.
 Il problema è che l'Italia non aveva tutte le risorse.
@@ -156,16 +156,16 @@ Il problema è che l'Italia non aveva tutte le risorse.
 Bonifica l'agro pontino in modo da renderlo coltivabile ed essere autosufficiente nella produzione
 del grano.
 
-** Provvedimenti esterni
-**** Conquista di un nuovo territorio (Etiopia), piuttosto che risollevare l'economia interna.
+* Provvedimenti esterni
+** Conquista di un nuovo territorio (Etiopia), piuttosto che risollevare l'economia interna.
 
 Qual è il problema della conquista dell'etiopia: c'era una legge che impediva alle altre nazioni di
 inviare le armi all'Italia. Mussolini assume un'atteggiamento vittimistico.
 In questo modo ottiene il consenso dell'opinione pubblica.
 Nel 1936 l'Italia conquista l'Etiopia. Offre la corona a Vittorio Emanuele III.
 
-**** Asse Roma-Berlino
+** Asse Roma-Berlino
 Termine utilizzata Il primo momento di vicinanza tra Hitler e Mussolini.
 
-**** Promulgazione delle leggi razziali
+** Promulgazione delle leggi razziali
 Nel 1938 vengono promulgate le leggi razziali anche in Italia.
