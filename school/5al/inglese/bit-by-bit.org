@@ -37,7 +37,22 @@ Flowcharts are a way to design the program before actually writing it with code.
 representation for structure and logic.
 
 ** Writing a program
+Before writing a program, the programmer needs to choose a programming language, an environment, an editor and a compiler.
+Then, he starts to design the program using the specific language he chose.
+
 ** Testing and documenting
+The final stage of writing a program consists in testing, debugging and documenting its functionalities.
+
+Testing can either be static or dynamic:
+*** Static testing:
+Testing is made on the code. It is more reliable but much more limited.
+*** Dynamic testing:
+Testing is made by running the program and testing various inputs. It is less reliable but easier to automate.
+
+*** Types of errors:
+- Syntax error: where the syntax of the program is wrong
+- Logic error: where the logic around the program is wrong
+- Runtime erorr: where an unexpected data type is passed
 
 * Module 5 -> The Internet
 ** History of the internet
