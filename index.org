@@ -18,6 +18,11 @@
   1. [[file:school/5al/italiano/pirandello.org][Pirandello]]
   1. [[file:school/5al/italiano/italo-svevo.org][Italo Svevo]]
 
+* Inglese
+  1. [[file:school/5al/gpo/bit-by-bit.org][Bit by bit]]
+  1. [[file:school/5al/gpo/modern-age.org][Modern age]]
+  1. [[file:school/5al/gpo/thomas-hobbes.org][Thomas Hobbes]]
+
 * GPO
   1. [[file:school/5al/gpo/clil.org][Renewable energy]]
 
