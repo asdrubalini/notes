@@ -1,0 +1,120 @@
+#+title: Codifica di linea
+
+** A cosa serve una codifica di linea
+Avviene prima di trasmettere l'informazione in linea.
+Consiste nel codificare l'informazione in maniera tale da trasformarli in un
+segnale elettrico idoneo alla linea ed alla tecnica di trasmissione.
+
+#+CAPTION: Riepilogo
+[[./riepilogo.jpg]]
+
+** Caratteristiche che dovrebbe avere un segnale di linea
+*** Eliminazione della componente continua
+Considerando che di solito la trasmissione avviene a distanza ed è spesso necessario
+l'impiego di ripetitori di segnale, la circuiteria non consentirebbe la rigenerazione
+del segnale nel caso di un segnale continuo.
+
+È necessario cercare di eliminare la componente continua del segnale che stiamo trasmettendo.
+
+*** Componente alla frequenza di cifra
+In ricezione il segnale deve essere ricostruito. Abbiamo quindi bisogno che ci sia una componente
+diversa da zero alla frequenza di cifra. Sarebbe utile che il nostro segnale in arrivo abbia una
+componente alla frequenza di cifra $F_c$.
+
+In realtà è un falso problema.
+
+*** Riduzione delle lunghe frequenze di zeri
+Il segnale non deve avere lunghe sequenze di zeri per evitare che in ricezione si abbiano dei problemi
+di decodifica.
+
+*** Riduzione della banda occupata dal segnale
+Non dovrebbe occupare una banda troppo larga.
+
+** Tipi di codici di linea a disposizione
+#+CAPTION: Metodi di codifica
+[[./5.png]]
+
+*** Codice NRZ (non ritorno a zero)
+Il segnale elettrico risultante è identico ai bit di partenza.
+NOTA: in ricezione, ogni codifica viene trasformata in NRZ.
+
+#+CAPTION: Codifica NRZ
+[[./NRZcode.png]]
+
+Spettro: si annulla alla Fc, a 2 Fc eccetera.
+La banda occupata è uguale ad Fc.
+Il problema è che la componente continua (la media del segnale) ha una frequenza molto alta.
+Per questo motivo, non useremo NRZ per la trasmissione a lunghe distanze.
+
+Per il circuito è sufficiente utilizzare un comparatore.
+
+*** Codifica RZ (ritorno a zero)
+
+#+CAPTION: Codifica RZ
+[[./RZcode.png]]
+
+I bit zero rimangono a zero, mentre i bit uno rimangono per metà tempo a livello basso e per l'altra
+metà a livello alto.
+
+Grazie a questo ho una componente continua più bassa ma ho allargato la banda.
+Non solo, in corrispondenza di Fc ho una componente che posso estrarre (perchè ha un valore
+diverso da zero).
+
+In ogni caso non ho risolto il problema perchè la componente continua è abbastanza alta.
+
+*** Codifica di Manchester
+
+#+CAPTION: Codifica di Manchester
+[[./manchester.png]]
+
+In questo modo abbiamo un valore medio che è molto prossimo a 0. Il problema però è che la
+banda occupata dal segnale è molto elevata.
+
+#+CAPTION: Banda Manchester
+[[./banda-manchester.png]]
+
+*** Codifica AMI
+AMI = Alternated Mark Inversion
+
+#+CAPTION: Codifica AMI
+[[./AMICode.png]]
+
+Deriva dal codice RZ ma si differenzia per il fatto che gli impulsi devono essere alternati.
+Ha un valore medio molto prossimo a zero, una banda piccola ma si annulla ad Fc.
+In realtà però il fatto che sia nullo in Fc è un falso problema perchè in demodulazione lo
+convertiamo comunque in RZ o qualsiasi altro codice che abbia la Fc.
+
+#+CAPTION: Banda AMI
+[[./banda-ami.png]]
+
+Rimane però il problema delle lunghe sequenze di zero, poichè potrebbero creare dei problemi di
+codifica in ricezione. Per risolvere, si usa HDB-n
+
+*** Codifica HDB-n
+#+CAPTION: Banda HDB-3
+[[./HDB3Code.png]]
+
+Dove n è il numero massimo di zeri consecutivi consentiti. Ad esempio, HDB-3 mi permette di trasmettere
+3 zeri consecutivi prima che il codice intervenga.
+
+Consiste nel codice AMI ma quando c'è una violazione (troppi zeri consecutivi) il codice interviene, in
+modi diversi in base a se il numero di uno è pari o dispari.
+
+** Per ricostruire un segnale NRZ
+Devo assicurarmi di prendere proprio il centro del livello alto. Per questo motivo, traslo il clock in modo
+che il fronte di salita sia al centro.
+
+RZ = (NRZ) and (CLOCK)
+Con l'and logico, il segnale è diverso da zero solo quando sono alti sia il clock che l'NRZ.
+
+Per trasmettere in NZ e convertire in NRZ in ricezione:
+#+CAPTION: Circuito di conversione RZ -> NRZ
+[[./conversione-rz-nrz.png]]
+
+** Per trasmettere in codice AMI e riconvertire in NRZ
+#+CAPTION: Circuito di conversione NRZ -> AMI
+[[./conversione-nrz-ami.jpg]]
+
+** Conversione NRZ -> Bifase -> NRZ
+#+CAPTION: Circuito di conversione NRZ -> Bifase -> NRZ
+[[./conversione-nrz-bifase-nrz.jpg]]

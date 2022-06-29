@@ -1,0 +1,46 @@
+#+title: Thomas Hobbes
+
+* Life and belief
+Thomas Hobbes, who lived in the 16th and 17th century, was mainly a political
+philosopher.
+
+* Materialist view of human nature
+He believed that every phenomena in the universe can be explained in terms of
+motions and interactions between bodies made of matter. He did not believe
+in the existance of soul or any other metaphysical entity.
+He believed that animals are machines and that their thoughts and emotions
+were determined by physical laws and chains of cause and effects, aimed
+at pursuing pleasure and avoiding pain.
+
+He also thought that a society should work in the same way as the human body,
+operating according to the laws.
+
+Researching about his thought, he was influenced by Galileo and Kepler,
+which has discovered the phisical laws governing the motion of planets.
+
+It is important to note, however, that Hobbes was not a physician and that
+he had never been able to explain the math behind human behaviour.
+
+* Absolute monarchy is the best form of government
+According to Hobbes and the Leviathan, the absolute monarchy is the only form 
+of government that can guarantee peace, since if every menber of the society
+agree to one single central authority, civil war is not possible.
+
+* The Leviathan
+The Leviathan is probably the most known book written by Thomas Hobbes. The title
+comes from the biblical figure of the Leviathan.
+
+The book was written during the English Civil war of the seventeenth century and 
+the author argues for a social contract and rule by an absolute sovereign.
+In his opinion, the war of all against all (the state of nature) could be 
+avoided only by a strong and united government.
+
+** The state of nature
+According to Hobbes, the state of nature is the concept for which every man
+is in competition with all other men. Everyone has some desire to satisfy
+and they try to destroy one another. This causes a perpetual war.
+
+To avoid the destruction of the human kind, the man has to rely on his passions
+and on his reason, which are synthesizable in "don't do to others what you would not
+want them to do you". People however will not respect this, for this reason, 
+The State, The Leviathan is the monster that is needed.

@@ -1,0 +1,146 @@
+#+title: Codifica di Canale
+
+La codifica di canale serve per aggiungere ai blocchi di bit degli altri bit
+di ridondanza necessari per la rilevazione e la correzione degli errori.
+
+Due tecniche:
+- rilevazione dell'errore e richiesta automatica dell'invio del blocco
+  (strategia ARQ, Automatic Repeat Request)
+- rilevazione dell'errore e correzione diretta, l'errore viene corretto
+  senza richiesta di rispedire (strategia FEC, Foward Error Correction)
+
+Due tipi di codici
+- Codici a blocchi
+  - A ripetizione
+  - Parità (pari o dispari)
+  - Hamming
+  - Ciclici
+
+- Codici convoluzionali
+
+
+** Codici a ripetizione
+Consistono nell'associare al bit 0 un numero di zeri.
+Ad esempio 0 diventa 000 e 1 diventa 111 (con rapporto 3:1)
+In ricezione prendo la maggioranza. Esempio 001 prendo 0 perchè ci sono più 0 che 1.
+
+** Codici di parità
+Nel caso della parità pari, il numero di 1 nel blocco deve essere pari. Se scelgo
+la parità dispari, il numero di 1 deve essere dispari. È compreso il bit di parità.
+
+Esempio con parità pari:
+Se voglio trasmettere '1011010', aggiungo il bit di parità '0' perchè il numero complessivo
+di 1 è già pari.
+
+Si può fare anche in colonna:
+#+CAPTION: Parità in colonna
+[[./1.jpg]]
+
+** Correzione degli errori:
+Si utilizza XOR per avere dei bit di parità. In base al bit di parità sbagliato, posso capire
+in quale bit si trova l'errore e quindi correggerlo.
+
+#+CAPTION: Correzione degli errori
+[[./2.jpg]]
+
+** Codice di Hamming
+Prevede un numero di bit di ridondanza q, k il numero di bit di informazione, n il numero di bit totali:
+
+\begin{equation}
+n = 2^q -1
+\end{equation}
+
+Esempio
+
+\begin{equation}
+q = 3
+\end{equation}
+
+\begin{equation}
+n = 2^3 - 1 = 7
+\end{equation}
+
+\begin{equation}
+k = 4
+\end{equation}
+
+I bit di ridondanza in questo caso non sono in coda ma sono mischiati. Per individuare la posizione dei bit
+di ridondanza:
+
+\begin{equation}
+2^0 = 1^a \hspace{0.2cm} posizione
+\end{equation}
+
+\begin{equation}
+2^1 = 2^a \hspace{0.2cm} posizione
+\end{equation}
+
+\begin{equation}
+2^2 = 4^a \hspace{0.2cm} posizione
+\end{equation}
+
+#+CAPTION: Tabella Hamming
+[[./3.png]]
+
+Ad ogni gruppo viene calcolata la parità e viene inserita nella posizione.
+
+#+CAPTION: Rilevazione dell'errore
+[[./4.jpg]]
+
+** CRC: Cyclic redundant check
+Si esprime la combinazione di bit che dobbiamo trasmettere sottoforma di polinomio. Si considera
+un polinomio generatore di un certo grado e lo si moltiplica per il polinomio messaggio.
+
+Messaggio:
+\begin{equation}
+M(x)
+\end{equation}
+
+Generatore:
+\begin{equation}
+G(x)
+\end{equation}
+
+\begin{equation}
+M'(x) = M(x) \cdot x^{gr(G)}
+\end{equation}
+
+Ovvero aggiungo tanti zeri quanto è il grado di G $gr(G)$
+
+Poi divido per $G(x)$ ed il resto della divisione sarà il CRC che devo aggiungere al messaggio
+\begin{equation}
+R(x) = M'(x) % G(x)
+\end{equation}
+
+\begin{equation}
+T(x) = M(x) + R(x)
+\end{equation}
+
+*** In ricezione
+In ricezione ci deve essere lo stesso polinomio generatore.
+Divido per $G(x)$ e controllo se il resto è uguale o diverso da zero. Se è diverso da zero
+richiedo il rinvio.
+
+*** Esempio:
+Messaggio: =1010011=
+
+\begin{equation}
+M(x) = x^6 + x^4 + x + 1
+\end{equation}
+
+Dalla norma, conosciuto sia da ricevitore che da trasmettitore:
+\begin{equation}
+G(x) = x^4 + x + 1
+\end{equation}
+
+Che corrisponde alla combinazione di bit =10011=.
+
+\begin{equation}
+M'(x) = (x^6 + x^4 + x + 1) \cdot x^4 = x^{10} + x^8 + x^5 + x^4
+\end{equation}
+
+Ovvero: =1010011_0000= (notare come equivale al messaggio con 4 zeri finali)
+
+Facendo la divisione tra $M'(x)$ e $G(x)$, ottengo un resto di =0111=, che aggiungo in coda al messaggio.
+
+In ricezione, divido nuovamente per G e se la non ottengo 0 come risultato so che il messaggio contiene un errore.
